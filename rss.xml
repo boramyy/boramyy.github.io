@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsby-starter-blog-demo.netlify.com/</link><generator>RSS for Node</generator><lastBuildDate>Thu, 02 May 2019 12:16:15 GMT</lastBuildDate><item><title><![CDATA[react gatsby로 github 블로그 만들기!]]></title><description><![CDATA[indexnode와 npmpackage.json과 package-lock.json트랜스 컴파일러 babellint 프로그램 eslintgatsby로 블로그 시작하기gatsby-cli 설치하기터미널에서 다음 명령어를 사용하여 gatsby-cli…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//dev/gatsby_blog/1/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//dev/gatsby_blog/1/</guid><pubDate>Thu, 02 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;index&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#node%EC%99%80-npm&quot;&gt;node와 npm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#packagejson%EA%B3%BC-package-lockjson&quot;&gt;package.json과 package-lock.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%ED%8A%B8%EB%9E%9C%EC%8A%A4-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC-babel&quot;&gt;트랜스 컴파일러 babel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#lint-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-eslint&quot;&gt;lint 프로그램 eslint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;gatsby로 블로그 시작하기&lt;/h3&gt;
+&lt;h4&gt;gatsby-cli 설치하기&lt;/h4&gt;
+&lt;p&gt;터미널에서 다음 명령어를 사용하여 gatsby-cli를 전역에 설치합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g gatsby-cli&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;사이트 생성하기&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ gatsby new &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;생성할 사이트 이름&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;기본으로 가져올 소스코드 주소&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;br&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 명령어를 통해 개츠비에서 제공하는 기본구조의 사이트를 쉽게 생성할 수 있습니다.
+&lt;code class=&quot;language-text&quot;&gt;기본으로 가져올 소스코드 주소&lt;/code&gt;를 명시하지 않으면 &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-default&quot;&gt;https://github.com/gatsbyjs/gatsby-starter-default&lt;/a&gt; 에 작성된 소스코드가 받아집니다.&lt;/p&gt;
+&lt;p&gt;저는 블로그가 목적이니 블로그 스타터를 사용했습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ gatsby new react-blog https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1815aa8e04da3918fa0a31128d785161/349eb/gatsby_blog_1-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 87.05985915492958%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAC2UlEQVQ4y6VUTU8TURTtTsNPULbwQzQhmbg0cTHhF/AbDOEbigks2kATFkSCCxa4wEAxJrLHIBREW1pwpp3Sduh0vjrf8+71zrQNKCgab3Jy37y578w9Z957iTcLrx98Pvj04vSsNCw3FP6y3uCrlzW+dFHmD47z/NGXIn94ckb5GrnTIn/8tcTnCgJ/9O07ny+Jw7m88Pztu92+RPLlzCO5LoHjBaiqBqq6gZ4foB8CGpaLpu2h5QbYptx2/DhH85ppo36loK60UGpoKJbOnY8f9gYSUzPT/YyxNlKELAwty2Jmu810XWfR2PNcGmvMcRxmmiZlm6pCRuUMo8zCgDFA17aU99ndwcTs7Gx/EAQWdoLt7+9DOp2Gzc1NSKVSsLOzA2tra5DJZGB9fR02NjZAURSgWogjIqbwPF/d3t6+RQh7e3uYTCZxdXUVi8UiMloSLXNdF0kJUi3eDHoXE9J7lT5+m1BTVZSkCn4+PMQrWUZgIQa+FynDMPCJ0KduvPgDXfJuh97dhEKpgKVCHpvNJgpSDQvlBp7XFBTqCl5QVjQdTcNATdOQPL6fMKROqJ1eHQZkks+u8Wv0JP+GEMAmvqbN8MoKUXPvYPg3QoSaouOJ0MBiw0SxaZJXHb9uouchbZ/7JeuqgnVJxGZNwsZlBcvlMoqi+FOOUKlU0Pf9+wgB2j5gy2GoEHQX/l9yRVYxd1HDYl3DimIinRC0bTvOPUTPkWTo7NE/EjJTV0GuitColqFWlYCkAUkFkhlDEASQZRmIFLrR29itmHBubq6fzLV7HVrRX3YQNQ//NmJfyE81m80OJiYnJx/TBm1HBtNJYOdVGQ7OKlCqtYAugxi6YYDRRW8uGkddUmfRZYE019ra2hpIDA0NPVxZWXm6tLT0bHk5w6UW5rn0/BSXejXDTU9PcRMTE9zo6Cg3Pj7OjY2Nxc/URDxeXFzk6NLgOmuXn4yMjPT9AN1xpE92SFrWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Chinese Salty Egg&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1815aa8e04da3918fa0a31128d785161/b9e4f/gatsby_blog_1-1.png&quot;
+        srcset=&quot;/static/1815aa8e04da3918fa0a31128d785161/cf440/gatsby_blog_1-1.png 148w,
+/static/1815aa8e04da3918fa0a31128d785161/d2d38/gatsby_blog_1-1.png 295w,
+/static/1815aa8e04da3918fa0a31128d785161/b9e4f/gatsby_blog_1-1.png 590w,
+/static/1815aa8e04da3918fa0a31128d785161/f9b6a/gatsby_blog_1-1.png 885w,
+/static/1815aa8e04da3918fa0a31128d785161/2d849/gatsby_blog_1-1.png 1180w,
+/static/1815aa8e04da3918fa0a31128d785161/bbefa/gatsby_blog_1-1.png 1770w,
+/static/1815aa8e04da3918fa0a31128d785161/349eb/gatsby_blog_1-1.png 2272w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;github.io 주소 사용하기&lt;/h3&gt;
+&lt;p&gt;다음 명령어를 실행하여 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;devDependencies&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;를 추가해줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; gh-pages --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그리고 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;scripts&lt;/code&gt;에 deploy 명령에 대한 내용을 추가해줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;deploy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby build --prefix-paths &amp;amp;&amp;amp; gh-pages -d public&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제 &lt;code class=&quot;language-text&quot;&gt;npm run deploy&lt;/code&gt;를 실행하면 public 폴더가 gh-pages 브랜치에 업로드됩니다.&lt;/p&gt;
+&lt;h3&gt;참고&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/quick-start&quot;&gt;Gatsby Docs&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//hi-folks/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//hi-folks/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean. A small river named
+Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
+&lt;h2&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
+&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This however showed weasel&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Well uncritical so misled&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this is very interesting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Goodness much until that fluid owl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When she reached the first hills of the &lt;strong&gt;Italic Mountains&lt;/strong&gt;, she had a last
+view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, the headline of
+&lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
+Lane. Pityful a rethoric question ran over her cheek, then she continued her
+way. On her way she met a copy.&lt;/p&gt;
+&lt;h3&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
+&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with
+&lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
+they abused her for their projects again and again. And if she hasn’t been
+rewritten, then they are still using her.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It is a paradisematic country, in which roasted parts of sentences fly into your
+mouth. Even the all-powerful Pointing has no control about the blind texts it is
+an almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
+&lt;h3&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
+&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;So baboon this&lt;/li&gt;
+&lt;li&gt;Mounted militant weasel gregariously admonishingly straightly hey&lt;/li&gt;
+&lt;li&gt;Dear foresaw hungry and much some overhung&lt;/li&gt;
+&lt;li&gt;Rash opossum less because less some amid besides yikes jeepers frenetic
+impassive fruitlessly shut&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When she reached the first hills of the Italic Mountains, she had a last view
+back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
+Village and the subline of her own road, the Line Lane. Pityful a rethoric
+question ran over her cheek, then she continued her way. On her way she met a
+copy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times and everything that was left from its origin
+would be the word “and” and the Little Blind Text should turn around and
+return to its own, safe country.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
+and dragged her into their agency, where they abused her for their projects
+again and again. And if she hasn’t been rewritten, then they are still using
+her. Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts.&lt;/p&gt;
+&lt;h4&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
+&lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+large language ocean. A small river named Duden flows by their place and
+supplies it with the necessary regelialia. It is a paradisematic country, in
+which roasted parts of sentences fly into your mouth.&lt;/p&gt;
+&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an
+almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
+advised her not to do so, because there were thousands of bad Commas, wild
+Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
+&lt;h5&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
+&lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
+the way. When she reached the first hills of the Italic Mountains, she had a
+last view back on the skyline of her hometown Bookmarksgrove, the headline of
+Alphabet Village and the subline of her own road, the Line Lane. Pityful a
+rethoric question ran over her cheek, then she continued her way. On her way she
+met a copy.&lt;/p&gt;
+&lt;h6&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
+&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times and everything that was left from its origin
+would be the word “and” and the Little Blind Text should turn around and return
+to its own, safe country. But nothing the copy said could convince her and so it
+didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
+with Longe and Parole and dragged her into their agency, where they abused her
+for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already.Did you know that “despite its name, salted duck eggs can also be made from
+chicken eggs, though the…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//my-second-post/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
+&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
+chicken eggs, though the taste and texture will be somewhat different, and the
+egg yolk will be less rich.”?
+(&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[test 1-2]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting!I’m sure I’ll write a lot more interesting things in the future.Oh, and here’s a…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//dev/second/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//dev/second/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. In Asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. The eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. From the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./salty_egg.jpg&quot; alt=&quot;Chinese Salty Egg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[test 22222]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting!I’m sure I’ll write a lot more interesting things in the future.Oh, and here’s a…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//category1/hoho2/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//category1/hoho2/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. In Asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. The eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. From the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./salty_egg.jpg&quot; alt=&quot;Chinese Salty Egg&quot;&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
