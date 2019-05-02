@@ -1,14 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
+    title: `boramyy`,
+    author: `boramkim`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://boramyy.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      github: `boramyy`,
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        "displayName": false
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +33,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-images`,
             options: {
