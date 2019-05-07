@@ -124,9 +124,9 @@ $ npm run deploy
 
 ### 참고
 
-[Gatsby Docs][gatsby-docs] <br>
-[Gatsby Starter][gatsby-starter] <br>
-[How Gatsby Works with GitHub Pages][gatsby-gh-pages]
+- [Gatsby Docs][gatsby-docs] <br>
+- [Gatsby Starter][gatsby-starter] <br>
+- [How Gatsby Works with GitHub Pages][gatsby-gh-pages]
 
 
 [gatsby-docs]: https://www.gatsbyjs.org/docs/quick-start

@@ -49,7 +49,7 @@ module.exports = {
 
 ### 참고
 
-[Gatsby styled-component][gatsby-starter]
+- [Gatsby styled-component][gatsby-plugin-styled-components]
 
 
 [gatsby-plugin-styled-components]: https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/?=styled
