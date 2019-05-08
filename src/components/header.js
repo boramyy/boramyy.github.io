@@ -5,8 +5,6 @@ import { Link } from "gatsby"
 
 class Header extends React.Component {
   render() {
-    // const { location, title, children } = this.props
-    // const rootPath = `${__PATH_PREFIX__}/`
     const StyledHeader = styled.header`
       padding-top:60px;
     `;
@@ -21,25 +19,30 @@ class Header extends React.Component {
       &:hover {color:#000}
       &.on {
         position:relative;font-weight:400;color:#111;
-        svg {stroke-width: 2px;}
+        svg {stroke-width: 1.5px;}
       }
     `;
+
+    const Logo = styled(NavLink)`
+      margin-left: 0;
+    `;
+
     const NavLinkWithATag = styled.a`
       margin-left:20px;
       padding: 5px;
       font-family:'Noto Sans KR', san-serif;
-      fill:#777;
+      fill: #777;
       text-decoration: none;
-      svg {vertical-align:middle}
-      &:hover {fill:#000;}
+      svg {vertical-align: middle}
+      &:hover {fill: #000;}
     `;
     const Nav = styled.nav`
       float: right;
     `;
     return (
-      <StyledHeader>
+      <StyledHeader className="container">
         <HiddenText text="Boram Kim"/>
-        <NavLink to={`/`} activeClassName="active">
+        <Logo to={`/`} className="logo" activeClassName="on">
           <svg width="18px" height="18px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25"
             style={{ enableBackground: `new 0 0 25 25`, stroke: `#111`, fill: `none`}} xmlSpace="preserve">
             <g>
@@ -55,7 +58,7 @@ class Header extends React.Component {
                 c-0.4,2-0.5,4-0.6,6c0,1.2-0.1,2.4-0.2,3.6c-0.1,1.1-0.3,2.3-1,3.3C10.6,22.3,9,22.8,7.6,22.8z" />
             </g>
           </svg>
-        </NavLink>
+        </Logo>
         <Nav>
           <NavLink to={`/dev`} className="nav-item" activeClassName="on">dev</NavLink>
           <NavLink to={`/prj`} className="nav-item" activeClassName="on">prj</NavLink>

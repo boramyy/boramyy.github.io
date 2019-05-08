@@ -75,5 +75,18 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          { family: `Roboto Mono` },
+          { family: `Nanum Gothic` },
+          {
+            family: `Noto Sans KR`,
+            variants: [`100`, `400`, `700`]
+          },
+        ],
+      },
+    }
   ],
 }
