@@ -7,6 +7,12 @@ class Layout extends React.Component {
     const { children } = this.props
 
     const GlobalStyle = createGlobalStyle`
+      html {
+        height: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
       body {
         margin: 0;
         font-family: 'Noto Sans KR', san-serif;

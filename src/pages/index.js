@@ -67,28 +67,72 @@ class BlogIndex extends React.Component {
     `
     
     const StackBox = styled.table`
-      max-width:1000px;
-      tr:last-child {
-        td {padding-bottom:0;}
-      }
-      td {
-        padding-bottom:100px;
-        &:nth-child(2n-1) {width:45%;}
-        &:nth-child(2n) {width:55%;}
-      }
-      .stack-subtitle {font-size:26px;font-weight:bold;line-height:1.4;}
-      .stack-desc {font-size:16px;word-spacing:2px;line-height:2.2;letter-spacing:0px;}
-      .stack-skills {
-        display:block;margin-top:30px;font-size:16px;font-weight:100;line-height:3;
-        .stack-skills-item {margin-right:50px;}
+      width: 100%;
+      max-width: 1000px;
+      table-layout: fixed;
+      tr{
+        &:last-child {
+          td {padding-bottom:0;}
+        }
+        td {
+          padding-bottom:100px;
+          &:nth-child(2n-1) {width:45%;}
+          &:nth-child(2n) {width:55%;}
+        }
       }
     `
 
+    const StackTitle = styled.td`
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 1.4;
+    `
+
+    const StackDesc = styled.p`
+      font-size: 16px;
+      word-spacing: 2px;
+      line-height: 2.2;
+      letter-spacing: 0px;
+    `
+
+    const SkillGroup = styled.div`
+      display: block;
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 3;
+    `
+
     const StackSkill = styled.span`
+      display: inline-block;
       margin-right: 50px;  
     `;
-    const frontSkills = ['javascript', 'react', 'vue', 'html', 'css', 'sass', 'materialize', 'bootstrap', 'jquery'];
-    // const backSkills = ['java - spring', 'node - express', 'oracle', 'mysql'];
+    
+    const stackList = [{
+      title: 'front-end',
+      description: '프론트엔드 프레임워크인 react나 vue를 사용하여ㄴ 프로젝트 진행이 가능합니다. html과 순수 css로 원하는 형태의 웹페이지를 그려낼 수 있습니다.',
+      skills: ['javascript', 'react', 'vue', 'html', 'css', 'sass', 'materialize', 'bootstrap', 'jquery']
+    }, {
+      title: 'back-end',
+      description: '데이터베이스와 연동해 기본적인 crud 게시판 구현이 가능하며, 짜여진 코드를 읽고 이해하는데 문제가 없습니다.',
+      skills: ['java - spring', 'node - express', 'oracle', 'mysql']
+    }];
+
+    const StackRow = function({stack}) {
+      return (
+        <tr>
+          <StackTitle>{stack.title}</StackTitle>
+          <td>
+            <StackDesc>{stack.description}</StackDesc>
+            <SkillGroup>
+              {stack.skills.map(function(item, index){
+                return <StackSkill key={index}>{item}</StackSkill>
+              })}
+            </SkillGroup>
+          </td>
+        </tr>
+      );
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -115,38 +159,9 @@ class BlogIndex extends React.Component {
           <div className="group-content container">
             <StackBox>
               <tbody>
-                <tr>
-                  <td className="stack-subtitle">front-end</td>
-                  <td className="stack-content">
-                    <p className="stack-desc">
-                      react를 이용해 
-                      html과 css 만으로 원하는대로 웹페이지를 그려낼 수 있고,
-                      다양한 라이브러리를 사용해보았습니다.
-                    </p>
-                    <span className="stack-skills">
-                      <span className="stack-skills-item">
-                        {frontSkills.map(function(item, index){
-                          return <StackSkill key={index}>{item}</StackSkill>
-                        })}
-                      </span>
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="stack-subtitle">back-end</td>
-                  <td className="stack-content">
-                    <p className="stack-desc">
-                      데이터베이스와 연동해 기본적인 crud 게시판 구현이 가능하며,
-                      짜여진 코드를 읽고 이해하는데 문제가 없습니다.
-                    </p>
-                    <span className="stack-skills">
-                      <span className="stack-skills-item">java - spring</span>
-                      <span className="stack-skills-item">node - express</span>
-                      <span className="stack-skills-item">oracle</span>
-                      <span className="stack-skills-item">mysql</span>
-                    </span>
-                  </td>
-                </tr>
+                {stackList.map(function (item, index) {
+                  return <StackRow key={index} stack={item} />
+                })}
               </tbody>
             </StackBox>
           </div>
