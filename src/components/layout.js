@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "../components/header"
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 class Layout extends React.Component {
   render() {
@@ -13,14 +13,35 @@ class Layout extends React.Component {
         overflow-x: hidden;
         scroll-behavior: smooth;
       }
-      body {
-        margin: 0;
+
+      ::-moz-selection {color:#fff;background:#ff6db6}
+      ::selection {color:#fff;background:#ff6db6}
+
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed, 
+      figure, figcaption, footer, header, hgroup, 
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
         font-family: 'Noto Sans KR', san-serif;
       }
+
+      body {
+        margin: 0;
+      }
+
       code {
         font-family: 'Roboto Mono';
         font-size: 0.85em;
       }
+      
       .container {
         width: 100%;
         max-width: 100%;
@@ -30,15 +51,21 @@ class Layout extends React.Component {
         padding-left: 100px;
       }
     `
+    
+    const StyledFooter = styled.footer`
+      padding-bottom: 30px;
+      font-size: 12px;
+      text-align: right;
+    `
 
     return (
       <div>
         <GlobalStyle />
         <Header />
         <main>{children}</main>
-        <footer>
+        <StyledFooter className="container">
           Copyright 2019. boramkim All rights reserved.
-        </footer>
+        </StyledFooter>
       </div>
     )
   }

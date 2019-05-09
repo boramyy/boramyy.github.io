@@ -110,7 +110,7 @@ class BlogIndex extends React.Component {
     
     const stackList = [{
       title: 'front-end',
-      description: '프론트엔드 프레임워크인 react나 vue를 사용하여ㄴ 프로젝트 진행이 가능합니다. html과 순수 css로 원하는 형태의 웹페이지를 그려낼 수 있습니다.',
+      description: '프론트엔드 프레임워크인 react나 vue를 사용하여 프로젝트 진행이 가능합니다. html과 순수 css로 원하는 형태의 웹페이지를 그려낼 수 있습니다.',
       skills: ['javascript', 'react', 'vue', 'html', 'css', 'sass', 'materialize', 'bootstrap', 'jquery']
     }, {
       title: 'back-end',

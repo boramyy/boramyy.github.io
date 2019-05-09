@@ -47,7 +47,7 @@ $ gatsby new react-blog https://github.com/gatsbyjs/gatsby-starter-blog
 $ cd react-blog && npm run develop
 ```
 
-![Chinese Salty Egg](./gatsby-blog1-1.png)
+![preview of blog](./gatsby-blog1-1.png)
 
 
 ### github.io 주소 사용하기

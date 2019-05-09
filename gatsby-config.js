@@ -79,12 +79,13 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          { family: `Roboto Mono` },
-          { family: `Nanum Gothic` },
           {
             family: `Noto Sans KR`,
+            subsets: [`korean`],
             variants: [`100`, `400`, `700`]
           },
+          { family: `Roboto Mono` },
+          { family: `Nanum Gothic` },
         ],
       },
     }

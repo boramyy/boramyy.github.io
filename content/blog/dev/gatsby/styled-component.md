@@ -29,7 +29,7 @@ $ npm install --save gatsby-plugin-styled-components styled-components babel-plu
 ### gatsby-config.js에 설정 추가
 `gatsby-config.js` 파일의 plugins 배열에 `gatsby-plugin-styled-components`를 추가해줍니다.
 
-```
+``` javascript
 module.exports = {
   plugins: [
     ...,
