@@ -8,9 +8,11 @@ published: true
 
 ### index
 
-- [gatsby로 블로그 시작하기](#gatsby로-블로그-시작하기)
-- [github.io 주소 사용하기](#githubio-주소-사용하기)
-- [블로그 배포하기](#블로그-배포하기)
+- [gatsby에서 google webfont 사용하기](#gatsby에서-google-webfont-사용하기)
+- [플러그인 설치하기](#플러그인-설치하기)
+- [gatsby-config.js에 설정 추가](#gatsby-configjs에-설정-추가)
+- [style 지정](#style-지정)
+- [삽질 1](#삽질-1)
 - [참고](#참고)
 
 
