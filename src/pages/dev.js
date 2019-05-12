@@ -12,12 +12,32 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <h1>development page!!!!!!!!!</h1>
+        
+        
+        <h2 className="page-title">all<br/>development<br/>posts</h2>
         <SEO
           title="dev post"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+        <ul className="post-list">
+        
         {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <li className="post-list-item" key={node.fields.slug}>
+              <h3>
+                <Link to={node.fields.slug}>
+                  <span className="post-title">{title}</span>
+                  {/* <div className="post-tags">
+                    <span className="post-tag {{ tag }}">{{ tag }}</span>
+                  </div> */}
+                  <div className="post-date">{node.frontmatter.date}</div>
+                </Link>
+              </h3>
+            </li>
+          )
+        })}
+        {/* {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -31,10 +51,13 @@ class BlogIndex extends React.Component {
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
-              />
+                />
             </div>
           )
-        })}
+        })} */}
+
+        </ul>
+
       </Layout>
     )
   }
