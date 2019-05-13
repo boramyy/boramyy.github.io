@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 class Layout extends React.Component {
   render() {
-    const { children } = this.props
+    const { children, className } = this.props
 
     const GlobalStyle = createGlobalStyle`
       html {
@@ -42,6 +42,15 @@ class Layout extends React.Component {
         font-size: 0.85em;
       }
       
+      .clear {
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+          width: 0;
+          height: 0
+        }
+      }
       .container {
         width: 100%;
         max-width: 100%;
@@ -49,6 +58,11 @@ class Layout extends React.Component {
         margin-left: auto;
         padding-right: 100px;
         padding-left: 100px;
+        box-sizing: border-box;
+      }
+      .page {
+        padding-top: 100px;
+        padding-bottom: 100px;
       }
     `
     
@@ -62,7 +76,7 @@ class Layout extends React.Component {
       <div>
         <GlobalStyle />
         <Header />
-        <main>{children}</main>
+        <main className={className}>{children}</main>
         <StyledFooter className="container">
           Copyright 2019. boramkim All rights reserved.
         </StyledFooter>

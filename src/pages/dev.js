@@ -1,4 +1,5 @@
 import React from "react"
+import styled from 'styled-components'
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -10,33 +11,116 @@ class BlogIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
+    const PageTitle = styled.h2`
+      float: left;
+      width: 30%;
+      margin: 50px 0 0;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #111;
+      line-height: 1.8;
+      letter-spacing: -0.4px;
+      word-break: break-all;
+    `
+    const PostList = styled.ul`
+      float: left;
+      width:70%;
+    `
+    const PostListItem = styled.li`
+      border: 1px solid transparent;
+      list-style: none;
+      -webkit-transition: box-shadow 200ms, margin 200ms, border 200ms;
+      transition: box-shadow 200ms, margin 200ms, border 200ms;
+      &:after { 
+        content: '';
+        display: block;
+        margin: 0 50px;
+        border-bottom: 1px dashed #e0e0e0;
+      }
+      &:hover {
+        margin-top: -10px; 
+        margin-bottom: 10px;
+        border: 1px solid #111;
+        background-color: #fff;
+        box-shadow: 15px 15px 0 0 rgba(0,0,0,0.1);
+        &:after { border-bottom-color: transparent }
+      }
+      &:active {
+        margin-top: -5px;
+        margin-bottom: 5px;
+        box-shadow: 5px 5px 0 0 rgba(0,0,0,0.2);
+        .post-title { color:#111; }
+      }
+    `
+    const PostLink = styled(Link)`
+      display: block;
+      min-height: 193px;
+      padding: 50px;
+    `
+
+    const PostTitle = styled.span`
+      font-size: 1.3em;
+      color: #333;
+      line-height: 1.3;
+    `
+
+    const Tags = styled.div`
+      margin-top:10px;
+    `
+    
+    const Tag = styled.div`
+      float: left;
+      margin-right: 15px;
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1;
+      &:before { content:'#'; }
+    `
+
+    const PostDate = styled.div`
+      margin-top: 30px;
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1;
+    `
+
+    const PostTags = function(props){
+      const hasTags = props.hasTags;
+      if (hasTags) {
+        return  (
+          <Tags className="clear">
+            {hasTags.map((item, index) => {
+              return <Tag key={index}>{item}</Tag>
+            })}
+          </Tags>
+        );
+      }
+      return null;
+    }
+
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        
-        
-        <h2 className="page-title">all<br/>development<br/>posts</h2>
+      <Layout className={`container clear page`} location={this.props.location} title={siteTitle}>
+        <PageTitle>all<br />development<br />posts</PageTitle>
         <SEO
-          title="dev post"
+          title="development posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <ul className="post-list">
-        
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <li className="post-list-item" key={node.fields.slug}>
-              <h3>
-                <Link to={node.fields.slug}>
-                  <span className="post-title">{title}</span>
-                  {/* <div className="post-tags">
-                    <span className="post-tag {{ tag }}">{{ tag }}</span>
-                  </div> */}
-                  <div className="post-date">{node.frontmatter.date}</div>
-                </Link>
-              </h3>
-            </li>
-          )
-        })}
+        <PostList> 
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <PostListItem key={node.fields.slug}>
+                <h3>
+                  <PostLink to={node.fields.slug}>
+                    <PostTitle>{title}</PostTitle>
+                    <PostTags hasTags={node.frontmatter.tags}></PostTags>
+                    <PostDate>{node.frontmatter.date}</PostDate>
+                  </PostLink>
+                </h3>
+              </PostListItem>
+            )
+          })}
+        </PostList>
         {/* {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -56,7 +140,6 @@ class BlogIndex extends React.Component {
           )
         })} */}
 
-        </ul>
 
       </Layout>
     )
@@ -80,8 +163,11 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
+            categories
+            tags
+            published
+            date(formatString: "YYYY MM DD")
             description
           }
         }
