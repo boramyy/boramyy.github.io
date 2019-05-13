@@ -8,7 +8,15 @@ class Header extends React.Component {
     const StyledHeader = styled.header`
       padding-top:60px;
     `;
+
+    const Nav = styled.nav`
+      float: right;
+      height: 30px;
+    `;
+
     const NavLink = styled(Link)`
+      display: block;
+      float: left;
       margin-left:20px;
       padding:5px;
       font-size:15px;
@@ -24,23 +32,28 @@ class Header extends React.Component {
     `;
 
     const Logo = styled(NavLink)`
+      margin-top: 5px;
       margin-left: 0;
+      padding: 0;
     `;
 
     const NavLinkWithATag = styled.a`
+      display: block;
+      float: left;
       margin-left:20px;
       padding: 5px;
       font-family:'Noto Sans KR', san-serif;
       fill: #777;
       text-decoration: none;
-      svg {vertical-align: middle}
+      svg {
+        display: block;
+        vertical-align: middle
+      }
       &:hover {fill: #000;}
     `;
-    const Nav = styled.nav`
-      float: right;
-    `;
+    
     return (
-      <StyledHeader className="container">
+      <StyledHeader className="container clear">
         <HiddenText text="Boram Kim"/>
         <Logo to={`/`} className="logo" activeClassName="on">
           <svg width="18px" height="18px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25"
