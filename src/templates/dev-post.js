@@ -169,14 +169,14 @@ class DevPostTemplate extends React.Component {
         <AnotherPostBox>
           {previous && (
             <AnotherPost className="prev" to={previous.fields.slug} rel="prev">
-              <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
                 <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
               </svg> {previous.frontmatter.title}
             </AnotherPost>
           )}
           {next && (
             <AnotherPost className="next" to={next.fields.slug} rel="next">
-              {next.frontmatter.title} <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              {next.frontmatter.title} <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
                 <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
               </svg>
             </AnotherPost>

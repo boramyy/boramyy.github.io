@@ -38,9 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
-      const template = null;
-
-      console.dir(post.node.frontmatter.categories)
+      let template = null;
       
       switch (post.node.frontmatter.categories) {
         case 'development':
@@ -56,7 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
           break;
 
         default:
-          template = path.resolve(`./src/templates/404.js`);
+          template = path.resolve(`./src/templates/dev-post.js`);
           break;
       }
 
