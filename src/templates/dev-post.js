@@ -79,12 +79,25 @@ class DevPostTemplate extends React.Component {
         color:#51b6e0;
         &:hover {color:#77d7ff}
       }
-      ul {
+      ul, ol {
         padding-left:20px;
         li {
-          // margin-bottom: 12px;
+          line-height: 2.2;
           list-style:inside;
         }
+      }
+      blockquote {
+        margin-top: 70px;
+        margin-bottom: 100px;
+        padding: 40px 50px;
+        font-size: 0.9em;
+        line-height: 1.8;
+        border: 1px solid #ccc;
+        box-shadow: 15px 15px 0 0 rgba(0,0,0,0.1);
+        h2, h3, h4, h5, h6 {
+          margin-top: 15px;
+        }
+        p {font-size: 16px;}
       }
     `
 
@@ -182,38 +195,6 @@ class DevPostTemplate extends React.Component {
             </AnotherPost>
           )}
         </AnotherPostBox>
-
-
-
-
-
-
-
-{/* 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul> */}
       </StyledLayout>
     )
   }
