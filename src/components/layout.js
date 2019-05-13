@@ -11,7 +11,6 @@ class Layout extends React.Component {
         height: 100%;
         max-width: 100%;
         overflow-x: hidden;
-        scroll-behavior: smooth;
       }
 
       ::-moz-selection {color:#fff;background:#ff6db6}
