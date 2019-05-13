@@ -73,9 +73,9 @@ class Header extends React.Component {
           </svg>
         </Logo>
         <Nav>
-          <NavLink to={`/dev`} className="nav-item" activeClassName="on">dev</NavLink>
-          <NavLink to={`/prj`} className="nav-item" activeClassName="on">prj</NavLink>
-          <NavLink to={`/pht`} className="nav-item" activeClassName="on">pht</NavLink>
+          <NavLink to={`/dev`} className="nav-item" activeClassName="on" partiallyActive={true}>dev</NavLink>
+          <NavLink to={`/prj`} className="nav-item" activeClassName="on" partiallyActive={true}>prj</NavLink>
+          <NavLink to={`/pht`} className="nav-item" activeClassName="on" partiallyActive={true}>pht</NavLink>
           <NavLinkWithATag href={`https://github.com/boramyy`} className={[`nav-item`, `link`]}>
             <svg viewBox="0 0 32 32" width="16" height="16">
               <path
