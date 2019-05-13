@@ -42,6 +42,29 @@ class Layout extends React.Component {
         font-size: 0.85em;
       }
       
+      h2, h3, h4, h5, h6 {
+        margin-top: 100px;
+        margin-bottom: 30px;
+        font-family: 'Noto Sans KR', san-serif;
+        font-weight: bold;
+        color:#333;
+        line-height: 1;
+      }
+
+      h2 {
+        font-size:1.85em;
+        font-weight:normal;
+        color:#111;
+        line-height:1.8;
+        letter-spacing:-0.4px;
+        word-spacing:5px;
+      }
+
+      h3 {font-size:1.6em;}
+      h4 {font-size:1.3em;margin-top:60px;margin-bottom:15px;}
+      h5 {font-size:1.1em;margin-top:45px;margin-bottom:15px;}
+      h6 {font-size:1em;margin-top:30px;margin-bottom:15px;}
+      
       .clear {
         &:after {
           content: '';

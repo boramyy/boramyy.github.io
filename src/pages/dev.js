@@ -51,6 +51,11 @@ class BlogIndex extends React.Component {
         box-shadow: 5px 5px 0 0 rgba(0,0,0,0.2);
         .post-title { color:#111; }
       }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: normal;
+      }
     `
     const PostLink = styled(Link)`
       display: block;
@@ -59,16 +64,16 @@ class BlogIndex extends React.Component {
     `
 
     const PostTitle = styled.span`
-      font-size: 1.3em;
+      font-size: 22px;
       color: #333;
-      line-height: 1.3;
+      line-height: 1.5;
     `
 
     const Tags = styled.div`
-      margin-top:10px;
+      margin-top:12px;
     `
     
-    const Tag = styled.div`
+    const PostTag = styled.div`
       float: left;
       margin-right: 15px;
       font-size: 13px;
@@ -85,12 +90,12 @@ class BlogIndex extends React.Component {
     `
 
     const PostTags = function(props){
-      const hasTags = props.hasTags;
-      if (hasTags) {
+      const tags = props.tags;
+      if (tags) {
         return  (
           <Tags className="clear">
-            {hasTags.map((item, index) => {
-              return <Tag key={index}>{item}</Tag>
+            {tags.map((item, index) => {
+              return <PostTag key={index}>{item}</PostTag>
             })}
           </Tags>
         );
@@ -113,7 +118,7 @@ class BlogIndex extends React.Component {
                 <h3>
                   <PostLink to={node.fields.slug}>
                     <PostTitle>{title}</PostTitle>
-                    <PostTags hasTags={node.frontmatter.tags}></PostTags>
+                    <PostTags tags={node.frontmatter.tags} />
                     <PostDate>{node.frontmatter.date}</PostDate>
                   </PostLink>
                 </h3>
