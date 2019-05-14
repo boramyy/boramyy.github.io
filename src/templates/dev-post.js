@@ -15,7 +15,7 @@ class DevPostTemplate extends React.Component {
     const StyledLayout = styled(Layout)`
       padding-top: 50px;
       padding-right: 12%;
-      padding-bottom: 150px;
+      padding-bottom: 50px;
       padding-left: 12%;
     `
     const PostHeader = styled.div`
