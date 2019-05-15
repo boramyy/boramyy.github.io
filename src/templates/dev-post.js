@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'styled-components'
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import User from "../components/user"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -54,9 +54,11 @@ class DevPostTemplate extends React.Component {
     `
 
     const StyledContent = styled.div`
+      padding-bottom: 120px;
       color: #444;
       letter-spacing: 0;
       word-spacing: 2px;
+      // border-bottom: 1px solid #111;
       p {
           font-size: 18px;
           font-family: "Nanum Gothic",san-serif;
@@ -105,15 +107,12 @@ class DevPostTemplate extends React.Component {
       overflow: hidden;
       display: block;
       width: 100%;
-      padding-top: 30px;
-      padding-bottom: 50px;
-      border-top: 1px solid #eee;
     `
 
     const AnotherPost = styled(Link)`
       display: flex;
       width: 50%;
-      height: 200px;
+      height: 120px;
       font-size: 20px;
       line-height: 1.6;
       align-items: center;
@@ -176,8 +175,7 @@ class DevPostTemplate extends React.Component {
         </PostHeader>
 
         <StyledContent dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
-        <Bio />
+        <User />
 
         <AnotherPostBox>
           {previous && (
