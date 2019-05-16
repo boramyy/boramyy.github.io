@@ -75,6 +75,9 @@ class DevPostTemplate extends React.Component {
         display: block;
         margin: 30px auto;
       }
+      .gatsby-resp-image-wrapper {
+        margin: 50px auto;
+      }
       a {
         font-size: 18px;
         line-height: 2.2;
