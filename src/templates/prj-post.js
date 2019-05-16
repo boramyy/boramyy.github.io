@@ -6,7 +6,7 @@ import User from "../components/user"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class DevPostTemplate extends React.Component {
+class PrjPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -207,10 +207,10 @@ class DevPostTemplate extends React.Component {
   }
 }
 
-export default DevPostTemplate
+export default PrjPostTemplate
 
 export const pageQuery = graphql`
-  query DevPostBySlug($slug: String!) {
+  query PrjPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title

@@ -1,6 +1,7 @@
 ---
 title: "테스트 테스트 Vue로 만든 Todo페이지 gh-pages에 배포하기"
 date: "2015-05-01T22:12:03.284Z"
+categories: dev
 ---
 
 ### 테스트 합시다!

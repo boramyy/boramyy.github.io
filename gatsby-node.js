@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 categories
+                published
               }
             }
           }
@@ -38,25 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
-      let template = null;
-      
-      switch (post.node.frontmatter.categories) {
-        case 'development':
-          template = path.resolve(`./src/templates/dev-post.js`);
-          break;
-      
-        case 'project':
-          template = path.resolve(`./src/templates/prj-post.js`);
-          break;
-
-        case 'photograph':
-          template = path.resolve(`./src/templates/pht-post.js`);
-          break;
-
-        default:
-          template = path.resolve(`./src/templates/dev-post.js`);
-          break;
-      }
+      let template = path.resolve(`./src/templates/${post.node.frontmatter.categories || 'blog'}-post.js`);
 
       createPage({
         path: post.node.fields.slug,
@@ -65,6 +48,27 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
+        },
+      })
+    })
+
+    // pagination for dev
+    const devPosts = posts.filter((post, index) => {
+      return post.node.frontmatter.categories === 'dev' && post.node.frontmatter.published === true
+    })
+    
+    const devPostPerPage = 7
+    const numPages = Math.ceil(devPosts.length / devPostPerPage)
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/dev` : `/dev/${i + 1}`,
+        component: path.resolve("./src/templates/dev-list.js"),
+        context: {
+          limit: devPostPerPage,
+          skip: i * devPostPerPage,
+          numPages,
+          currentPage: i + 1,
         },
       })
     })

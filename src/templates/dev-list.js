@@ -7,16 +7,26 @@ import SEO from "../components/seo"
 
 class BlogIndex extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      next: '',
+      prev: ''
+    };
+  }
+
   componentDidMount() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    console.dir(posts);
+    const { currentPage } = this.props.pageContext
+    const prevPage = currentPage - 1 === 1 ? '/dev' : '/dev/' + (currentPage - 1)
+    const nextPage = '/dev/' + (currentPage + 1)
+
+    this.setState({
+      next: nextPage,
+      prev: prevPage
+    })
   }
 
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-
     const PageTitle = styled.h2`
       float: left;
       width: 30%;
@@ -78,7 +88,7 @@ class BlogIndex extends React.Component {
     const Tags = styled.div`
       margin-top:12px;
     `
-    
+
     const PostTag = styled.div`
       float: left;
       margin-right: 15px;
@@ -95,10 +105,10 @@ class BlogIndex extends React.Component {
       line-height: 1;
     `
 
-    const PostTags = function(props){
+    const PostTags = function (props) {
       const tags = props.tags;
       if (tags) {
-        return  (
+        return (
           <Tags className="clear">
             {tags.map((item, index) => {
               return <PostTag key={index}>{item}</PostTag>
@@ -109,6 +119,63 @@ class BlogIndex extends React.Component {
       return null;
     }
 
+    const Pagination = styled.div`
+      position:fixed;
+      top: 52%;
+      left: 15%;
+    `
+
+    const PaginationLocation = styled.div`
+      position: absolute;
+      top: 180px;
+      left: 0;
+      font-size: 15px;
+      font-weight: 100;
+    `
+
+    const PaginationNum = styled(Link)`
+      &.on {color:#000}
+    `
+
+    const Arrow = styled(Link)`
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-bottom: 1px solid #111;
+      border-right: 1px solid #111;
+      -webkit-transition: border 100ms;
+      transition: border 100ms;
+      &:hover {
+        border-bottom-width: 4px;
+        border-right-width: 4px
+      }
+      &.left {
+        display: block;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+      &.right {
+        display: block;
+        margin-top:40px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      &.off {
+        cursor: none;
+        pointer-events: none;
+        border-right-style: dashed;
+        border-bottom-style: dashed
+      }
+    `
+
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+    
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+
     return (
       <Layout className={`container clear page`} location={this.props.location} title={siteTitle}>
         <PageTitle>all<br />development<br />posts</PageTitle>
@@ -116,7 +183,7 @@ class BlogIndex extends React.Component {
           title="development posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <PostList> 
+        <PostList>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -132,26 +199,19 @@ class BlogIndex extends React.Component {
             )
           })}
         </PostList>
-        {/* {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-                />
+        
+        {numPages > 1 && (
+          <Pagination>
+              <PaginationLocation>
+                <span>{currentPage} / {numPages}</span>
+              </PaginationLocation>
+            <div id="arrow-box">
+              <Arrow className={`left${isFirst ? ' off' : ''}`} to={this.state.prev} />
+              <Arrow className={`right${isLast ? ' off' : ''}`} to={this.state.next} />
             </div>
-          )
-        })} */}
-
-
+          </Pagination>
+        )}
+        
       </Layout>
     )
   }
@@ -160,13 +220,21 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
+  query listtQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: {
+        categories: { eq: "dev" }
+        published: { eq: true }
+      }}
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           excerpt

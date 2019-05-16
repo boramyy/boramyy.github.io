@@ -111,7 +111,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout className={`container clear page`} location={this.props.location} title={siteTitle}>
-        <PageTitle>all<br />development<br />posts</PageTitle>
+        <PageTitle>projects~</PageTitle>
         <SEO
           title="development posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -132,26 +132,6 @@ class BlogIndex extends React.Component {
             )
           })}
         </PostList>
-        {/* {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-                />
-            </div>
-          )
-        })} */}
-
-
       </Layout>
     )
   }
@@ -166,7 +146,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: {
+        categories: { eq: "prj" }
+      }}
+        sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt

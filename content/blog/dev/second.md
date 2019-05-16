@@ -1,6 +1,7 @@
 ---
 title: test 1-2
 date: "2015-05-01T22:12:03.284Z"
+categories: dev
 ---
 
 This is my first post on my new fake blog! How exciting!
