@@ -133,10 +133,6 @@ class BlogIndex extends React.Component {
       font-weight: 100;
     `
 
-    const PaginationNum = styled(Link)`
-      &.on {color:#000}
-    `
-
     const Arrow = styled(Link)`
       display: block;
       width: 100px;

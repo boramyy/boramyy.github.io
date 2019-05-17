@@ -2,7 +2,6 @@ import React from "react"
 import styled from 'styled-components'
 import { Link, graphql } from "gatsby"
 
-import User from "../components/user"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -19,112 +18,78 @@ class PrjPostTemplate extends React.Component {
       padding-left: 12%;
     `
     const PostHeader = styled.div`
-      overflow: hidden;
-      margin-top: 100px;
-      margin-bottom: 150px;
-    `
-
-    const PostTitle = styled.h2`
-      float: left;
-      width: 50%;
-      margin-top: 0;
-      margin-right: 15%;
+      margin-top: 50px;
+      padding-left: 8%;
+      font-weight: 100;
       color: #111;
     `
 
-    const PostHeaderRight = styled.div`
-      float: left;
-      width: 35%;
-      margin-top: 10px;
-      font-size: 15px;
-      font-weight: 100;
+    const PostTitle = styled.h2`
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-size: 72px;
+      font-weight: bold;
+    `
+
+    const PostGroup = styled.span`
+      margin-right: 10px;
+      font-size: 20px;
     `
 
     const Tags = styled.div`
-      margin-bottom:15px;
+      display: inline-block;
     `
 
     const PostTag = styled.span`
-      margin-right: 15px;
-      line-height: 30px;
+      margin-left: 6px;
+      font-size: 20px;
     `
     
-    const PostDate = styled.span`
-      line-height: 30px;
+    const PostLink = styled.a`
+      display: block;
+      margin-top: 50px;
+      font-size: 15px;
+      line-height: 2;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: #999;
+      }
     `
-
-    const StyledContent = styled.div`
-      padding-bottom: 120px;
-      color: #444;
-      letter-spacing: 0;
-      word-spacing: 2px;
-      // border-bottom: 1px solid #111;
-      p {
-          font-size: 18px;
-          font-family: "Nanum Gothic",san-serif;
-          line-height: 2.2;
-          letter-spacing: -0.4px;
-        }
-      }
-      hr {
-        margin-top: 50px;
-        border: 0;
-        border-top: 1px solid #bbb;
-      }
-      img, video {
-        display: block;
-        margin: 30px auto;
-      }
-      .gatsby-resp-image-wrapper {
-        margin: 50px auto;
-      }
-      em { 
-        display: block;
-        font-size: 16px;
-        text-align: center;
-        font-style: italic;
-        font-weight: 100;
-      }
-      a {
-        font-size: 18px;
-        color:#51b6e0;
-        &:hover {color:#77d7ff}
-      }
-      ul, ol {
-        padding-left:20px;
-        li {
-          line-height: 2.2;
-          list-style:inside;
-        }
-      }
-      blockquote {
-        margin-top: 70px;
-        margin-bottom: 100px;
-        padding: 40px 50px;
-        font-size: 0.9em;
-        line-height: 1.8;
-        border: 1px solid #ccc;
-        box-shadow: 15px 15px 0 0 rgba(0,0,0,0.1);
-        h2, h3, h4, h5, h6 {
-          margin-top: 15px;
-        }
-        p {font-size: 16px;}
-      }
+    const PostDate = styled.span`
+      display: block;
+      margin-top: 4px;
+      font-size: 15px;
+      line-height: 2;
+    `
+    const SvgIcon = styled.svg`
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+      fill: none;
+      stroke: #000;
+      stroke-width: 1.5px;
+      stroke-miterlimit: 10;
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
     `
 
     const AnotherPostBox = styled.div`
       overflow: hidden;
       display: block;
       width: 100%;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      border-top: 1px solid #eee;
     `
 
     const AnotherPost = styled(Link)`
       display: flex;
       width: 50%;
-      height: 120px;
-      font-size: 20px;
-      line-height: 1.6;
+      height: 200px;
+      font-size: 36px;
       align-items: center;
+
       &.prev {
         float: left;
         justify-content: flex-start;
@@ -142,7 +107,7 @@ class PrjPostTemplate extends React.Component {
         }
       }
       &:hover {
-        color:#ff6db6;
+        color: #ff6db6;
         svg {
           fill:#ff6db6;
         }
@@ -168,6 +133,32 @@ class PrjPostTemplate extends React.Component {
       return null;
     }
 
+    const PostContent = styled.article`
+      margin-top:100px;
+      .prj-data {
+        .content-box {}
+        .text-box {
+          .title {margin-top:0;font-size:1.4em;}
+          .text {font-size:0.9em;line-height:2.4;}
+        }
+        &.prj02 {
+          .content-box-1 {
+            position:relative;width:70%;min-height:515px;margin-right:-100px;padding:150px 8% 120px;background:rgba(79, 192, 141, 0.9);
+            .text-box-1 {
+              width:35%;
+              .title {color:#fff;}
+              .text {color:#fff;}
+            }
+            .main-img {position:absolute;top:-120px;left:52%;display:block;width:900px;-webkit-box-shadow:-18px 20px 30px rgba(0,0,0,0.1);box-shadow:-18px 20px 30px rgba(0,0,0,0.1);}
+          }
+          .content-box-2 {
+            @extend %clearFloat;position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto;padding:200px 0 150px;
+            .screenshot {float:left;width:40%;max-width:550px;margin:0 5%;-webkit-box-shadow:-16px 25px 35px rgba(0,0,0,0.1);box-shadow:-16px 25px 35px rgba(0,0,0,0.1);}
+          }
+        }
+      }
+    `
+
     return (
       <StyledLayout location={this.props.location} title={siteTitle}>
         <SEO
@@ -175,33 +166,51 @@ class PrjPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
 
-        <PostHeader>
-          <PostTitle>{post.frontmatter.title}</PostTitle>
-          <PostHeaderRight>
-            <PostTags tags={post.frontmatter.tags} />
-            <PostDate>{post.frontmatter.date}</PostDate>
-          </PostHeaderRight>
-        </PostHeader>
+          <PostHeader>
+            <PostTitle>{post.frontmatter.title}</PostTitle>
+            <PostGroup>{post.frontmatter.group} </PostGroup> / <PostTags tags={post.frontmatter.tags}/>
+            <PostLink href={post.frontmatter.golink} target="_blank">
+              <SvgIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                <title>link</title>
+                <polyline points="27.5 12.23 27.5 0.5 15.77 0.5" />
+                <line x1="27.5" y1="0.5" x2="12.43" y2="15.57" />
+                <polyline points="12.69 4.53 0.5 4.53 0.5 27.5 23.47 27.5 23.47 15.31" />
+              </SvgIcon>
+              {post.frontmatter.golink}
+            </PostLink>
+            <PostDate>
+              <SvgIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.88 26.5">
+                <title>calendar</title>
+                <rect x="0.5" y="3.54" width="27.88" height="22.46" />
+                <line x1="28.38" y1="10.98" x2="0.5" y2="10.98" />
+                <line x1="7.02" x2="7.02" y2="7.13" />
+                <line x1="21.86" x2="21.86" y2="7.13" />
+              </SvgIcon>
+              {post.frontmatter.date}
+            </PostDate>
+          </PostHeader>
 
-        <StyledContent dangerouslySetInnerHTML={{ __html: post.html }} />
-        <User />
+          <PostContent>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <AnotherPostBox>
-          {previous && (
-            <AnotherPost className="prev" to={previous.fields.slug} rel="prev">
-              <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
-                <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-              </svg> {previous.frontmatter.title}
-            </AnotherPost>
-          )}
-          {next && (
-            <AnotherPost className="next" to={next.fields.slug} rel="next">
-              {next.frontmatter.title} <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
-                <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-              </svg>
-            </AnotherPost>
-          )}
-        </AnotherPostBox>
+            <AnotherPostBox>
+              {previous && (
+                <AnotherPost className="prev" to={previous.fields.slug} rel="prev">
+                  <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
+                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                  </svg> {previous.frontmatter.title}
+                </AnotherPost>
+              )}
+              {next && (
+                <AnotherPost className="next" to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
+                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                  </svg>
+                </AnotherPost>
+              )}
+            </AnotherPostBox>
+          </PostContent>
+
       </StyledLayout>
     )
   }
@@ -223,7 +232,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "YYYY MM DD")
+        date(formatString: "YYYY MM")
         categories
         group
         tags

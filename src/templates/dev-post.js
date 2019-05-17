@@ -60,11 +60,10 @@ class DevPostTemplate extends React.Component {
       word-spacing: 2px;
       // border-bottom: 1px solid #111;
       p {
-          font-size: 18px;
-          font-family: "Nanum Gothic",san-serif;
-          line-height: 2.2;
-          letter-spacing: -0.4px;
-        }
+        font-size: 18px;
+        font-family: "Nanum Gothic",san-serif;
+        line-height: 2.2;
+        letter-spacing: -0.4px;
       }
       hr {
         margin-top: 50px;

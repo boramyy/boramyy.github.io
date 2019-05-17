@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 categories
                 published
+                date
               }
             }
           }
@@ -37,17 +38,34 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
-      let template = path.resolve(`./src/templates/${post.node.frontmatter.categories || 'blog'}-post.js`);
+      const category = post.node.frontmatter.categories
 
+      // const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      // const next = index === 0 ? null : posts[index - 1].node
+
+      let prevPost = null;
+      let nextPost = null;
+
+      posts.forEach((item, idx) => {
+        if (item.node.frontmatter.categories === category && item.node.frontmatter.published === true) {
+          if (idx < index) {
+            prevPost = item.node;
+          }
+          if (idx > index && nextPost === null) {
+            nextPost = item.node;
+          }
+        }
+      });
+     
+      let template = path.resolve(`./src/templates/${category || 'blog'}-post.js`);
+      
       createPage({
         path: post.node.fields.slug,
         component: template,
         context: {
           slug: post.node.fields.slug,
-          previous,
-          next,
+          previous: prevPost,
+          next: nextPost
         },
       })
     })

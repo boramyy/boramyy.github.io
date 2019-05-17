@@ -7,11 +7,6 @@ import SEO from "../components/seo"
 
 class BlogIndex extends React.Component {
 
-  componentDidMount() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    console.dir(posts);
-  }
-
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
