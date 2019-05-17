@@ -141,21 +141,6 @@ class PrjPostTemplate extends React.Component {
           .title {margin-top:0;font-size:1.4em;}
           .text {font-size:0.9em;line-height:2.4;}
         }
-        &.prj02 {
-          .content-box-1 {
-            position:relative;width:70%;min-height:515px;margin-right:-100px;padding:150px 8% 120px;background:rgba(79, 192, 141, 0.9);
-            .text-box-1 {
-              width:35%;
-              .title {color:#fff;}
-              .text {color:#fff;}
-            }
-            .main-img {position:absolute;top:-120px;left:52%;display:block;width:900px;-webkit-box-shadow:-18px 20px 30px rgba(0,0,0,0.1);box-shadow:-18px 20px 30px rgba(0,0,0,0.1);}
-          }
-          .content-box-2 {
-            @extend %clearFloat;position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto;padding:200px 0 150px;
-            .screenshot {float:left;width:40%;max-width:550px;margin:0 5%;-webkit-box-shadow:-16px 25px 35px rgba(0,0,0,0.1);box-shadow:-16px 25px 35px rgba(0,0,0,0.1);}
-          }
-        }
       }
     `
 

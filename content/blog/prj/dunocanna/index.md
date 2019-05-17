@@ -54,7 +54,7 @@ published: true
     </div>
   </div>
 
-  <div class="content-box content-box-2">
+  <div class="content-box content-box-2 clear">
     <video class="screenshot screenshot-1" autoplay muted loop>
       <source src="./dunocanna_slider.mp4" type="video/mp4">
       Your browser does not support the video tag.
