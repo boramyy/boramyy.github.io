@@ -1,6 +1,6 @@
 ---
 title: "gatsby에서 styled-component 사용하기"
-date: "2019-05-02"
+date: "2019-05-02T02"
 categories: dev
 tags: ['gatsby', 'react', 'styled-component']
 published: true
