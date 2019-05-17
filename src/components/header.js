@@ -4,9 +4,18 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 
 class Header extends React.Component {
+
   render() {
+    const { className } = this.props
+
     const StyledHeader = styled.header`
       padding-top:60px;
+      &.fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
     `;
 
     const Nav = styled.nav`
@@ -53,7 +62,7 @@ class Header extends React.Component {
     `;
     
     return (
-      <StyledHeader className="container clear">
+      <StyledHeader className={`container clear ${className}`}>
         <HiddenText text="Boram Kim"/>
         <Logo to={`/`} className="logo" activeClassName="on">
           <svg width="18px" height="18px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25"

@@ -220,7 +220,7 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query listtQuery($skip: Int!, $limit: Int!) {
+  query devListQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title

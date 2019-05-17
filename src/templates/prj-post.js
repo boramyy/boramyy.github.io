@@ -223,11 +223,14 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        categories
-        tags
-        published
         date(formatString: "YYYY MM DD")
+        categories
+        group
+        tags
+        excerpt
+        golink
         description
+        published
       }
     }
   }
