@@ -26,39 +26,59 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-beee9786a745d4e8ac1c.js"
+    "url": "webpack-runtime-e0b5fca90af1b6261770.js"
   },
   {
-    "url": "styles.1025963f4f2ec7abbad4.css"
+    "url": "styles.a77d44fe7f8f3a1f2f02.css"
   },
   {
-    "url": "styles-12b50b0331563bca0609.js"
+    "url": "styles-a57e630e681a3b192501.js"
   },
   {
-    "url": "app-ba3b92a67203de479a7d.js"
+    "url": "app-9341165d9ed20d053f24.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-78f9e4dea04737fa062d.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-4ce7f49cec02d9b9d831.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d0ae44c2a69c6e54e1e8533dbccb0774"
+    "revision": "b4b5a712d920367c9847c557e84579e3"
   },
   {
-    "url": "component---src-pages-404-js-986b78fdf457dbffb47f.js"
+    "url": "google-fonts/s/nanumgothic/v16/PN_3Rfi-oW3hYwmKDpxS7F_D-dje.woff2",
+    "revision": "01fe0d37c63c0cdc03b3745c03d01e2d"
   },
   {
-    "url": "0-490333d2da4258caf881.js"
+    "url": "google-fonts/s/notosanskr/v11/Pby6FmXiEBPT4ITbgNA5CgmOsk7lyJc.woff2",
+    "revision": "b047fc8e25a874bece3e3c5234de05af"
   },
   {
-    "url": "static/d/434/path---404-html-516-62a-enp7cNhiAgTKKeZZfzV8YrZDs8.json"
+    "url": "google-fonts/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIR.woff2",
+    "revision": "c8f6d5258b4c57c91be8179a872ccc08"
+  },
+  {
+    "url": "google-fonts/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237t.woff2",
+    "revision": "7b91af55b8d0b4df6adc4c5d6810037a"
+  },
+  {
+    "url": "google-fonts/s/robotomono/v6/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2",
+    "revision": "0c94e034ca06357576c2d03d623e1fcd"
+  },
+  {
+    "url": "component---src-pages-404-js-8639511a49403537e4be.js"
+  },
+  {
+    "url": "0-e6dc059f2183c949ff8a.js"
+  },
+  {
+    "url": "static/d/580/path---404-html-516-62a-HczQQcJX4DRuzlJYqTacHK6JUI.json"
   },
   {
     "url": "static/d/604/path---offline-plugin-app-shell-fallback-a-30-c5a-BawJvyh36KKFwbrWPg4a4aYuc8.json"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "9657775b68862db0f366cfe11943fa70"
+    "revision": "67ed4a3366e89da4b2627b3bfa599ef0"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
