@@ -176,7 +176,7 @@ class BlogIndex extends React.Component {
       <Layout className={`container clear page`} location={this.props.location} title={siteTitle}>
         <PageTitle>all<br />development<br />posts</PageTitle>
         <SEO
-          title="development posts"
+          title="dev posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <PostList>

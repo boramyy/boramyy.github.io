@@ -216,7 +216,7 @@ class BlogIndex extends React.Component {
       <Layout fixed={true} location={this.props.location} title={siteTitle}>
         <HiddenText text="Project List" />
         <SEO
-          title="project list"
+          title="projects"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <NaviForPrj posts={posts} hash={this.state.hash} />

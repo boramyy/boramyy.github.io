@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `boramyy`,
+    title: `boram kim, developer`,
     author: `boramkim`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://boramyy.github.io/`,
