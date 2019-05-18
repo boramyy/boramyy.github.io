@@ -4,6 +4,10 @@ import styled from 'styled-components'
 
 class Layout extends React.Component {
 
+  componentDidMount(){
+    window.document.documentElement.classList.remove('scrollSmooth')
+  }
+  
   render() {
     const { children, className } = this.props
     
@@ -19,7 +23,7 @@ class Layout extends React.Component {
     `
 
     return (
-      <div>
+      <div className={this.props.scrollSmooth ? 'scroll-smooth' : ''}>
         <Header className={this.props.fixed ? 'fixed': ''} />
         <main className={className}>{children}</main>
         <StyledFooter className={`container${this.props.fixed ? ' fixed' : ''}`}>

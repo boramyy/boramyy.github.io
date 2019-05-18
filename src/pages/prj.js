@@ -8,9 +8,71 @@ import SEO from "../components/seo"
 
 class BlogIndex extends React.Component {
 
+  _isMounted = false;
+  
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      size: {
+        scrollAreaHeight: 0,
+        scrollBarHeight: 0,
+        prjItemHeight: 0
+      }
+    };
+  }
+  
+  componentDidMount() {
+    this._isMounted = true;
+    this.getSizeForScroll();
+    window.addEventListener("resize", this.throttle(this.getSizeForScroll, 500));
+    window.addEventListener("scroll", this.throttle(this.onScroll, 50));
+    window.document.documentElement.classList.add('scrollSmooth')
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+  
+  throttle = (callback, limit) => {
+    let tick = false;
+    return function () {
+      if (!tick) {
+        callback.call();
+        tick = true;
+        setTimeout(function () {
+          tick = false;
+        }, limit);
+      }
+    }
+  }
+
+  getSizeForScroll = () => {
+    if (this._isMounted) {
+      const scrollAreaHeight = document.getElementById('projectList').scrollHeight
+      this.setState({
+        size: {
+          ...this.state.size, ...{
+            scrollAreaHeight: scrollAreaHeight,
+            scrollBarHeight: window.innerHeight * (window.innerHeight / scrollAreaHeight) ,
+            prjItemHeight: document.getElementsByClassName('prjListItem')[0].offsetHeight
+          }
+        }
+      })
+    }
+  }
+
+  onScroll = () => {
+    const { scrollBarHeight, prjItemHeight } = this.state.size
+    const prjNavs = document.getElementsByClassName('prjnav');
+    const currentPrjNum = Math.floor((window.scrollY + scrollBarHeight) / prjItemHeight);
+
+    Array.from(prjNavs).forEach((item, index) => {
+      item.classList.remove('on');
+      if (index === currentPrjNum) {
+        item.classList.add('on')
+      }
+    });
+
+    // window.location.hash = document.getElementsByClassName('prjnav')[currentPrjNum].hash.replace('#', '')
   }
 
   render() {
@@ -82,7 +144,7 @@ class BlogIndex extends React.Component {
     const ProjectThumb = styled.div`
       position: absolute;
       top: 50%;
-      right: 4%;
+      right: 2%;
       width: 68%;
       max-width: 600px;
       border-radius: 0;
@@ -105,6 +167,44 @@ class BlogIndex extends React.Component {
       }
     `
 
+    const LinkDot = styled.a`
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 12px 15px;
+      border-radius: 50%;
+      border: 1px solid #333;
+      background-color: transparent;
+      &:hover {
+        border-color: #aaa;
+      }
+      &.on {
+        background-color: #333;
+      }
+    `
+
+    const StyledNaviForPrj = styled.div`
+      position: fixed;
+      top: 50%;
+      left: 100px;
+      z-index: 999;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    `
+
+    const NaviForPrj = (props) => {
+      const posts = props.posts;
+      return (
+        <StyledNaviForPrj>
+          {posts.map(({node}, index) => {
+            const prjname = node.frontmatter.prjname
+            const isPrjMain = window.location.hash === ''
+            const isCurrentPath = window.location.hash === `#${prjname}`
+            return (<LinkDot key={prjname} className={`prjnav${isCurrentPath || (isPrjMain && index) === 0 ? ' on' : ''}`} href={`#${prjname}`} />)
+          })}
+        </StyledNaviForPrj>
+      );
+    }
 
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -117,11 +217,12 @@ class BlogIndex extends React.Component {
           title="project list"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <ProjectList>
+        <NaviForPrj posts={posts}/>
+        <ProjectList id="projectList">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <ProjectListItem key={node.fields.slug}>
+              <ProjectListItem key={node.fields.slug} id={node.frontmatter.prjname} className="prjListItem">
                 <ProjectHTag>
                   <ProjectItemLink to={node.fields.slug}>
                     <ProjectText>
@@ -164,6 +265,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            prjname
             date(formatString: "YYYY MM DD")
             categories
             group

@@ -1,5 +1,6 @@
 ---
 title: "todo with vue"
+prjname: "v-todo"
 excerpt: "Vue를 사용하여 작성한 todo 페이지입니다."
 date: 2018-10-12
 golink: "https://boramyy.github.io/v-todo/"

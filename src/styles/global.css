@@ -4,6 +4,10 @@ html {
   overflow-x: hidden;
 }
 
+html.scrollSmooth {
+  scroll-behavior: smooth;
+}
+
 ::-moz-selection {color:#fff;background:#ff6db6}
 ::selection {color:#fff;background:#ff6db6}
 

@@ -74,7 +74,6 @@ exports.createPages = ({ graphql, actions }) => {
     const devPosts = posts.filter((post, index) => {
       return post.node.frontmatter.categories === 'dev' && post.node.frontmatter.published === true
     })
-    
     const devPostPerPage = 7
     const numPages = Math.ceil(devPosts.length / devPostPerPage)
 

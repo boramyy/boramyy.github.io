@@ -13,9 +13,7 @@ class PrjPostTemplate extends React.Component {
 
     const StyledLayout = styled(Layout)`
       padding-top: 50px;
-      padding-right: 12%;
-      padding-bottom: 50px;
-      padding-left: 12%;
+      // padding-bottom: 50px;
     `
     const PostHeader = styled.div`
       margin-top: 50px;
@@ -38,11 +36,12 @@ class PrjPostTemplate extends React.Component {
 
     const Tags = styled.div`
       display: inline-block;
-    `
-
-    const PostTag = styled.span`
+      `
+      
+      const PostTag = styled.span`
       margin-left: 6px;
       font-size: 20px;
+      line-height: 2;
     `
     
     const PostLink = styled.a`
@@ -65,7 +64,7 @@ class PrjPostTemplate extends React.Component {
     const SvgIcon = styled.svg`
       width: 14px;
       height: 14px;
-      margin-right: 10px;
+      margin-right: 14px;
       fill: none;
       stroke: #000;
       stroke-width: 1.5px;
@@ -136,16 +135,25 @@ class PrjPostTemplate extends React.Component {
     const PostContent = styled.article`
       margin-top:100px;
       .prj-data {
-        .content-box {}
+        .content-box {
+          p {
+            font-family: 'Nanum Gothic', san-serif;
+          }
+        }
         .text-box {
-          .title {margin-top:0;font-size:1.4em;}
-          .text {font-size:0.9em;line-height:2.4;}
+          .title {
+            margin-top: 0;
+            font-size: 25px;
+          }
+          .text {
+            font-size: 16px;
+            line-height: 2.4;
+          }
         }
       }
     `
-
     return (
-      <StyledLayout location={this.props.location} title={siteTitle}>
+      <StyledLayout className={'container'} location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}

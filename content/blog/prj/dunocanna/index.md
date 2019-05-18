@@ -1,5 +1,6 @@
 ---
 title: "dunocanna"
+prjname: "dunocanna"
 excerpt: "모바일 청첩장"
 date: 2019-02-08
 golink: "https://boramyy.github.io/dunocanna/"
@@ -27,6 +28,9 @@ published: true
 .content-box-2 .screenshot,
 .content-box-2 .gatsby-resp-image-background-image {
   float:left;width:320px;margin:0 3%;-webkit-box-shadow:-16px 25px 35px rgba(0,0,0,0.2);box-shadow:-16px 25px 35px rgba(0,0,0,0.2);
+}
+.content-box-2 .gatsby-resp-image-link {
+  margin: 0 3%;
 }
 .content-box-2 .gatsby-resp-image-background-image {
   margin-right:0;margin-left:0;
