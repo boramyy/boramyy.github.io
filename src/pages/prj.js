@@ -13,6 +13,7 @@ class BlogIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      hash: '',
       size: {
         scrollAreaHeight: 0,
         scrollBarHeight: 0,
@@ -23,6 +24,7 @@ class BlogIndex extends React.Component {
   
   componentDidMount() {
     this._isMounted = true;
+    this.setState({hash: window.location.hash})
     this.getSizeForScroll();
     window.addEventListener("resize", this.throttle(this.getSizeForScroll, 500));
     window.addEventListener("scroll", this.throttle(this.onScroll, 50));
@@ -193,13 +195,13 @@ class BlogIndex extends React.Component {
     `
 
     const NaviForPrj = (props) => {
-      const posts = props.posts;
+      const {posts, hash} = props;
       return (
         <StyledNaviForPrj>
           {posts.map(({node}, index) => {
             const prjname = node.frontmatter.prjname
-            const isPrjMain = window.location.hash === ''
-            const isCurrentPath = window.location.hash === `#${prjname}`
+            const isPrjMain = hash === ''
+            const isCurrentPath = hash === `#${prjname}`
             return (<LinkDot key={prjname} className={`prjnav${isCurrentPath || (isPrjMain && index) === 0 ? ' on' : ''}`} href={`#${prjname}`} />)
           })}
         </StyledNaviForPrj>
@@ -217,7 +219,7 @@ class BlogIndex extends React.Component {
           title="project list"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <NaviForPrj posts={posts}/>
+        <NaviForPrj posts={posts} hash={this.state.hash} />
         <ProjectList id="projectList">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
