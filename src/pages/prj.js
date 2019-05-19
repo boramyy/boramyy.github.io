@@ -85,6 +85,9 @@ class BlogIndex extends React.Component {
       right: 0;
       bottom: 0;
       left: 0;
+      @media (max-width: 414px) {
+        position: relative;
+      }
     `
 
     const ProjectListItem = styled.li`
@@ -94,6 +97,17 @@ class BlogIndex extends React.Component {
       padding: 10% 20%;
       &:last-child {
         padding-bottom: 20%;
+      }
+      @media (max-width: 414px) {
+        height: 215px;
+        margin-bottom: 16%;
+        padding: 15% 10%;
+        &:nth-child(1) {
+          margin-top: 30px;
+        }
+        &:last-child {
+          margin-bottom: 120px;
+        }
       }
     `
 
@@ -116,6 +130,11 @@ class BlogIndex extends React.Component {
       &:hover {
         .project-thumb {-webkit-transform:translateY(-52%) rotate3d(0, 10, -5, -10deg);transform:translateY(-52%) rotate3d(0, 10, -5, -10deg);}
       }
+      @media (max-width: 414px) {
+        &:hover {
+          .project-thumb {right:0;-webkit-transform:translateY(-20%) rotate3d(-10, 0, -10, -10deg);transform:translateY(-20%) rotate3d(-10, 0, -10, -10deg);}
+        }
+      }
     `
 
     const ProjectText = styled.p`
@@ -125,6 +144,12 @@ class BlogIndex extends React.Component {
       transform: translateY(-62%);
       -webkit-transform: translateY(-62%);
       z-index: 2;
+      @media (max-width: 414px) {
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+        transform: none;
+      }
     `
 
     const ProjectTitle = styled.span`
@@ -135,12 +160,19 @@ class BlogIndex extends React.Component {
       color: #000;
       line-height: 1.4;
       letter-spacing: 15px;
+      @media (max-width: 414px) {
+        font-size: 24px;
+        letter-spacing: 6px;
+      }
     `
 
     const ProjectGroup = styled.span`
       display: block;
       font-size: 16px;
       font-weight: normal;
+      @media (max-width: 414px) {
+        font-size:16px;
+      }
     `
 
     const ProjectThumb = styled.div`
@@ -167,6 +199,13 @@ class BlogIndex extends React.Component {
         width: 100%;
         padding-top: 61.8%;
       }
+      @media (max-width: 414px) {
+        top: 18%;
+        right: -12%;
+        width: 100%;
+        -webkit-transform: none;
+        transform: none;
+      }
     `
 
     const LinkDot = styled.a`
@@ -192,6 +231,12 @@ class BlogIndex extends React.Component {
       z-index: 999;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
+      @media (max-width: 767px) {
+        left: 50px;
+      }
+      @media (max-width: 414px) {
+        display: none;
+      }
     `
 
     const NaviForPrj = (props) => {

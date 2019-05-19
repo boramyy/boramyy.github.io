@@ -20,6 +20,32 @@ class BlogIndex extends React.Component {
       padding-top: 100px;
       padding-bottom: 100px;
       &:nth-child(2) {padding-right:10%;padding-left:20%;}
+      @media (max-width: 767px) {
+        padding-top: 0;
+        padding-bottom: 0;
+        .group-content {
+          padding-top: 15px;
+          padding-right: 0;
+          padding-bottom: 15px;
+        }
+        &:nth-child(1) {
+          .group-title {padding:30px 35px 35px 35px;}
+        }
+      }
+      @media (max-width: 414px) {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        &:nth-child(1) {
+          margin-top:50px;
+          padding-right: 0;
+          padding-left: 0;
+        }
+        &:nth-child(2) {
+          margin-top: 80%;
+          padding-right: 5%;
+          padding-left: 10%;
+        }
+      }
     `;
 
     const MainGroupTitle = styled.h2`
@@ -34,6 +60,7 @@ class BlogIndex extends React.Component {
       word-break: keep-all;
       .thin {
         font-weight: 100;
+        color: #111;
         letter-spacing: 0px;
       }
       .desc { 
@@ -45,6 +72,18 @@ class BlogIndex extends React.Component {
         letter-spacing: 0px;
         word-spacing: 2px;
       }
+      @media (max-width: 767px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      } 
+      @media (max-width: 414px) {
+        margin: 0;
+        font-size: 46px;
+        .desc {
+          margin-top: 30px;
+          font-size: 15px;
+        }
+      }
     `;
 
     const MainImg = styled.img`
@@ -54,6 +93,18 @@ class BlogIndex extends React.Component {
       width: 35%;
       max-width: 570px;
       z-index: -1;
+      @media (max-width: 767px) {
+        top: 60%;
+        right: 15px;
+        left: auto;
+        width: auto;
+        height: 70%;
+      }
+      @media (max-width: 414px) {
+        top: 104%;
+        right: 0;
+        height: 94%;
+      }
     `
     
     const MainVideo = styled.video`
@@ -64,6 +115,9 @@ class BlogIndex extends React.Component {
       z-index: -1;
       -webkit-transform: translateY(-60%);
       transform: translateY(-60%);
+      @media (max-width: 414px) {
+        top: 45%;
+      }
     `
     
     const StackBox = styled.table`
@@ -80,12 +134,22 @@ class BlogIndex extends React.Component {
           &:nth-child(2n) {width:55%;}
         }
       }
-    `
 
-    const StackTitle = styled.td`
+      @media (max-width: 414px) {  
+        td {
+          &:nth-child(2n-1) {width:35%;padding-right:15px;}
+          &:nth-child(2n) {width:65%;}
+        }
+      }
+      `
+      
+      const StackTitle = styled.td`
       font-size: 26px;
       font-weight: bold;
       line-height: 1.4;
+      @media (max-width: 414px) {  
+        font-size:22px;
+      }
     `
 
     const StackDesc = styled.p`
@@ -105,7 +169,10 @@ class BlogIndex extends React.Component {
 
     const StackSkill = styled.span`
       display: inline-block;
-      margin-right: 50px;  
+      margin-right: 50px;
+      @media (max-width: 414px) {  
+        display: block;
+      }
     `;
     
     const stackList = [{
@@ -135,13 +202,13 @@ class BlogIndex extends React.Component {
     }
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout className={'clear'} location={this.props.location} title={siteTitle}>
         <SEO
           title="boramkim, developer"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <MainGroup className="container">
-          <MainGroupTitle>
+          <MainGroupTitle className="group-title">
             boram kim,<br />developer<br />
             <span className="thin">in seoul</span>
             <p className="desc">
@@ -174,7 +241,7 @@ class BlogIndex extends React.Component {
               가나에서 사용하는 언어중 하나인 트위(twi)어로<br/> 'all will be well'을 의미합니다.
             </p>
           </MainGroupTitle>
-          <MainVideo className="last-visual" src={mainVideoSrc} type="video/mp4" autoPlay muted loop />
+          <MainVideo src={mainVideoSrc} type="video/mp4" autoPlay muted loop />
         </MainGroup>
       </Layout>
     )

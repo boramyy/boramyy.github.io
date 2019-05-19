@@ -37,10 +37,19 @@ class BlogIndex extends React.Component {
       line-height: 1.8;
       letter-spacing: -0.4px;
       word-break: break-all;
+      @media (max-width: 414px) {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 50px;
+      }
     `
     const PostList = styled.ul`
       float: left;
       width:70%;
+      @media (max-width: 414px) {
+        width: 100%;
+        min-height: 330px;
+      }
     `
     const PostListItem = styled.li`
       border: 1px solid transparent;
@@ -72,17 +81,35 @@ class BlogIndex extends React.Component {
         margin-bottom: 0;
         font-weight: normal;
       }
+      @media (max-width: 414px) {
+        margin-bottom: 15px;
+        border-left: 1px solid #111;
+        &:after {
+          content:none
+        }
+        &:hover {
+          margin-bottom:25px;
+        }
+      }
     `
     const PostLink = styled(Link)`
       display: block;
       min-height: 193px;
       padding: 50px;
+      @media (max-width: 414px) {
+        padding:15px 20px;
+        min-height: auto;
+      }
     `
 
     const PostTitle = styled.span`
       font-size: 22px;
       color: #333;
       line-height: 1.5;
+      @media (max-width: 414px) {
+        font-size: 18px;
+        line-height: 1.6;
+      }
     `
 
     const Tags = styled.div`
@@ -96,6 +123,10 @@ class BlogIndex extends React.Component {
       color: #aaa;
       line-height: 1;
       &:before { content:'#'; }
+      @media (max-width: 414px) {
+        font-size:16px;
+        line-height: 1.6;
+      }
     `
 
     const PostDate = styled.div`
@@ -103,6 +134,9 @@ class BlogIndex extends React.Component {
       font-size: 13px;
       color: #aaa;
       line-height: 1;
+      @media (max-width: 414px) {
+        font-size:15px;
+      }
     `
 
     const PostTags = function (props) {

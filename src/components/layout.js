@@ -12,7 +12,7 @@ class Layout extends React.Component {
     const { children, className } = this.props
     
     const StyledFooter = styled.footer`
-      padding-bottom: 30px;
+      padding-bottom: 35px;
       font-size: 12px;
       text-align: right;
       &.fixed {

@@ -94,3 +94,16 @@ h6 {font-size:1em;margin-top:30px;margin-bottom:15px;}
 }
 .mockup-iphonexs .mockup-body.white {background-image:url('../../content/assets/mockup-iphonexs-white.png');}
 .mockup-iphonexs .mockup-body.grey {background-image:url('../../content/assets/mockup-iphonexs-grey.png');}
+
+@media (max-width: 767px) {
+ .container {width:100%;padding: 50px;}
+}
+
+@media (max-width: 414px) {
+  .container {padding:35px;}
+
+  .page {padding-bottom:50px;}
+
+  .mockup-iphonexs {position:relative;width:300px;height:602px;}
+  .mockup-iphonexs .mockup-screen {top:17px;right:13px;bottom:17px;left:18px;padding-right:5px;}
+}

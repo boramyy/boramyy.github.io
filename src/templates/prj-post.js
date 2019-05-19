@@ -13,13 +13,16 @@ class PrjPostTemplate extends React.Component {
 
     const StyledLayout = styled(Layout)`
       padding-top: 50px;
-      // padding-bottom: 50px;
     `
     const PostHeader = styled.div`
+      width: 70%;
       margin-top: 50px;
       padding-left: 8%;
       font-weight: 100;
       color: #111;
+      @media (max-width: 414px) {
+        padding-left:0;
+      }
     `
 
     const PostTitle = styled.h2`
@@ -27,6 +30,11 @@ class PrjPostTemplate extends React.Component {
       margin-bottom: 30px;
       font-size: 72px;
       font-weight: bold;
+      @media (max-width: 414px) {
+        margin-bottom: 15px;
+        font-size: 40px;
+        line-height: 1.4;
+      }
     `
 
     const PostGroup = styled.span`
@@ -54,6 +62,9 @@ class PrjPostTemplate extends React.Component {
         text-decoration: underline;
         text-decoration-color: #999;
       }
+      @media (max-width: 414px) {
+        margin-top:40px;
+      }
     `
     const PostDate = styled.span`
       display: block;
@@ -80,6 +91,9 @@ class PrjPostTemplate extends React.Component {
       padding-top: 30px;
       padding-bottom: 50px;
       border-top: 1px solid #eee;
+      @media (max-width: 414px) {
+        padding-bottom:30px;
+      }
     `
 
     const AnotherPost = styled(Link)`
@@ -88,7 +102,6 @@ class PrjPostTemplate extends React.Component {
       height: 200px;
       font-size: 36px;
       align-items: center;
-
       &.prev {
         float: left;
         justify-content: flex-start;
@@ -115,6 +128,21 @@ class PrjPostTemplate extends React.Component {
         width: 50px;
         height: 50px;
         fill: #333;
+      }
+      @media (max-width: 414px) {
+        width: 100%;
+        height: 85px;
+        font-size: 24px;
+        &.prev {
+          svg {margin-right:20px;}
+        }
+        &.next {
+          svg {margin-left:20px;}
+        }
+        svg {
+          width: 40px;
+          height: 40px;
+        }
       }
     `
 
@@ -150,6 +178,9 @@ class PrjPostTemplate extends React.Component {
             line-height: 2.4;
           }
         }
+      }
+      @media (max-width: 414px) {
+        margin-top:50px;
       }
     `
     return (

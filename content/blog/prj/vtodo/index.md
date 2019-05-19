@@ -25,6 +25,16 @@ published: true
     position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto;padding:200px 0 150px;
   }
   .content-box-2 .screenshot {float:left;width:40%;max-width:550px;margin:0 5%;-webkit-box-shadow:-16px 25px 35px rgba(0,0,0,0.1);box-shadow:-16px 25px 35px rgba(0,0,0,0.1);}
+
+
+@media (max-width: 414px) {
+  .content-box-1 {width:100%;padding:300px 8% 50px;}
+  .content-box-1 .text-box-1 {width:auto;}
+  .content-box-1 .gatsby-resp-image-link {top:30px;left:8%;width:100%;margin-right:-100px;}
+  
+  .content-box-2 {display:block;padding:50px 0;}
+  .content-box-2 .screenshot {float:none;width:100%;margin:10px auto;-webkit-box-shadow:0 20px 35px rgba(0,0,0,0.2);box-shadow:0 20px 35px rgba(0,0,0,0.2)}
+}
 </style>
 <div class="prj-data prj02 vtodo">
 
