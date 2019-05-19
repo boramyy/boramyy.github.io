@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[boram kim, developer]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://boramyy.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 19 May 2019 09:19:46 GMT</lastBuildDate><item><title><![CDATA[nextjs gh-pages로 배포하기]]></title><description><![CDATA[indexgatsby로 블로그 시작하기github.io 주소 사용하기블로그 배포하기참고배포할 nextjs 사이트먼저 배포할 nextjs 사이트를 준비합니다. 저는 만들었던 청첩장 사이트를 gh-pages를 통해 배포하려합니다.prefix…]]></description><link>https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</link><guid isPermaLink="false">https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</guid><pubDate>Sun, 19 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[boram kim, developer]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://boramyy.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 19 May 2019 11:21:06 GMT</lastBuildDate><item><title><![CDATA[nextjs gh-pages로 배포하기]]></title><description><![CDATA[indexgatsby로 블로그 시작하기github.io 주소 사용하기블로그 배포하기참고배포할 nextjs 사이트먼저 배포할 nextjs 사이트를 준비합니다. 저는 만들었던 청첩장 사이트를 gh-pages를 통해 배포하려합니다.prefix…]]></description><link>https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</link><guid isPermaLink="false">https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</guid><pubDate>Sun, 19 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#gatsby%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;gatsby로 블로그 시작하기&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#githubio-%EC%A3%BC%EC%86%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot;&gt;github.io 주소 사용하기&lt;/a&gt;&lt;/li&gt;
@@ -498,29 +498,32 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;
 &lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot;&gt;Gatsby Starter&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot;&gt;How Gatsby Works with GitHub Pages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[dunocanna]]></title><link>https://boramyy.github.io//prj/dunocanna/</link><guid isPermaLink="false">https://boramyy.github.io//prj/dunocanna/</guid><pubDate>Fri, 08 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;style&gt;
-.content-box-1 {
-  margin-right:-100px;padding:200px 8% 120px;background:url(&apos;/dunocanna_back.png&apos;) -150px -200px repeat, url(&apos;/dunocanna_back.png&apos;) 0 0 repeat;
-}
+.content-box-1 {margin-right:-100px;padding:200px 8% 120px;background:url(&apos;/dunocanna_back.png&apos;) -150px -200px repeat, url(&apos;/dunocanna_back.png&apos;) 0 0 repeat;}
 
 .content-box-1 .text-box-1 {width:40%;}
 .content-box-1 .text-box-1 .title {color:#000;}
 .content-box-1 .text-box-1 .text {color:#000;}
-
 .content-box-1 .mockup-box-1 {margin-top:-620px;margin-left:62%;}
 
-.content-box-2 {
-  position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto;padding:150px 0;
-}
+.content-box-2 {position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto;padding:150px 0;}
 .content-box-2 .screenshot,
 .content-box-2 .gatsby-resp-image-background-image {
   float:left;width:320px;margin:0 3%;-webkit-box-shadow:-16px 25px 35px rgba(0,0,0,0.2);box-shadow:-16px 25px 35px rgba(0,0,0,0.2);
 }
-.content-box-2 .gatsby-resp-image-link {
-  margin: 0 3%;
+.content-box-2 .gatsby-resp-image-link {margin: 0 3%;}
+.content-box-2 .gatsby-resp-image-background-image {margin-right:0;margin-left:0;}
+
+
+@media (max-width: 414px) {
+  .content-box-1 {margin-right:0;margin-left:-35px;padding:55px 12%;}
+  .content-box-1 .text-box-1 {width:100%;}
+  .content-box-1 .mockup-box-1 {margin-top:50px;margin-left:0;}
+  
+  .content-box-2 {display:block;padding:70px 0;}
+  .content-box-2 .screenshot {display:block;float:none;width:90%;margin:0 auto 50px;-webkit-box-shadow:0 20px 35px rgba(0,0,0,0.2);box-shadow:0 20px 35px rgba(0,0,0,0.2);}  
 }
-.content-box-2 .gatsby-resp-image-background-image {
-  margin-right:0;margin-left:0;
-}
+
+
 &lt;/style&gt;
 &lt;div class=&quot;prj-data prj01 dunocanna&quot;&gt;
 &lt;div class=&quot;content-box content-box-1&quot;&gt;
@@ -592,6 +595,16 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;
     position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto;padding:200px 0 150px;
   }
   .content-box-2 .screenshot {float:left;width:40%;max-width:550px;margin:0 5%;-webkit-box-shadow:-16px 25px 35px rgba(0,0,0,0.1);box-shadow:-16px 25px 35px rgba(0,0,0,0.1);}
+
+
+@media (max-width: 414px) {
+  .content-box-1 {width:100%;padding:300px 8% 50px;}
+  .content-box-1 .text-box-1 {width:auto;}
+  .content-box-1 .gatsby-resp-image-link {top:30px;left:8%;width:100%;margin-right:-100px;}
+  
+  .content-box-2 {display:block;padding:50px 0;}
+  .content-box-2 .screenshot {float:none;width:100%;margin:10px auto;-webkit-box-shadow:0 20px 35px rgba(0,0,0,0.2);box-shadow:0 20px 35px rgba(0,0,0,0.2)}
+}
 &lt;/style&gt;
 &lt;div class=&quot;prj-data prj02 vtodo&quot;&gt;
 &lt;div class=&quot;content-box content-box-1&quot;&gt;
@@ -729,20 +742,7 @@ chicken eggs, though the…]]></description><link>https://boramyy.github.io//my-
 chicken eggs, though the taste and texture will be somewhat different, and the
 egg yolk will be less rich.”?
 (&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[test 1-2]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting!I’m sure I’ll write a lot more interesting things in the future.Oh, and here’s a…]]></description><link>https://boramyy.github.io//dev/second/</link><guid isPermaLink="false">https://boramyy.github.io//dev/second/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;./salty_egg.jpg&quot; alt=&quot;Chinese Salty Egg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[테스트 테스트 Vue로 만든 Todo페이지 gh-pages에 배포하기]]></title><description><![CDATA[테스트 합시다!npm run build를 하면 폴더가 생깁니다. 
+&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[테스트 테스트 Vue로 만든 Todo페이지 gh-pages에 배포하기]]></title><description><![CDATA[테스트 합시다!npm run build를 하면 폴더가 생깁니다. 
 폴더 하위에 js, css 그리고 index.html, favicon.ico 요롷게 생긴다.npm run build로 생성된 dist 폴더구조index.html…]]></description><link>https://boramyy.github.io//category1/hoho2/</link><guid isPermaLink="false">https://boramyy.github.io//category1/hoho2/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;h3 id=&quot;테스트-합시다&quot;&gt;&lt;a href=&quot;#%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%95%A9%EC%8B%9C%EB%8B%A4&quot; aria-label=&quot;테스트 합시다 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;테스트 합시다!&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&amp;lt;!doctype html&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;no-js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;en&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -926,4 +926,17 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;h3 id=&quot;참고자료&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C&quot; aria-label=&quot;참고자료 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고자료&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://vuejs.org/v2/guide/&quot;&gt;Vue 가이드&lt;/a&gt; &lt;br/&gt;
 &lt;a href=&quot;https://kr.vuejs.org/v2/guide/&quot;&gt;Vue 한국어 가이드&lt;/a&gt;&lt;br/&gt;
-&lt;a href=&quot;https://github.com/DivanteLtd/vue-storefront/tree/gh-pages&quot;&gt;참고한 다른 웹&lt;/a&gt; &lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;a href=&quot;https://github.com/DivanteLtd/vue-storefront/tree/gh-pages&quot;&gt;참고한 다른 웹&lt;/a&gt; &lt;/p&gt;</content:encoded></item><item><title><![CDATA[test 1-2]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting!I’m sure I’ll write a lot more interesting things in the future.Oh, and here’s a…]]></description><link>https://boramyy.github.io//dev/second/</link><guid isPermaLink="false">https://boramyy.github.io//dev/second/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. In Asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. The eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. From the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./salty_egg.jpg&quot; alt=&quot;Chinese Salty Egg&quot;&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
