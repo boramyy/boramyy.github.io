@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
           padding-bottom: 15px;
         }
         &:nth-child(1) {
-          .group-title {padding:30px 35px 35px 35px;}
+          .group-title {padding:25px 35px;}
         }
       }
       @media (max-width: 414px) {
@@ -241,7 +241,7 @@ class BlogIndex extends React.Component {
               가나에서 사용하는 언어중 하나인 트위(twi)어로<br/> 'all will be well'을 의미합니다.
             </p>
           </MainGroupTitle>
-          <MainVideo src={mainVideoSrc} type="video/mp4" autoPlay muted loop />
+          <MainVideo src={mainVideoSrc} type="video/mp4" autoPlay muted loop playsinline />
         </MainGroup>
       </Layout>
     )
