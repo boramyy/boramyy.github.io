@@ -10,8 +10,10 @@ published: true
 
 ### index
 
-- [gatsby로 블로그 시작하기](#gatsby로-블로그-시작하기)
-- [github.io 주소 사용하기](#githubio-주소-사용하기)
+- [배포할 nextjs 사이트](#배포할-nextjs-사이트)
+- [prefix 설정하기](#prefix-설정하기)
+- [next export](#next-export)
+- [.nojekyll](#nojekyll)
 - [블로그 배포하기](#블로그-배포하기)
 - [참고](#참고)
 
@@ -132,8 +134,9 @@ $ git commit -m "deploy to gh-pages"
 $ git subtree push --prefix out origin gh-pages
 ```
 
+이 명령어를 실행하면 랜더링된 코드가 `gh-pages` 브랜치에 업로드되고 내용이 {username}.github.io/{reponame} 에 출력됩니다.
 
-### 명령어 한줄로 끝내기
+#### 명령어 한줄로 끝내기
 
 이 과정을 명령어 하나로 끝내고싶다! 하시면 scripts에 묶어서 작성해줍니다.
 
@@ -151,8 +154,6 @@ $ git subtree push --prefix out origin gh-pages
 ``` shell
 $ npm run deploy
 ```
-
-이 명령어를 실행하면 랜더링된 코드가 `gh-pages` 브랜치에 업로드되고 내용이 {username}.github.io/{reponame} 에 출력됩니다.
 
 ---
 
