@@ -62,7 +62,7 @@ class DevPostTemplate extends React.Component {
       p {
         font-size: 18px;
         font-family: "Nanum Gothic",san-serif;
-        line-height: 2.2;
+        line-height: 2.4;
         letter-spacing: -0.4px;
       }
       hr {

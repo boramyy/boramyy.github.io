@@ -3,7 +3,7 @@ title: "dunocanna"
 prjname: "dunocanna"
 excerpt: "모바일 청첩장"
 date: 2019-02-08
-golink: "https://boramyy.github.io/dunocanna/"
+golink: "https://boramyy.github.io/invitation/"
 img: "./dunocanna_thumb.jpg"
 categories: prj
 group: ['mobile web']
