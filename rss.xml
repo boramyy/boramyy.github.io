@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[boram kim, developer]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://boramyy.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 19 May 2019 15:32:44 GMT</lastBuildDate><item><title><![CDATA[nextjs gh-pages로 배포하기]]></title><description><![CDATA[index배포할 nextjs 사이트prefix 설정하기next export.nojekyll블로그 배포하기참고배포할 nextjs 사이트먼저 배포할 nextjs 사이트를 준비합니다. 저는 만들었던 청첩장 사이트를 gh-pages…]]></description><link>https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</link><guid isPermaLink="false">https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</guid><pubDate>Sun, 19 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[boram kim, developer]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://boramyy.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Tue, 21 May 2019 14:51:59 GMT</lastBuildDate><item><title><![CDATA[nextjs gh-pages로 배포하기]]></title><description><![CDATA[index배포할 nextjs 사이트prefix 설정하기next export.nojekyll블로그 배포하기참고배포할 nextjs 사이트먼저 배포할 nextjs 사이트를 준비합니다. 저는 만들었던 청첩장 사이트를 gh-pages…]]></description><link>https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</link><guid isPermaLink="false">https://boramyy.github.io//dev/nextjs/deploy-gh-pages/</guid><pubDate>Sun, 19 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#%EB%B0%B0%ED%8F%AC%ED%95%A0-nextjs-%EC%82%AC%EC%9D%B4%ED%8A%B8&quot;&gt;배포할 nextjs 사이트&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#prefix-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0&quot;&gt;prefix 설정하기&lt;/a&gt;&lt;/li&gt;
@@ -147,7 +147,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3d79784607fc41c01b3996fb86b6c240/e326c/google-font-problem.png&quot;
+    href=&quot;/static/3d79784607fc41c01b3996fb86b6c240/fc34e/google-font-problem.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -155,7 +155,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -166,12 +166,12 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;problem picture&quot;
         title=&quot;&quot;
-        src=&quot;/static/3d79784607fc41c01b3996fb86b6c240/b9e4f/google-font-problem.png&quot;
-        srcset=&quot;/static/3d79784607fc41c01b3996fb86b6c240/cf440/google-font-problem.png 148w,
-/static/3d79784607fc41c01b3996fb86b6c240/d2d38/google-font-problem.png 295w,
-/static/3d79784607fc41c01b3996fb86b6c240/b9e4f/google-font-problem.png 590w,
-/static/3d79784607fc41c01b3996fb86b6c240/e326c/google-font-problem.png 884w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        src=&quot;/static/3d79784607fc41c01b3996fb86b6c240/e7b61/google-font-problem.png&quot;
+        srcset=&quot;/static/3d79784607fc41c01b3996fb86b6c240/9b672/google-font-problem.png 163w,
+/static/3d79784607fc41c01b3996fb86b6c240/4b204/google-font-problem.png 325w,
+/static/3d79784607fc41c01b3996fb86b6c240/e7b61/google-font-problem.png 650w,
+/static/3d79784607fc41c01b3996fb86b6c240/fc34e/google-font-problem.png 884w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
@@ -182,7 +182,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2936aad342226ae2f6b83540df5f682b/5fb09/google-font-compare-01.jpg&quot;
+    href=&quot;/static/2936aad342226ae2f6b83540df5f682b/ebfad/google-font-compare-01.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -201,8 +201,8 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;compare font - gatsby&quot;
         title=&quot;&quot;
-        src=&quot;/static/2936aad342226ae2f6b83540df5f682b/5fb09/google-font-compare-01.jpg&quot;
-        srcset=&quot;/static/2936aad342226ae2f6b83540df5f682b/5fb09/google-font-compare-01.jpg 100w&quot;
+        src=&quot;/static/2936aad342226ae2f6b83540df5f682b/ebfad/google-font-compare-01.jpg&quot;
+        srcset=&quot;/static/2936aad342226ae2f6b83540df5f682b/ebfad/google-font-compare-01.jpg 100w&quot;
         sizes=&quot;(max-width: 100px) 100vw, 100px&quot;
       /&gt;
     &lt;/span&gt;
@@ -213,7 +213,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/17547e05b2d191c97b597390529a875d/5fb09/google-font-compare-02.jpg&quot;
+    href=&quot;/static/17547e05b2d191c97b597390529a875d/ebfad/google-font-compare-02.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -232,8 +232,8 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;compare font - jekyll&quot;
         title=&quot;&quot;
-        src=&quot;/static/17547e05b2d191c97b597390529a875d/5fb09/google-font-compare-02.jpg&quot;
-        srcset=&quot;/static/17547e05b2d191c97b597390529a875d/5fb09/google-font-compare-02.jpg 100w&quot;
+        src=&quot;/static/17547e05b2d191c97b597390529a875d/ebfad/google-font-compare-02.jpg&quot;
+        srcset=&quot;/static/17547e05b2d191c97b597390529a875d/ebfad/google-font-compare-02.jpg 100w&quot;
         sizes=&quot;(max-width: 100px) 100vw, 100px&quot;
       /&gt;
     &lt;/span&gt;
@@ -246,7 +246,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/457a5ebd1466f001cc9b712a998d614f/fef0a/google-font-rendered-fonts.png&quot;
+    href=&quot;/static/457a5ebd1466f001cc9b712a998d614f/e08d3/google-font-rendered-fonts.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -254,7 +254,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -265,12 +265,12 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;rendered fonts&quot;
         title=&quot;&quot;
-        src=&quot;/static/457a5ebd1466f001cc9b712a998d614f/b9e4f/google-font-rendered-fonts.png&quot;
-        srcset=&quot;/static/457a5ebd1466f001cc9b712a998d614f/cf440/google-font-rendered-fonts.png 148w,
-/static/457a5ebd1466f001cc9b712a998d614f/d2d38/google-font-rendered-fonts.png 295w,
-/static/457a5ebd1466f001cc9b712a998d614f/b9e4f/google-font-rendered-fonts.png 590w,
-/static/457a5ebd1466f001cc9b712a998d614f/fef0a/google-font-rendered-fonts.png 722w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        src=&quot;/static/457a5ebd1466f001cc9b712a998d614f/e7b61/google-font-rendered-fonts.png&quot;
+        srcset=&quot;/static/457a5ebd1466f001cc9b712a998d614f/9b672/google-font-rendered-fonts.png 163w,
+/static/457a5ebd1466f001cc9b712a998d614f/4b204/google-font-rendered-fonts.png 325w,
+/static/457a5ebd1466f001cc9b712a998d614f/e7b61/google-font-rendered-fonts.png 650w,
+/static/457a5ebd1466f001cc9b712a998d614f/e08d3/google-font-rendered-fonts.png 722w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
@@ -297,7 +297,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d9deb7f01abc796a8bf38a46c8123872/f1dec/google-font-got-it.png&quot;
+    href=&quot;/static/d9deb7f01abc796a8bf38a46c8123872/8abd4/google-font-got-it.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -305,7 +305,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 608px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -316,12 +316,11 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;the problem hint&quot;
         title=&quot;&quot;
-        src=&quot;/static/d9deb7f01abc796a8bf38a46c8123872/b9e4f/google-font-got-it.png&quot;
-        srcset=&quot;/static/d9deb7f01abc796a8bf38a46c8123872/cf440/google-font-got-it.png 148w,
-/static/d9deb7f01abc796a8bf38a46c8123872/d2d38/google-font-got-it.png 295w,
-/static/d9deb7f01abc796a8bf38a46c8123872/b9e4f/google-font-got-it.png 590w,
-/static/d9deb7f01abc796a8bf38a46c8123872/f1dec/google-font-got-it.png 608w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        src=&quot;/static/d9deb7f01abc796a8bf38a46c8123872/8abd4/google-font-got-it.png&quot;
+        srcset=&quot;/static/d9deb7f01abc796a8bf38a46c8123872/9b672/google-font-got-it.png 163w,
+/static/d9deb7f01abc796a8bf38a46c8123872/4b204/google-font-got-it.png 325w,
+/static/d9deb7f01abc796a8bf38a46c8123872/8abd4/google-font-got-it.png 608w&quot;
+        sizes=&quot;(max-width: 608px) 100vw, 608px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
@@ -420,7 +419,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1815aa8e04da3918fa0a31128d785161/349eb/gatsby-blog1-1.png&quot;
+    href=&quot;/static/1815aa8e04da3918fa0a31128d785161/7abdb/gatsby-blog1-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -428,7 +427,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
   
   &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
@@ -439,15 +438,15 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;preview of blog&quot;
         title=&quot;&quot;
-        src=&quot;/static/1815aa8e04da3918fa0a31128d785161/b9e4f/gatsby-blog1-1.png&quot;
-        srcset=&quot;/static/1815aa8e04da3918fa0a31128d785161/cf440/gatsby-blog1-1.png 148w,
-/static/1815aa8e04da3918fa0a31128d785161/d2d38/gatsby-blog1-1.png 295w,
-/static/1815aa8e04da3918fa0a31128d785161/b9e4f/gatsby-blog1-1.png 590w,
-/static/1815aa8e04da3918fa0a31128d785161/f9b6a/gatsby-blog1-1.png 885w,
-/static/1815aa8e04da3918fa0a31128d785161/2d849/gatsby-blog1-1.png 1180w,
-/static/1815aa8e04da3918fa0a31128d785161/bbefa/gatsby-blog1-1.png 1770w,
-/static/1815aa8e04da3918fa0a31128d785161/349eb/gatsby-blog1-1.png 2272w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        src=&quot;/static/1815aa8e04da3918fa0a31128d785161/e7b61/gatsby-blog1-1.png&quot;
+        srcset=&quot;/static/1815aa8e04da3918fa0a31128d785161/9b672/gatsby-blog1-1.png 163w,
+/static/1815aa8e04da3918fa0a31128d785161/4b204/gatsby-blog1-1.png 325w,
+/static/1815aa8e04da3918fa0a31128d785161/e7b61/gatsby-blog1-1.png 650w,
+/static/1815aa8e04da3918fa0a31128d785161/50a28/gatsby-blog1-1.png 975w,
+/static/1815aa8e04da3918fa0a31128d785161/67fa2/gatsby-blog1-1.png 1300w,
+/static/1815aa8e04da3918fa0a31128d785161/c7d2d/gatsby-blog1-1.png 1950w,
+/static/1815aa8e04da3918fa0a31128d785161/7abdb/gatsby-blog1-1.png 2272w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
@@ -500,7 +499,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;
 &lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot;&gt;Gatsby Starter&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot;&gt;How Gatsby Works with GitHub Pages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[dunocanna]]></title><link>https://boramyy.github.io//prj/dunocanna/</link><guid isPermaLink="false">https://boramyy.github.io//prj/dunocanna/</guid><pubDate>Fri, 08 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;style&gt;
-.content-box-1 {margin-right:-100px;padding:200px 8% 120px;background:url(&apos;/dunocanna_back.png&apos;) -150px -200px repeat, url(&apos;/dunocanna_back.png&apos;) 0 0 repeat;}
+.content-box-1 {margin-right:-100px;padding:200px 8% 120px;background:url(&apos;/images/dunocanna_back.png&apos;) -150px -200px repeat, url(&apos;/images/dunocanna_back.png&apos;) 0 0 repeat;}
 
 .content-box-1 .text-box-1 {width:40%;}
 .content-box-1 .text-box-1 .title {color:#000;}
@@ -541,14 +540,14 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;
       &lt;div class=&quot;mockup-iphonexs&quot;&gt;
         &lt;div class=&quot;mockup-screen&quot;&gt;
           
-  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/2e0c01ae00eb4d7e2a1759bdc38613aa/c2dea/dunocaana_pull.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/2e0c01ae00eb4d7e2a1759bdc38613aa/889b4/dunocaana_pull.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
   
-  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 724.8466257668712%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAACRCAIAAABMlg8xAAAACXBIWXMAAAsSAAALEgHS3X78AAAPuElEQVRo3rWZaYxcVXbHXxiEBBpMBggf4EPGBGIzDGC7HYLASBnHHjMwXsDAKAaZjAYiRTZCkwhbUQgaIxCGRMBAJMDBW7s93tpbL3a7Vy+9d1fvVV1dS1e92ve9urq6tvzq3e5ydXe1bXBy1Kq+77577j33f5Z7zn3SRBHF4/GJ2RSfoUJPIpEotKU5zyVp/qRXmUsOmr/m/DHSQtMvxFwsvDRntOgtbISGYE8odB2xA4EAjVAoFIlEotFoMBhU+mM80jkHOWmObGazuaWlpb29rbOzc3x8/PDhw8MKqdVqjUbDdHNXLt7e5OQkPFar1eVy8Wiz2VgcHpadI3Z+5QJUhSlSqVQymWQWOqempuZvtdBTghmCU4yYfpyZqzRggl/BNh6LxTwKiVno93q9brdbSF7QyFxmIGWT3d3dRoNBlmWn0xkOh4HQ4XD4fD4aPAp+Mf4qYDTQk8lk4jeqEOOGhoaYzm6388gv6wNHQTtSoSWEZAXEg8HhsNMzMDCg0+lYGfxR2Fzm4pWRClEZyiZps4vW1latVsujTqfnz2KxgP8ssQU/Qgqt0mDDiMBqrCwkZ02wGB0dLe0YEJxsjHWcipzIzzo8Mhf8mA0DSjCLDafTaUajKhbP5XJsj1fYTDabzWQy4ncW2gVnQrEYJgbc1dUFNs3NzfSAfGNj47lz55qamujnF1AKBnNVbBBiV/v376+oqDhz5kx5eblsNtN/9uzZo0eP4i1tbW3sHxTnGgmEkMK2kJO9sWEexSshMMS+hNglIonoFeZR3C9sJqZQ8eBZehbjYkUkTH1ObCvtGBCCId6UQrTZCw3Epg1OSYXmGongBwzMoKenR1YIeHjEHzAV8EfPWBj9zHJV7ALayNzR0VFXV9fX14eHCJ7e3l60denSJWZBkbOY5wQKISGzIAUCg7nf70dezJPZxUYKks5FmxEstWfPnpqaGsSur6//5ptvFDs5jyxCnSVUJYh3KLkQCXhkqwUVFPvvrJWLg5EC6nQYK8h5rePmBk+5WcyJIpr4njQr9M4JwCV7ikkC/dT3obRCoiHlboKmmbMKCZMuXofH5AyJY0iMnMUsaHzcCI2NjWlHR00KEclUKlV/fz+dZoXEStPMooU9EIOImARADAseGkRsTIXwgD/kZxofx3iwU2xm1sqgytyESEyaEYQueAwGA1PQcCuk1+tZmQUYU0LsmwJMxCoRD4R7iXYh7orGXOabWlmQOArZFTssbBXi9AophFWVFptfxpG4gC3AAD4IKRjnG0yKCgpQlRZbzALsIyMjwK4cbhpculi9pZkL1kOUwvUxKVyNGISdXZ/5pgCbT/NXW5BZxDesDX2Kcwf5cT50j+Qi6C/IjFUCKZgzDvWAecDv53BHbehJnLgLMovkgAUxrFgsGg6F8osn8zkccTESDjPpwisHgxwnLAXIKBaFsz5BH7PB7dwuF+uXMpJMJndNbEqiKN3I2AXRVtKEiaNHj+D6QAoq4ignAxHJos/n55ctkHEIUMjMwHJwYEDy+wMo4KuvvuKIghm00RbMTMduQZ5JGcDpuXHjhmAg2NXVSQbPScZcEhkfg44dO8ZRzGYYDUCsc/z4MRa5cuUK5k1/Q0P9pk2bwJIi4Pjx43V1F44dOyqdq63t7u785JPdLS3NIMxvbW3NkSNH6UGwCxcutLZeYd4DBw6sXr26ubnp1KmTJErV1VV7934n8U6jUX/00YdVVWd7e3voVal6OzraPv1kN686OztIovr6VDCsXbPmypXLbW2tjOePHqmpqZFt7Ny5g9WIufUN9ai6t7f7888/Qwo46+rODw8PkYqtWbNmcHBgCHn6+9Qa9cGDB6Ta2lomfvvt7QcPlpP1gQSz9vR0f/7ZZwjyxRdf/Mvvf3/ixPGPP/74qaeeApqTJytPnz4F/fGPX0jgwcTbt237+uuvz549c+TIEbKBk5WVu/7wB7LGZ59dtWHD+nW//OUzzzyzfPnyr778sqa6+tTpUygSFCSz2USa8tGHH8KJPmC4fPkyGeT777+/f/++Z1etWv/rF1atWvXiiy+uXbsWzMGMkouM6dNP/1NCSKPRsOPdd9nb4NAggAESUu3atetEZWXZihV3/+Qnq3/xi2+++ZY9t7e319dfaGluZr3/2bNHOlRejra2bt2K2IcOHULa3bt3f/DBB2/84xs0Hvv5zxfdeedrW7bs3LnzkUcewZb2fvcdKc6RI3967733pKVLljD9ww89tGzZssU//ek999xz11133XHHHbfffvtdixYtXrz4/vvvf/rppx944IHbbrvtzxW6995777n77vvuu09i3C23/Bn0ox/dAkmz6c4f/3jRojv/+qGHYOZRGZYnRt56663S5s2bX3r5lQ0bN23e/MqWLVteffXVlza/snHTixjj+vXr39i69Xe/e2v7tu2oY8OGTS+9/Jv8i00M3gyEUjaTDnvl5GQsNRnVakcddlvAMToRC0XCIbvdJlusTvOwz23V6ozpCX/MpRZeip9h8BIu1NdxYVyv6e9pb2mq7+poVataDGMjHe2XOXSHhoYbz1Wqh/q6elSyfmiwvTY+MRmJhDl9SXVuOm7PnJ2ZmWQnVThuxf/idnEkuumVCQaDg4MiG8Fl8F5xGmavFxLzzASaPd9+S9lIiNi7d29VVRXn43zmrPj7XplB0ehZc6XTWSngd4aDPh+lucvicTt0sl1jlHVmu052jJntssNNHTWVjHuC8doOGeclQqKkgN9rstglt1MO+j3yuEY2adxO07jF3j6o6xrmT89f24DW5nRmU3F/KDZsjgaDARZwOWWnY9yg10heVaU/HHLa9H6vPRxwBfzuQZ2pa0TfOaTrHBrTGC2BcNQemCIYTyVCkYgvGiEP89ttBtmskyYubLNZzX6fM+h3+Lz2gM9pMht71EaDzR2OTbC3WDxR02WX7Q6vx8pINkjC47Sb3C6zlG37tWekLhAKBf0ut4vXBqtsGBgaPnH8+KWLF8lm6GTqeDRosRiJfqMaspUBl9PispuknGptvP8/SFkAzGEfj8UoSuJjYxqiErGGxEg9MnTxYvNAf388FhR/E5FgOOjR24alUNdvo92vO0YqIiEfyV9qKul0Ws7VVp2s69ZZwpOJqNUyrtdpDfrRUNDt9zpcHllj61NZO67IzdJYy79fOfff6kv/FQvZwuFQLOKfiIftFv3B013llc2p5EQo5I3HAvwFA+5oyH/JWH929MTF8YaakVNSZvAfJnpeS3U/P2H8NhiOOx2ybB7n98yZ0zU11ThEPBbRjalHhge1oyNOq0XrGKzWnmwZa6hoOCA5R4/nen8V733d2bEt6hkwowGdJhT0hUMeZI5FQ6T7QNDYUN/R3mqzmgJBV6fc2mVtq9NVSxareUrzr+bWd+ovHJzSvDs42N/d3YYthIKeaCQAzqCAkdETCXvDIS+Sa53D50erGvS1UigcCHvUmYGXU4NvJlWvB/Tlbq8vEvISmNg8DLFYKH8REHCHgl5mDAe9VrfxsrrZGbBLPo9Mhhsc/Tqnei498NpU/29iAb1stWrUHAF9aBXLYWWm8Pts8FNlUyjmU6d4TMKwkM1h0ycG3sr1vZBVPZcYfd/j8Qb9brtdNujV2DwD0tlcPJHK5jJUO163bSI/XVhyOWS/3+ryeN26mkzfhljHpqzqVyG5yuPzOW06u1XPvBbZPDVlSqdMHqfbZjda3HIkHKRskrB+86VyY9el8w2N/dX/7Ljw98Yzf1dT+eHhJpNdVjvsJo/HF/V11l5880zjVrezOaIxJKuq3X5PnjmRiCViwcREDHDAIx0eycVGgj6T2Z3AjXmb945M35cn3/z0yBu5bNfUmGOq/FBsKok1SkpMSIcVyl8GJFLhaJJcdXb8yaUmmpPR8wSVTDaTVILsdBgiuxoeHsZZrBRf40acIR6PibqmUOkwQSY7k9NlijJAclniJuUEkZCaAg8jAJKpURpSXfCKhsGgA97c/AAoLlAKGbVyvZJiQdq8YrRSkE79P5QJVEtEfGrOQl1XXKxch5mkmkyluroaUb/3yoUSUtxqiIs5cUWtlEaTC4kgiSpQXCABKvASukh2SFkHBgZQAf1Cq6WZyZEZgYY4Dch32XyxSq6x8+nzWdyTTCok6p9i5H5gUXZ9wAgU4t5ILFv4JnBDzCi5srKSDLCxsbGpqamhoaGxoZF0WtSf11cVeIrVpu9J0imkyMxQcc0v7gKuMlNztbW1kR319Pb09aq0Zq0pJseCnpzZ5tYbHE4nhQeHFoU0hSHFeKGclsQlCXqmKEJVKFa2yAaTcUw7ShDTjY3hUiiSnIzZdboxRqJOhLvqkmNardPhYHqUHIvGIuFIMBScSORvFcVFO5UODX7IfmhfDQbgLC4WQI53P7z4FpCIa+mbrdxvyCVJAlQqFZGM+oGEDvcU8hdiWLHCCvc0014lU6eYTMyi1+tsNptarQaIG7ozwIHFDT6Aii8lGCnY0iASoiTe0hAXAQRJ3FY4z7SRXLzYolWIWGmYIUYTj2GmWEUubAN1KJHUIOr/aVUNDAwyqxgkRogPTwjyf4z2rLI/kcx6ggLAvJKJXuIjUHSGxI174fvOLMcIxbKjcjap+B/mgeRIq+wi7xKA7/N6XU4nlTfo8LZw4aGgncga7ZkxSzaWyFHssF+cBHiF9V/Pn1kw+0OuhyRRJeVmbk8YKq6oRTAkQNAUH2dQivhkNwuwjNOV7usX9yGYHhpibygZnSG8i/RaltkI5oHNAsEswLLBUFqlSo9qMNRM3tTt+SulQADAMDK8n7k4BgAMK2Ki2Tc0zDSZzGFxmfyxLWQWt7zie4v4nbmYm5wHWC6bKYWTOPqKo//ci+JQMtrt0aQyaeGDGCZ7I1Dlta2YNFENCOhBfnFVdTUABpORfq92OGCIpuLUfuNKfBRGIlssTEQbnPAHpsPs4b/KnM6mA5PhYDKcyqYz6QzvwDZvWMpnOn6Vj4UOoULxvba0Y7BJl3JpxiIAThtm5hKBZY7B3HQMm5xMiO9/IgkgLKNSvErc3rFzJWIHRT89s0pgVIp4vKCB2GxP+BMbFoc+E4lPMYT8iMK84J6FYbkUwqSucdZKJV1nvieV9C0pM48Kt+nFN+sl6ebQrqioIAnYq9C+fftoV1yTDhys2Lf/TwcOHqYtPfzwwytXrty4ceP69euff/755cuX07OkFC1duuTBB5euf27xv23/i00v/OWDf7VUWrZsGZy7du3asWPHO++8s27duhUrVjz55JN/M4/oe/yJv93+1s8OfX7/zreX0pbKysoY/fjjjz/66KOPPfYY7bIFaGVZ2bLlZWtWL/+n3z66bu3yZcvKpOkXM1R2TeL9E0+sXPIIIuTb/wvZvPntVKTLjgAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;
-      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;dunocaana pull&quot; title src=&quot;/static/2e0c01ae00eb4d7e2a1759bdc38613aa/b9e4f/dunocaana_pull.png&quot; srcset=&quot;/static/2e0c01ae00eb4d7e2a1759bdc38613aa/cf440/dunocaana_pull.png 148w,
-/static/2e0c01ae00eb4d7e2a1759bdc38613aa/d2d38/dunocaana_pull.png 295w,
-/static/2e0c01ae00eb4d7e2a1759bdc38613aa/b9e4f/dunocaana_pull.png 590w,
-/static/2e0c01ae00eb4d7e2a1759bdc38613aa/c2dea/dunocaana_pull.png 652w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;dunocaana pull&quot; title src=&quot;/static/2e0c01ae00eb4d7e2a1759bdc38613aa/e7b61/dunocaana_pull.png&quot; srcset=&quot;/static/2e0c01ae00eb4d7e2a1759bdc38613aa/9b672/dunocaana_pull.png 163w,
+/static/2e0c01ae00eb4d7e2a1759bdc38613aa/4b204/dunocaana_pull.png 325w,
+/static/2e0c01ae00eb4d7e2a1759bdc38613aa/e7b61/dunocaana_pull.png 650w,
+/static/2e0c01ae00eb4d7e2a1759bdc38613aa/889b4/dunocaana_pull.png 652w&quot; sizes=&quot;(max-width: 650px) 100vw, 650px&quot;&gt;
     &lt;/span&gt;
   &lt;/span&gt;
   
@@ -565,14 +564,14 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;
       Your browser does not support the video tag.
     &lt;/video&gt;
     
-  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/94dc1/dunocanna_kakao.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/94f23/dunocanna_kakao.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
   
-  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 178.96253602305475%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAUCAwQG/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB5rEu+RG4cV3zOssIwyxAD//EAB0QAAEEAwEBAAAAAAAAAAAAAAIAAQMEEBIzFCH/2gAIAQEAAQUCqAMk3lhViIAOj3VrpTdhm3iVoheT5nZ8/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AV//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AV//xAAjEAABAwALAQAAAAAAAAAAAAABAAIRECAhIjEyM0FRcYGh/9oACAEBAAY/AocJELT+oBrYsXlA6V47LMxCCMFxW//EAB4QAAIBBAMBAAAAAAAAAAAAAAABESExYXEQUfCx/9oACAEBAAE/IbowcHixHQVXPrPXPXlktQlNVFbobRLGXV5Yk9XXsl9kmed8/wD/2gAMAwEAAgADAAAAEEvujogv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPxBf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPxBf/8QAHxABAQACAgIDAQAAAAAAAAAAAREAITFRQWEQcfCR/9oACAEBAAE/EIT74U2TrPR/XvBxKUU7r2+s/X9Y0CJLu4S0lmxuDhnocNzJ2KrPNi6dBqhgRp8AI8c7xB5f3FPKv3nZwSivXz//2Q==&amp;apos;); background-size: cover; display: block;&quot;&gt;
-      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;dunocanna kakao&quot; title src=&quot;/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/c739e/dunocanna_kakao.jpg&quot; srcset=&quot;/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/8ee9c/dunocanna_kakao.jpg 148w,
-/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/ebbe7/dunocanna_kakao.jpg 295w,
-/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/c739e/dunocanna_kakao.jpg 590w,
-/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/94dc1/dunocanna_kakao.jpg 694w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;dunocanna kakao&quot; title src=&quot;/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/17de2/dunocanna_kakao.jpg&quot; srcset=&quot;/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/21749/dunocanna_kakao.jpg 163w,
+/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/3950f/dunocanna_kakao.jpg 325w,
+/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/17de2/dunocanna_kakao.jpg 650w,
+/static/967a76bd2ea22fadb2ad8c8bee0b1c1f/94f23/dunocanna_kakao.jpg 694w&quot; sizes=&quot;(max-width: 650px) 100vw, 650px&quot;&gt;
     &lt;/span&gt;
   &lt;/span&gt;
   
@@ -618,17 +617,17 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;
       &lt;/p&gt;
     &lt;/div&gt;
     
-  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/d8fd8faf7bf6ce623c8f786c43eeac85/0bf41/vtodo_full.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/d8fd8faf7bf6ce623c8f786c43eeac85/66c12/vtodo_full.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
   
-  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;&gt;
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3wUH/8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQABBQJf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAERIFH/2gAIAQEAAT8hYp2v/9oADAMBAAIAAwAAABAwD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABoQAAICAwAAAAAAAAAAAAAAAAEREDEAUYH/2gAIAQEAAT8QqgUd4AW3IIc//9k=&amp;apos;); background-size: cover; display: block;&quot;&gt;
-      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;vtodo full&quot; title src=&quot;/static/d8fd8faf7bf6ce623c8f786c43eeac85/c739e/vtodo_full.jpg&quot; srcset=&quot;/static/d8fd8faf7bf6ce623c8f786c43eeac85/8ee9c/vtodo_full.jpg 148w,
-/static/d8fd8faf7bf6ce623c8f786c43eeac85/ebbe7/vtodo_full.jpg 295w,
-/static/d8fd8faf7bf6ce623c8f786c43eeac85/c739e/vtodo_full.jpg 590w,
-/static/d8fd8faf7bf6ce623c8f786c43eeac85/5413e/vtodo_full.jpg 885w,
-/static/d8fd8faf7bf6ce623c8f786c43eeac85/4efde/vtodo_full.jpg 1180w,
-/static/d8fd8faf7bf6ce623c8f786c43eeac85/abfc3/vtodo_full.jpg 1770w,
-/static/d8fd8faf7bf6ce623c8f786c43eeac85/0bf41/vtodo_full.jpg 2160w&quot; sizes=&quot;(max-width: 590px) 100vw, 590px&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;vtodo full&quot; title src=&quot;/static/d8fd8faf7bf6ce623c8f786c43eeac85/17de2/vtodo_full.jpg&quot; srcset=&quot;/static/d8fd8faf7bf6ce623c8f786c43eeac85/21749/vtodo_full.jpg 163w,
+/static/d8fd8faf7bf6ce623c8f786c43eeac85/3950f/vtodo_full.jpg 325w,
+/static/d8fd8faf7bf6ce623c8f786c43eeac85/17de2/vtodo_full.jpg 650w,
+/static/d8fd8faf7bf6ce623c8f786c43eeac85/029e1/vtodo_full.jpg 975w,
+/static/d8fd8faf7bf6ce623c8f786c43eeac85/b1bd1/vtodo_full.jpg 1300w,
+/static/d8fd8faf7bf6ce623c8f786c43eeac85/7cbb3/vtodo_full.jpg 1950w,
+/static/d8fd8faf7bf6ce623c8f786c43eeac85/66c12/vtodo_full.jpg 2160w&quot; sizes=&quot;(max-width: 650px) 100vw, 650px&quot;&gt;
     &lt;/span&gt;
   &lt;/span&gt;
   
@@ -744,20 +743,7 @@ chicken eggs, though the…]]></description><link>https://boramyy.github.io//my-
 chicken eggs, though the taste and texture will be somewhat different, and the
 egg yolk will be less rich.”?
 (&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[test 1-2]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting!I’m sure I’ll write a lot more interesting things in the future.Oh, and here’s a…]]></description><link>https://boramyy.github.io//dev/second/</link><guid isPermaLink="false">https://boramyy.github.io//dev/second/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;./salty_egg.jpg&quot; alt=&quot;Chinese Salty Egg&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[테스트 테스트 Vue로 만든 Todo페이지 gh-pages에 배포하기]]></title><description><![CDATA[테스트 합시다!npm run build를 하면 폴더가 생깁니다. 
+&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[테스트 테스트 Vue로 만든 Todo페이지 gh-pages에 배포하기]]></title><description><![CDATA[테스트 합시다!npm run build를 하면 폴더가 생깁니다. 
 폴더 하위에 js, css 그리고 index.html, favicon.ico 요롷게 생긴다.npm run build로 생성된 dist 폴더구조index.html…]]></description><link>https://boramyy.github.io//category1/hoho2/</link><guid isPermaLink="false">https://boramyy.github.io//category1/hoho2/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;h3 id=&quot;테스트-합시다&quot;&gt;&lt;a href=&quot;#%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%95%A9%EC%8B%9C%EB%8B%A4&quot; aria-label=&quot;테스트 합시다 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;테스트 합시다!&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&amp;lt;!doctype html&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;no-js&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;en&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -941,4 +927,17 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;h3 id=&quot;참고자료&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C&quot; aria-label=&quot;참고자료 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고자료&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://vuejs.org/v2/guide/&quot;&gt;Vue 가이드&lt;/a&gt; &lt;br/&gt;
 &lt;a href=&quot;https://kr.vuejs.org/v2/guide/&quot;&gt;Vue 한국어 가이드&lt;/a&gt;&lt;br/&gt;
-&lt;a href=&quot;https://github.com/DivanteLtd/vue-storefront/tree/gh-pages&quot;&gt;참고한 다른 웹&lt;/a&gt; &lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;a href=&quot;https://github.com/DivanteLtd/vue-storefront/tree/gh-pages&quot;&gt;참고한 다른 웹&lt;/a&gt; &lt;/p&gt;</content:encoded></item><item><title><![CDATA[test 1-2]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting!I’m sure I’ll write a lot more interesting things in the future.Oh, and here’s a…]]></description><link>https://boramyy.github.io//dev/second/</link><guid isPermaLink="false">https://boramyy.github.io//dev/second/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. In Asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. The eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. From the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;./salty_egg.jpg&quot; alt=&quot;Chinese Salty Egg&quot;&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
