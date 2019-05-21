@@ -12,7 +12,7 @@ published: true
 ---
 
 <style>
-.content-box-1 {margin-right:-100px;padding:200px 8% 120px;background:url('/dunocanna_back.png') -150px -200px repeat, url('/dunocanna_back.png') 0 0 repeat;}
+.content-box-1 {margin-right:-100px;padding:200px 8% 120px;background:url('/images/dunocanna_back.png') -150px -200px repeat, url('/images/dunocanna_back.png') 0 0 repeat;}
 
 .content-box-1 .text-box-1 {width:40%;}
 .content-box-1 .text-box-1 .title {color:#000;}
