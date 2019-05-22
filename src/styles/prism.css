@@ -169,8 +169,7 @@ pre[class*="language-"] {
   color: #5577bb !important;
 }
 
-code.language-text,
-pre.language-text {
+p code.language-text {
   display: inline-block;
   height: 28px;
   margin: 0 5px;
@@ -181,4 +180,18 @@ pre.language-text {
   vertical-align: text-bottom;
   border-bottom: 12px solid #fff5e2;
   border-radius: 0 !important;
+}
+
+pre.language-text {
+  /* display: inline-block;
+  height: 28px;
+  margin: 0 5px;
+  padding: 1px 6px 1px 0 !important;
+  line-height: 2; */
+  color: #000 !important;
+  border: 2px solid #ffe2f2;
+  border-left: 12px solid #ffe2f2;
+  background: none !important;
+  /* vertical-align: text-bottom; */
+  /* border-radius: 0 !important; */
 }

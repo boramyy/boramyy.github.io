@@ -21,7 +21,7 @@ class DevPostTemplate extends React.Component {
     const PostHeader = styled.div`
       overflow: hidden;
       margin-top: 100px;
-      margin-bottom: 150px;
+      margin-bottom: 120px;
     `
 
     const PostTitle = styled.h2`
@@ -58,7 +58,6 @@ class DevPostTemplate extends React.Component {
       color: #444;
       letter-spacing: 0;
       word-spacing: 2px;
-      // border-bottom: 1px solid #111;
       p {
         font-size: 18px;
         font-family: "Nanum Gothic",san-serif;
@@ -90,10 +89,24 @@ class DevPostTemplate extends React.Component {
         &:hover {color:#77d7ff}
       }
       ul, ol {
-        padding-left:20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 20px;
         li {
+          font-size: 18px;
           line-height: 2.2;
-          list-style:inside;
+        }
+      }
+      ul {
+        li {
+          list-style: inside;
+        }
+      }
+      ol {
+        li {
+          margin-left: 20px;
+          padding-left: 8px;
+          list-style: decimal;
         }
       }
       blockquote {
