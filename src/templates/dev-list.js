@@ -97,18 +97,18 @@ class BlogIndex extends React.Component {
       min-height: 193px;
       padding: 50px;
       @media (max-width: 414px) {
-        padding:15px 20px;
+        padding: 15px 20px 20px;
         min-height: auto;
       }
     `
 
     const PostTitle = styled.span`
+      display: inline-block;
       font-size: 22px;
       color: #333;
       line-height: 1.5;
       @media (max-width: 414px) {
         font-size: 18px;
-        line-height: 1.6;
       }
     `
 
@@ -124,7 +124,7 @@ class BlogIndex extends React.Component {
       line-height: 1;
       &:before { content:'#'; }
       @media (max-width: 414px) {
-        font-size:16px;
+        font-size: 15px;
         line-height: 1.6;
       }
     `
@@ -135,7 +135,8 @@ class BlogIndex extends React.Component {
       color: #aaa;
       line-height: 1;
       @media (max-width: 414px) {
-        font-size:15px;
+        margin-top: 25px;
+        font-size: 15px;
       }
     `
 
