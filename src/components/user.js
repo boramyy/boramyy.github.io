@@ -40,6 +40,10 @@ class User extends React.Component {
       padding: 50px;
       border: 1px solid #ccc;
       box-shadow: 15px 15px 0 0 rgba(0,0,0,0.1);
+      @media (max-width: 414px) {
+        margin: 15px 0 70px;
+        padding: 30px;
+      }
     `
 
     const StyledImage = styled.img`
@@ -47,12 +51,19 @@ class User extends React.Component {
       height: 100px;
       border-radius: 50%;
       vertical-align: middle;
+      @media (max-width: 414px) {
+        width: 90px;
+        height: 90px;
+      }
     `
     
     const StyledName = styled.span`
       margin-left:30px;
       font-size: 20px;
       font-weight: bold;
+      @media (max-width: 414px) {
+        font-size: 18px;
+      }
     `
 
     return (
