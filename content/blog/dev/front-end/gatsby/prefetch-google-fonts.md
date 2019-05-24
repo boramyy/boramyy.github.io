@@ -2,7 +2,7 @@
 title: "gatsby-plugin-prefetch-google-fonts"
 date: "2019-05-09"
 categories: dev
-tags: ['gatsby', 'react', 'google fonts', 'glyphs']
+tags: ['front-end', 'gatsby', 'react', 'google fonts', 'glyphs']
 published: true
 ---
 

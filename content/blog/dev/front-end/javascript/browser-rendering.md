@@ -2,7 +2,7 @@
 title: "브라우저가 페이지를 렌더링하는 과정"
 date: "2019-05-22"
 categories: dev
-tags: ['javascript', 'rendering', 'dom', 'cssom']
+tags: ['front-end', 'javascript', 'rendering', 'dom', 'cssom']
 description: "브라우저가 페이지를 렌더링하는 과정입니다."
 published: true
 ---

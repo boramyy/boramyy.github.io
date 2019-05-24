@@ -2,7 +2,7 @@
 title: "react gatsby로 github 블로그 만들기!"
 date: "2019-05-02T01"
 categories: dev
-tags: ['gatsby', 'react', 'github']
+tags: ['front-end', 'gatsby', 'react', 'github']
 description: "react gatsby로 github 블로그를 만들어보자"
 published: true
 ---

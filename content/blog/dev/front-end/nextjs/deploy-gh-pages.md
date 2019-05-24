@@ -2,7 +2,7 @@
 title: "nextjs gh-pages로 배포하기"
 date: "2019-05-19"
 categories: dev
-tags: ['nextjs', 'react', 'github', 'gh-pages']
+tags: ['front-end', 'nextjs', 'react', 'github', 'gh-pages']
 description: "nextjs로 만든 모바일 웹을 gh-pages로 배포해보자"
 published: true
 ---
