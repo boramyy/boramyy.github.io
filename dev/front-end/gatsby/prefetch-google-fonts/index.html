@@ -1,0 +1,365 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.e3957ce774cfa4d6948e.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;color:#444;vertical-align:baseline;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}a,a:focus,a:visited{text-decoration:none}br{word-spacing:0}html{height:100%;max-width:100%;overflow-x:hidden}html.scrollSmooth{scroll-behavior:smooth}::-moz-selection{color:#fff;background:#ff6db6}::selection{color:#fff;background:#ff6db6}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{font-family:Noto Sans KR,san-serif}body{margin:0}code{font-family:Roboto Mono;font-size:.85em}h2,h3,h4,h5,h6{margin-top:100px;margin-bottom:30px;font-family:Noto Sans KR,san-serif;font-weight:700;color:#333;line-height:1.6}h2{font-size:1.85em;font-weight:400;color:#111;line-height:1.8;letter-spacing:-.4px;word-spacing:5px}h3{font-size:1.6em}h4{font-size:1.3em;margin-top:60px}h4,h5{margin-bottom:15px}h5{font-size:1.1em;margin-top:45px}h6{font-size:1em;margin-top:30px;margin-bottom:15px}.clear:after{content:"";display:block;clear:both;width:0;height:0}.container{width:100%;max-width:100%;margin-right:auto;margin-left:auto;padding-right:100px;padding-left:100px;box-sizing:border-box}.page{padding-top:100px;padding-bottom:100px}.mockup-iphonexs{position:relative;width:360px;height:723px}.mockup-iphonexs .mockup-screen{position:absolute;top:21px;right:4px;bottom:21px;left:22px;padding-right:4px;overflow:auto}.mockup-iphonexs .mockup-screen img{display:block;width:100%}.mockup-iphonexs .mockup-body{position:absolute;left:0;top:0;z-index:1;width:100%;height:100%;background-image:url(/static/mockup-iphonexs-1a8c8393099113cb3d15f7773ed373c5.png);background-size:100%;pointer-events:none}.mockup-iphonexs .mockup-body.white{background-image:url(/static/mockup-iphonexs-white-d14a4b5631fb2799884e0472d3cc7ef7.png)}.mockup-iphonexs .mockup-body.grey{background-image:url(/static/mockup-iphonexs-grey-6ed97b6a98616005314db19b67d97f75.png)}@media (max-width:767px){.container{width:100%;padding:50px}}@media (max-width:414px){.container{padding:35px}.page{padding-bottom:50px}.mockup-iphonexs{position:relative;width:300px;height:602px}.mockup-iphonexs .mockup-screen{top:17px;right:13px;bottom:17px;left:18px;padding-right:5px}}.gatsby-highlight *{font-family:Roboto Mono!important;font-size:15px;line-height:1.5}code[class*=language-],pre[class*=language-]{color:#404040;background:none;text-shadow:0 1px #fff;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{overflow-x:auto;margin:30px 0;padding:16px 25px 18px}:not(pre)>code[class*=language-],pre[class*=language-]{background:#fafafa}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.operator,.token.punctuation{color:#555}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.symbol{color:#444}.token.tag{color:#11b5b5}.token.attr-name{color:#57b}.token.attr-value{color:#5b5}.token.builtin,.token.char,.token.inserted,.token.selector{color:#11b5b5}.token.string{color:#5b5}.language-css .token.string,.style .token.string,.token.entity,.token.url{color:#f7b;background:hsla(0,0%,100%,.5)}.token.atrule{color:#07a}.token.keyword{color:#b5d}.token.property{color:#444}.token.function{color:#f7b}.token.class-name{color:#b5d}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.language-scss{color:#f99157!important}.language-javascript{color:#57b!important}p code.language-text{display:inline-block;height:28px;margin:0 5px;padding:1px 6px 1px 0!important;line-height:2;vertical-align:text-bottom;border-bottom:12px solid #fff5e2;border-radius:0!important}p code.language-text,pre.language-text{color:#000!important;background:none!important}pre.language-text{border:2px solid #ffe2f2;border-left-width:12px}</style><meta name="generator" content="Gatsby 2.3.34"/><style data-styled="cvSReA iqCVES efTBCw vjygn laDIhD ejTxaA UrNT fihYqr kUpluV cAjXMq jckVQf hBOBuF iGglWj kYWfgi iPmjsU kRQALZ jmbRUq kLySkB kkzZYR iwfTHQ iKJtYS gjSDPZ oPcim" data-styled-version="4.2.0">
+/* sc-component-id: sc-3cxgx0-0 */
+.cvSReA{padding-top:50px;padding-right:12%;padding-bottom:50px;padding-left:12%;}
+/* sc-component-id: sc-3cxgx0-1 */
+.fihYqr{overflow:hidden;margin-top:100px;margin-bottom:120px;}
+/* sc-component-id: sc-3cxgx0-2 */
+.kUpluV{float:left;width:50%;margin-top:0;margin-right:15%;color:#111;}
+/* sc-component-id: sc-3cxgx0-3 */
+.cAjXMq{float:left;width:35%;margin-top:10px;font-size:15px;font-weight:100;}
+/* sc-component-id: sc-3cxgx0-4 */
+.jckVQf{margin-bottom:15px;}
+/* sc-component-id: sc-3cxgx0-5 */
+.hBOBuF{margin-right:15px;line-height:30px;}
+/* sc-component-id: sc-3cxgx0-6 */
+.iGglWj{line-height:30px;}
+/* sc-component-id: sc-3cxgx0-7 */
+.kYWfgi{padding-bottom:120px;color:#444;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;word-spacing:2px;} .kYWfgi p{font-size:18px;font-family:"Nanum Gothic",san-serif;line-height:2.4;-webkit-letter-spacing:-0.4px;-moz-letter-spacing:-0.4px;-ms-letter-spacing:-0.4px;letter-spacing:-0.4px;} .kYWfgi hr{margin-top:50px;border:0;border-top:1px solid #bbb;} .kYWfgi img,.kYWfgi video{display:block;margin:30px auto;} .kYWfgi .gatsby-resp-image-wrapper{margin:50px auto;} .kYWfgi em{display:block;font-size:16px;text-align:center;font-style:italic;font-weight:100;} .kYWfgi a{font-size:18px;color:#51b6e0;} .kYWfgi a:hover{color:#77d7ff;} .kYWfgi ul,.kYWfgi ol{margin-top:15px;margin-bottom:15px;padding-left:20px;} .kYWfgi ul li,.kYWfgi ol li{font-size:18px;line-height:2.2;} .kYWfgi ul li{list-style:inside;} .kYWfgi ol li{margin-left:20px;padding-left:8px;list-style:decimal;} .kYWfgi blockquote{margin-top:70px;margin-bottom:100px;padding:40px 50px;font-size:0.9em;line-height:1.8;border:1px solid #ccc;box-shadow:15px 15px 0 0 rgba(0,0,0,0.1);} .kYWfgi blockquote h2,.kYWfgi blockquote h3,.kYWfgi blockquote h4,.kYWfgi blockquote h5,.kYWfgi blockquote h6{margin-top:15px;} .kYWfgi blockquote p{font-size:16px;} .kYWfgi .anchor svg{margin-top:14px;margin-left:-5px;}
+/* sc-component-id: sc-3cxgx0-8 */
+.iKJtYS{overflow:hidden;display:block;width:100%;}
+/* sc-component-id: sc-3cxgx0-9 */
+.gjSDPZ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:50%;height:120px;font-size:20px;line-height:1.6;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;} .gjSDPZ.prev{float:left;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;} .gjSDPZ.prev svg{margin-right:50px;-webkit-transform:rotate(180deg);-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);} .gjSDPZ.next{float:right;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;} .gjSDPZ.next svg{margin-left:50px;} .gjSDPZ:hover{color:#ff6db6;} .gjSDPZ:hover svg{fill:#ff6db6;} .gjSDPZ svg{width:50px;height:50px;fill:#333;}
+/* sc-component-id: q2ro87-0 */
+.oPcim{padding-bottom:35px;font-size:12px;text-align:right;} .oPcim.fixed{position:fixed;right:0;bottom:0;}
+/* sc-component-id: sc-1ahigr0-0 */
+.iqCVES{padding-top:60px;} .iqCVES.fixed{position:fixed;top:0;right:0;left:0;z-index:999;} @media (max-width:414px){.iqCVES{background-color:#fff;}.iqCVES.container{padding:25px 35px;}}
+/* sc-component-id: sc-1ahigr0-1 */
+.ejTxaA{float:right;height:30px;} @media (max-width:414px){.ejTxaA a{font-size:18px;}}
+/* sc-component-id: sc-1ahigr0-2 */
+.laDIhD{display:block;float:left;margin-left:20px;padding:5px;font-size:15px;font-weight:100;color:inherit;-webkit-text-decoration:none;text-decoration:none;box-shadow:none;} .laDIhD:hover{color:#000;} .laDIhD.on{position:relative;font-weight:400;color:#111;} .laDIhD.on svg{stroke-width:1.5px;}
+/* sc-component-id: sc-1ahigr0-3 */
+.vjygn{display:block;float:left;} .vjygn a{margin-left:0;} @media (max-width:414px){.vjygn a svg{width:22px;height:22px;}.vjygn a.on svg{stroke-width:1.5px;}}
+/* sc-component-id: sc-1ahigr0-4 */
+.UrNT{display:block;float:left;margin-left:20px;padding:5px;font-family:'Noto Sans KR',san-serif;fill:#777;-webkit-text-decoration:none;text-decoration:none;} .UrNT svg{display:block;vertical-align:middle;} .UrNT:hover{fill:#000;}
+/* sc-component-id: sc-1oc7sgy-0 */
+.efTBCw{overflow:hidden;position:absolute;width:0;height:0;line-height:0;color:transparent;}
+/* sc-component-id: n96cw1-0 */
+.iPmjsU{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:15px 50px 100px;padding:50px;border:1px solid #ccc;box-shadow:15px 15px 0 0 rgba(0,0,0,0.1);} @media (max-width:768px){.iPmjsU{margin:15px 0 70px;padding:30px;}} @media (max-width:414px){}
+/* sc-component-id: n96cw1-1 */
+.kRQALZ{width:100px;height:auto;border-radius:50%;vertical-align:middle;} @media (max-width:414px){.kRQALZ{width:90px;}}
+/* sc-component-id: n96cw1-2 */
+.jmbRUq{display:inline-block;margin-left:30px;} @media (max-width:414px){}
+/* sc-component-id: n96cw1-3 */
+.kLySkB{font-size:20px;font-weight:bold;} @media (max-width:414px){.kLySkB{font-size:18px;}}
+/* sc-component-id: n96cw1-4 */
+.kkzZYR{margin-top:20px;} .kkzZYR svg{margin-right:8px;margin-bottom:-2px;} @media (max-width:414px){.kkzZYR{font-size:14px;}}
+/* sc-component-id: n96cw1-5 */
+.iwfTHQ{padding-top:5px;padding-bottom:5px;-webkit-text-decoration:none;text-decoration:none;}</style><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#ff6db6"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a79b2ebde269d0661665e3195c131f88"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a79b2ebde269d0661665e3195c131f88"/><title data-react-helmet="true">gatsby-plugin-prefetch-google-fonts</title><meta data-react-helmet="true" name="description" content="indexgatsby에서 google webfont 사용하기플러그인 설치하기gatsby-config.js에 설정 추가style 지정삽질참고gatsby에서 google webfont…"/><meta data-react-helmet="true" property="og:title" content="gatsby-plugin-prefetch-google-fonts"/><meta data-react-helmet="true" property="og:image"/><meta data-react-helmet="true" property="og:description" content="indexgatsby에서 google webfont 사용하기플러그인 설치하기gatsby-config.js에 설정 추가style 지정삽질참고gatsby에서 google webfont…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="boramkim"/><meta data-react-helmet="true" name="twitter:title" content="gatsby-plugin-prefetch-google-fonts"/><meta data-react-helmet="true" name="twitter:description" content="indexgatsby에서 google webfont 사용하기플러그인 설치하기gatsby-config.js에 설정 추가style 지정삽질참고gatsby에서 google webfont…"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/nanumgothic/v16/PN_3Rfi-oW3hYwmKDpxS7F_D-dje.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/notosanskr/v11/Pby6FmXiEBPT4ITbgNA5CgmOsk7lyJc.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIR.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237t.woff2"/><link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="/google-fonts/s/robotomono/v6/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2"/><style type="text/css">@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:100;src:local('Noto Sans KR Thin'),local('NotoSansKR-Thin'),url(/google-fonts/s/notosanskr/v11/Pby6FmXiEBPT4ITbgNA5CgmOsk7lyJc.woff2) format('woff2'),url(/google-fonts/s/notosanskr/v11/Pby6FmXiEBPT4ITbgNA5CgmOsk7lyJE.woff) format('woff');font-display: swap;}@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:400;src:local('Noto Sans KR Regular'),local('NotoSansKR-Regular'),url(/google-fonts/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237t.woff2) format('woff2'),url(/google-fonts/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237r.woff) format('woff');font-display: swap;}@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:700;src:local('Noto Sans KR Bold'),local('NotoSansKR-Bold'),url(/google-fonts/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIR.woff2) format('woff2'),url(/google-fonts/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIX.woff) format('woff');font-display: swap;}@font-face{font-family:'Roboto Mono';font-style:normal;font-weight:400;src:local('Roboto Mono'),local('RobotoMono-Regular'),url(/google-fonts/s/robotomono/v6/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2) format('woff2'),url(/google-fonts/s/robotomono/v6/L0x5DF4xlVMF-BfR8bXMIjhLq3k.woff) format('woff');font-display: swap;}@font-face{font-family:'Nanum Gothic';font-style:normal;font-weight:400;src:local('NanumGothic'),url(/google-fonts/s/nanumgothic/v16/PN_3Rfi-oW3hYwmKDpxS7F_D-dje.woff2) format('woff2'),url(/google-fonts/s/nanumgothic/v16/PN_3Rfi-oW3hYwmKDpxS7F_D-djY.woff) format('woff');font-display: swap;}</style><link as="script" rel="preload" href="/component---src-templates-dev-post-js-8b18274e0569499a786f.js"/><link as="script" rel="preload" href="/12-725c954bc88950abe32f.js"/><link as="script" rel="preload" href="/0-5dc25dfbbf735d4bed87.js"/><link as="script" rel="preload" href="/app-12f3ba4c908b5ef7950b.js"/><link as="script" rel="preload" href="/styles-9c7a7a0337e9124f37ec.js"/><link as="script" rel="preload" href="/webpack-runtime-33b8a6e67bd336bac3f5.js"/><link as="fetch" rel="preload" href="/static/d/536/path---dev-front-end-gatsby-prefetch-google-fonts-cdf-746-ahc0246mvGXfPZztVMAjf13Hg.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class=""><header class="container clear  sc-1ahigr0-0 iqCVES"><strong class="sc-1oc7sgy-0 efTBCw">Boram Kim</strong><h1 id="logo" class="sc-1ahigr0-3 vjygn"><a class="logo sc-1ahigr0-2 laDIhD" href="/"><svg width="18px" height="18px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;stroke:#111;fill:none" xml:space="preserve"><g><path d="M7.6,22.8c-0.5,0-1-0.1-1.5-0.2c-1.4-0.4-2.4-1.1-2.8-2.1c-0.3-0.8-0.2-1.8,0.2-2.9c0.7-1.8,3.7-5.1,5.9-6.7 c-0.1,0-0.1,0.1-0.2,0.1c-1.4,0.6-3.6,1.5-5.1,0.9c-0.7-0.3-1.3-0.9-1.6-1.8c-1.1-2.9-0.4-5.1,2-6.7c1.3-0.8,2.7-1,3.9-0.6 c1.4,0.5,2.4,1.9,2.9,3.7c0,0.1,0,0.1-0.1,0.2c-0.1,0-0.1,0-0.2-0.1c-0.4-1.7-1.4-3-2.7-3.5C7.2,2.5,5.9,2.7,4.7,3.5 C2.4,5,1.7,7.2,2.7,10c0.3,0.8,0.8,1.4,1.5,1.7c1.5,0.6,3.6-0.3,4.9-0.9c0.6-0.3,1.1-0.5,1.4-0.5c0.1,0,0.1,0,0.1,0.1 c0,0.1,0,0.1-0.1,0.1c-2.1,1-6,5.1-6.8,7.2c-0.4,1.1-0.5,2-0.2,2.7c0.4,0.9,1.3,1.6,2.6,2c1.7,0.4,4,0.1,5.2-1.5 c0.6-0.9,0.8-2.1,0.9-3.2c0.1-1.2,0.2-2.4,0.2-3.5c0.1-2,0.1-4.1,0.6-6.1c0.3-1.5,0.8-2.7,1.6-3.5l0,0c0.8-1,2.2-2.6,4.6-2.3 c1.7,0.2,3.2,1.6,3.6,3.3c0.4,1.7-0.3,3.3-1.8,4.4c-1.3,0.9-3.1,0.8-4.6,0.8c-0.8,0-1.7,0-2.3,0.1c3.1,2.1,6.5,6.4,7.8,10 c0,0.1,0,0.1-0.1,0.2c-0.1,0-0.1,0-0.2-0.1c-1.4-3.6-4.9-8-7.9-10c0,0-0.1-0.1-0.1-0.1c0,0,0-0.1,0.1-0.1c0.7-0.2,1.6-0.2,2.6-0.2 c1.5,0,3.2,0.1,4.5-0.8c1.5-1,2.1-2.5,1.7-4.1c-0.4-1.7-1.8-2.9-3.4-3.1c-2.3-0.3-3.6,1.2-4.4,2.2l0,0c-0.7,0.8-1.2,1.9-1.5,3.4 c-0.4,2-0.5,4-0.6,6c0,1.2-0.1,2.4-0.2,3.6c-0.1,1.1-0.3,2.3-1,3.3C10.6,22.3,9,22.8,7.6,22.8z"></path></g></svg></a></h1><nav class="sc-1ahigr0-1 ejTxaA"><a class="nav-item sc-1ahigr0-2 laDIhD on" href="/dev">dev</a><a class="nav-item sc-1ahigr0-2 laDIhD" href="/prj">prj</a><a href="https://github.com/boramyy" class="nav-item link sc-1ahigr0-4 UrNT"><svg viewBox="0 0 32 32" width="16" height="16"><path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path></svg></a><a href="https://github.com/boramyy" class="nav-item link sc-1ahigr0-4 UrNT"><svg viewBox="0 0 14 16" width="14" height="16"><path fill-rule="evenodd" d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"></path></svg></a></nav></header><main class="sc-3cxgx0-0 cvSReA"><div class="sc-3cxgx0-1 fihYqr"><h2 class="sc-3cxgx0-2 kUpluV">gatsby-plugin-prefetch-google-fonts</h2><div class="sc-3cxgx0-3 cAjXMq"><div class="sc-3cxgx0-4 jckVQf"><span class="sc-3cxgx0-5 hBOBuF">front-end</span><span class="sc-3cxgx0-5 hBOBuF">gatsby</span><span class="sc-3cxgx0-5 hBOBuF">react</span><span class="sc-3cxgx0-5 hBOBuF">google fonts</span><span class="sc-3cxgx0-5 hBOBuF">glyphs</span></div><span class="sc-3cxgx0-6 iGglWj">2019 05 09</span></div></div><div class="sc-3cxgx0-7 kYWfgi"><h3 id="index"><a href="#index" aria-label="index permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>index</h3>
+<ul>
+<li><a href="#gatsby%EC%97%90%EC%84%9C-google-webfont-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">gatsby에서 google webfont 사용하기</a></li>
+<li><a href="#%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0">플러그인 설치하기</a></li>
+<li><a href="#gatsby-configjs%EC%97%90-%EC%84%A4%EC%A0%95-%EC%B6%94%EA%B0%80">gatsby-config.js에 설정 추가</a></li>
+<li><a href="#style-%EC%A7%80%EC%A0%95">style 지정</a></li>
+<li><a href="#%EC%82%BD%EC%A7%88">삽질</a></li>
+<li><a href="#%EC%B0%B8%EA%B3%A0">참고</a></li>
+</ul>
+<h3 id="gatsby에서-google-webfont-사용하기"><a href="#gatsby%EC%97%90%EC%84%9C-google-webfont-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" aria-label="gatsby에서 google webfont 사용하기 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gatsby에서 google webfont 사용하기</h3>
+<h3 id="플러그인-설치하기"><a href="#%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0" aria-label="플러그인 설치하기 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>플러그인 설치하기</h3>
+<p>터미널에서 다음 명령어를 사용하여 구글폰트를 사용하기위한 플러그인을 프로젝트에 설치합니다.</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">$ <span class="token function">npm</span> <span class="token function">install</span> --save gatsby-plugin-prefetch-google-fonts</code></pre></div>
+<h3 id="gatsby-configjs에-설정-추가"><a href="#gatsby-configjs%EC%97%90-%EC%84%A4%EC%A0%95-%EC%B6%94%EA%B0%80" aria-label="gatsby configjs에 설정 추가 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gatsby-config.js에 설정 추가</h3>
+<p><code class="language-text">gatsby-config.js</code> 파일의 plugins 배열에 <code class="language-text">gatsby-plugin-prefetch-google-fonts</code>를 추가해줍니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      resolve<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`gatsby-plugin-prefetch-google-fonts`</span></span><span class="token punctuation">,</span>
+      options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        fonts<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            family<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`Noto Sans KR`</span></span><span class="token punctuation">,</span>
+            variants<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`100`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`400`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`700`</span></span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="style-지정"><a href="#style-%EC%A7%80%EC%A0%95" aria-label="style 지정 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>style 지정</h3>
+<p>그리고 <code class="language-text">css</code>에 font-family를 원하는 폰트로 설정해줍니다.</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Noto Sans KR'</span><span class="token punctuation">,</span>san-serif<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="삽질"><a href="#%EC%82%BD%EC%A7%88" aria-label="삽질 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>삽질</h3>
+<h4 id="문제-발생"><a href="#%EB%AC%B8%EC%A0%9C-%EB%B0%9C%EC%83%9D" aria-label="문제 발생 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>문제 발생</h4>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/3d79784607fc41c01b3996fb86b6c240/fc34e/google-font-problem.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 18.099547511312217%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA3ElEQVQY0yWOCWrDMBBFff/LtRQCLXWdBDuRrdWSvCo0rxNX8JhF8+dPpT8+Ue8nesHeDC4XfN6Fgkv/0Us8fTW8nWq+r4qm1dTXnrYPXG6Wc2cOgsxWZd0ZlMbce+6dQmmHcSOD8WgbDvbHL9o4XBildlgXMNYT0yRzjl5b6uYiukCFPOs9ahgojwel7Ew5sywzKUW2bWVdFuZpkt5CzokYR8q+M4bAtq440df1D23bUT2fT3EUdx/IIkqyLMbEPM9HHVMSk3L0VxHnPB1/r/xl8GIcI835Qi9H/QFK2y7nNWCYDAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="problem picture"
+        title=""
+        src="/static/3d79784607fc41c01b3996fb86b6c240/e7b61/google-font-problem.png"
+        srcset="/static/3d79784607fc41c01b3996fb86b6c240/9b672/google-font-problem.png 163w,
+/static/3d79784607fc41c01b3996fb86b6c240/4b204/google-font-problem.png 325w,
+/static/3d79784607fc41c01b3996fb86b6c240/e7b61/google-font-problem.png 650w,
+/static/3d79784607fc41c01b3996fb86b6c240/fc34e/google-font-problem.png 884w"
+        sizes="(max-width: 650px) 100vw, 650px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>a ㅏ.. 분명 위 사진처럼 크롬 개발자도구의 <code class="language-text">element &gt; computed</code> 에서 확인하면 font-family가 <code class="language-text">&#39;Noto Sans KR&#39;,san-serif</code>로 적용되어있는데, 저번 jekyll로 만들어놨던 블로그와 비교해보니 한눈에봐도 폰트가 다릅니다..! 어떻게 된거지 한참을 찾아 헤맸어요.. ^_ㅠ</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/2936aad342226ae2f6b83540df5f682b/ebfad/google-font-compare-01.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 100px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 70%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwT/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHc1rkjh//EABgQAAMBAQAAAAAAAAAAAAAAAAECAxIA/9oACAEBAAEFAq2ZaPcjpNtHjpjJSEXA/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhABAQACAwAAAAAAAAAAAAAAEQABITFRof/aAAgBAQAGPwLOMBaOJl8t9DF//8QAHBAAAgICAwAAAAAAAAAAAAAAAREAIUFxMVFh/9oACAEBAAE/IS5cCp3EakLv1Q7fZwswRkWFbLUTwZ2IFIuyZ//aAAwDAQACAAMAAAAQ8w//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAfEAEAAgEEAwEAAAAAAAAAAAABESEAMUFRYXGBkcH/2gAIAQEAAT8QEtENQwVG6zdA+MklFzBZpvh7XTOAQU+MifRQ9xYh+4QcN3ZCTwtt95MYLj2r+5//2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="compare font - gatsby"
+        title=""
+        src="/static/2936aad342226ae2f6b83540df5f682b/ebfad/google-font-compare-01.jpg"
+        srcset="/static/2936aad342226ae2f6b83540df5f682b/ebfad/google-font-compare-01.jpg 100w"
+        sizes="(max-width: 100px) 100vw, 100px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/17547e05b2d191c97b597390529a875d/ebfad/google-font-compare-02.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 100px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 70%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHuermFA//EABgQAAMBAQAAAAAAAAAAAAAAAAECAxIA/9oACAEBAAEFAq2ZaPYjovtHlpjNSEXA/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhABAQACAwAAAAAAAAAAAAAAEQABITFRYf/aAAgBAQAGPwIwFozg5n2W30MX/8QAHBABAAICAwEAAAAAAAAAAAAAAQARITFBUWFx/9oACAEBAAE/IUj6KxeZT85fTqJd7cVDbDZWrr5DQLT0QVDeVn//2gAMAwEAAgADAAAAEPMP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHhABAAICAgMBAAAAAAAAAAAAAREhADFR4UFhgZH/2gAIAQEAAT8QP7ANhgqN1rJqdhmAHwILHrEkOgtQeHJEoEH6OD1lOPCuERM82/uOCDc9uf/Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="compare font - jekyll"
+        title=""
+        src="/static/17547e05b2d191c97b597390529a875d/ebfad/google-font-compare-02.jpg"
+        srcset="/static/17547e05b2d191c97b597390529a875d/ebfad/google-font-compare-02.jpg 100w"
+        sizes="(max-width: 100px) 100vw, 100px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+<em>‘ㅎ’을 통해 비교할 수 있는 사진</em></p>
+<h4 id="원인-찾기"><a href="#%EC%9B%90%EC%9D%B8-%EC%B0%BE%EA%B8%B0" aria-label="원인 찾기 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>원인 찾기</h4>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/457a5ebd1466f001cc9b712a998d614f/e08d3/google-font-rendered-fonts.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 18.559556786703602%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAw0lEQVQY04VQywqDMBD0//+qUBRftS1Wja8YHyh6qYqiF6fZUHttYJjsZpjMrsbiFHGSIudccd00mOcZ4zhimqYf/wPpCFqWc3AhUNU1yqqGKEslIFPidV2VUNXfHt3P9xNUL8sCzfWeCFkCw3TwCpliy/FwueoQ8oNt28Fk8iCK5RQF4jRDSiEKgWEY0LYtuq5TZnQ0MtBNG/enD/t2h+s94AcRDMvBItO9x0kZsiRDIUr0fQ8u19PI1ez7rkyO4/jhA1FoKFihurU7AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="rendered fonts"
+        title=""
+        src="/static/457a5ebd1466f001cc9b712a998d614f/e7b61/google-font-rendered-fonts.png"
+        srcset="/static/457a5ebd1466f001cc9b712a998d614f/9b672/google-font-rendered-fonts.png 163w,
+/static/457a5ebd1466f001cc9b712a998d614f/4b204/google-font-rendered-fonts.png 325w,
+/static/457a5ebd1466f001cc9b712a998d614f/e7b61/google-font-rendered-fonts.png 650w,
+/static/457a5ebd1466f001cc9b712a998d614f/e08d3/google-font-rendered-fonts.png 722w"
+        sizes="(max-width: 650px) 100vw, 650px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+똑같은 태그, 똑같은 문장에서의 글자의 형태?(glyphs)가 jekyll 블로그에서 적용했던 문자는 모두 <code class="language-text">Noto Sans KR Regular</code>로 적용된것에 비해 gatsby 블로그에서의 glyphs는 제 로컬 기본 폰트인 <code class="language-text">Apple SD Gothic Neo</code> 까지 섞여있다는 사실이었습니다!</p>
+<ol>
+<li>여기서 왜 같은 폰트를 불러오는데 다른 결과가 나오지?</li>
+<li>네트워크에서 정말 똑같은 폰트를 불러오는지 확인해보자</li>
+<li>요청하는 url이 다르네?</li>
+<li><a href="https://fonts.google.com">font.google.com</a>에서 한 폰트 내에서도 weight 말고도 구분하는 기준이 있나 확인해봐야겠다</li>
+<li><code class="language-text">customize</code>탭에서 Korean을 체크하면 <code class="language-text">link</code>태그의 attribute로 <code class="language-text">subsets</code>가 생긴다.</li>
+</ol>
+<blockquote>
+<h4 id="삽질-1-1"><a href="#%EC%82%BD%EC%A7%88-1-1" aria-label="삽질 1 1 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>삽질 1-1</h4>
+<p>원인찾기 1번 과정에서 <code class="language-text">oswald</code> 폰트를 요청하는 url 이 발견되었다.
+<code class="language-text">gatsby-plugin-prefetch-google-fonts</code>의 예제에서 존재하던 폰트인데, 처음 예제코드 그대로 빌드해본 후 계속 잔재하는 요청이라고 생각했다.
+프로젝트 전체검색에 <code class="language-text">oswald</code>를 검색해도 표시되지 않고 <code class="language-text">node_modules</code>와 <code class="language-text">.cache</code> 폴더를 지웠는데도 불구하고 자꾸 요청하는 것이다!!</p>
+<p>차분히 생각해보니,, 검색에서 잡히지 않던 이유는 <code class="language-text">.gitignore</code> 파일에 명시되어 있어서 에디터에서 똑똑하게 스스로 거른것이었고, <code class="language-text">public</code> 폴더에 font를 요청하는 코드가 따로 존재했다…</p>
+<p><code class="language-text">node_modules</code>, <code class="language-text">.cache</code>, <code class="language-text">public</code> 폴더를 모두 지우고 새로 빌드하니 내가 명시한 폰드들만 잘 불러오더라는 후문,,</p>
+</blockquote>
+<h4 id="원인-발견"><a href="#%EC%9B%90%EC%9D%B8-%EB%B0%9C%EA%B2%AC" aria-label="원인 발견 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>원인 발견</h4>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/d9deb7f01abc796a8bf38a46c8123872/8abd4/google-font-got-it.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 608px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 44.73684210526316%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA8klEQVQoz51RW46DMAzk4j1Q78IPogeAtoKCeJaKN556vJuKXak/RJrEiaPxjO3hy1rX9RC8bdtQliXSNEWWZUiSBFVV4ejyRMTIwjBEEATwfR9xHB8iI5cRds8npmn6k6Ry5gjG7k5b7u6wLIvlTCEv0f2OR54jV8u36xUPVUzbbEGu74zdWRSFoa5rO9u2NYfjOP4Qchv089x1YI2V6n6rfbO1d7F38iGU0wlyPkNYJYrwohIdVKMqODCiaRpTRTDmG93ti1gPLbhcIDoImWdAlS7az34Y0Pe9WSHYY54kmfUfY/bTEX0Uyj97cmCy+/UGOZO+f1FzcZEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="the problem hint"
+        title=""
+        src="/static/d9deb7f01abc796a8bf38a46c8123872/8abd4/google-font-got-it.png"
+        srcset="/static/d9deb7f01abc796a8bf38a46c8123872/9b672/google-font-got-it.png 163w,
+/static/d9deb7f01abc796a8bf38a46c8123872/4b204/google-font-got-it.png 325w,
+/static/d9deb7f01abc796a8bf38a46c8123872/8abd4/google-font-got-it.png 608w"
+        sizes="(max-width: 608px) 100vw, 608px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>그렇다.. <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/?=google">라이브러리의 설명</a>에 명시되어있던 <code class="language-text">subsets</code>를 간과한것이 문제였다.</p>
+<h4 id="문제-해결"><a href="#%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0" aria-label="문제 해결 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>문제 해결</h4>
+<p>다시 <code class="language-text">gatsby-config.js</code> 파일을 열고 다음과 같이 <code class="language-text">subsets</code> 설정을 추가해주었다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      resolve<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`gatsby-plugin-prefetch-google-fonts`</span></span><span class="token punctuation">,</span>
+      options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        fonts<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            family<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`Noto Sans KR`</span></span><span class="token punctuation">,</span>
+            subsets<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`korean`</span></span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            variants<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`100`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`400`</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`700`</span></span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>새로 빌드할 때 마다 캐시된 파일들을 지우고 새로 빌드하자니 귀찮아서 <code class="language-text">package.json</code>에 스크립트를 추가했다.</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"..."</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"..."</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+    <span class="token property">"rmdev"</span><span class="token operator">:</span> <span class="token string">"rm -rf node_modules/ .cache/ public/ &amp;&amp; npm i &amp;&amp; gatsby develop"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"..."</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">$ <span class="token function">npm</span> run rmdev</code></pre></div>
+<p>드디어 폰트가 정상적으로 출력된다!! ㅜㅜ</p>
+<hr>
+<h3 id="참고"><a href="#%EC%B0%B8%EA%B3%A0" aria-label="참고 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참고</h3>
+<ul>
+<li><a href="https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/?=google">gatsby-plugin-prefetch-google-fonts-docs</a></li>
+<li><a href="https://fonts.google.com">구글 웹폰트</a></li>
+</ul></div><div class="n96cw1-0 iPmjsU"><img src="" alt="" class="n96cw1-1 kRQALZ"/><div class="n96cw1-2 jmbRUq"><div class="n96cw1-3 kLySkB"></div><div class="n96cw1-4 kkzZYR"><a href="" class="n96cw1-5 iwfTHQ"><svg viewBox="0 0 32 32" width="16" height="16"><path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path></svg>boramyy</a></div></div></div><div class="sc-3cxgx0-8 iKJtYS"><a class="prev sc-3cxgx0-9 gjSDPZ" rel="prev" href="/dev/front-end/nextjs/deploy-gh-pages/"><svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path></svg> <!-- -->nextjs gh-pages로 배포하기</a><a class="next sc-3cxgx0-9 gjSDPZ" rel="next" href="/dev/front-end/gatsby/styled-component/">gatsby에서 styled-component 사용하기<!-- --> <svg x="0px" y="0px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path></svg></a></div></main><footer class="container q2ro87-0 oPcim">Copyright 2019. boramkim All rights reserved.</footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-128387569-1', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-dev-post-js","jsonName":"dev-front-end-gatsby-prefetch-google-fonts-cdf","path":"/dev/front-end/gatsby/prefetch-google-fonts/"};window.dataPath="536/path---dev-front-end-gatsby-prefetch-google-fonts-cdf-746-ahc0246mvGXfPZztVMAjf13Hg";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-12f3ba4c908b5ef7950b.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-4ce7f49cec02d9b9d831.js"],"component---src-templates-dev-post-js":["/component---src-templates-dev-post-js-8b18274e0569499a786f.js"],"component---src-templates-prj-post-js":["/component---src-templates-prj-post-js-791b2c1431d91b19017c.js"],"component---src-templates-dev-list-js":["/component---src-templates-dev-list-js-65c9b95a298502971c71.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0ed22148be8a12900306.js"],"component---src-pages-index-js":["/component---src-pages-index-js-b959809ac8f1a58f4a42.js"],"component---src-pages-prj-js":["/component---src-pages-prj-js-dcb3574e2021a21830d4.js"],"pages-manifest":["/pages-manifest-762f6b8e2f9a68e21cf9.js"]};/*]]>*/</script><script src="/webpack-runtime-33b8a6e67bd336bac3f5.js" async=""></script><script src="/styles-9c7a7a0337e9124f37ec.js" async=""></script><script src="/app-12f3ba4c908b5ef7950b.js" async=""></script><script src="/0-5dc25dfbbf735d4bed87.js" async=""></script><script src="/12-725c954bc88950abe32f.js" async=""></script><script src="/component---src-templates-dev-post-js-8b18274e0569499a786f.js" async=""></script></body></html>
