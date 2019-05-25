@@ -122,6 +122,12 @@ class DevPostTemplate extends React.Component {
         }
         p {font-size: 16px;}
       }
+      .anchor {
+        svg {
+          margin-top: 14px;
+          margin-left: -5px;
+        }
+      }
     `
 
     const AnotherPostBox = styled.div`
