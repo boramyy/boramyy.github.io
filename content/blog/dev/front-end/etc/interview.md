@@ -15,6 +15,7 @@ published: false
 - [css](#css)
 - [서비스](#서비스)
 - [통신](#통신)
+- [참고](#참고)
 
 
 ### 기본
@@ -74,14 +75,9 @@ published: false
 
 
 
-<!-- 
+
 ### 참고
-
+<!-- 
 - [Gatsby Docs][gatsby-docs] <br>
-- [Gatsby Starter][gatsby-starter] <br>
-- [How Gatsby Works with GitHub Pages][gatsby-gh-pages]
 
-
-[gatsby-docs]: https://www.gatsbyjs.org/docs/quick-start
-[gatsby-starter]: https://www.gatsbyjs.org/starters/?v=2
-[gatsby-gh-pages]: https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/ -->
+[gatsby-docs]: https://www.gatsbyjs.org/docs/quick-start -->
