@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
         padding-top: 35px;
         padding-bottom: 35px;
         &:nth-child(1) {
-          margin-top:50px;
+          margin-top: 30px;
           padding-right: 0;
           padding-left: 0;
         }
@@ -124,7 +124,7 @@ class BlogIndex extends React.Component {
       width: 100%;
       max-width: 1000px;
       table-layout: fixed;
-      tr{
+      tr {
         &:last-child {
           td {padding-bottom:0;}
         }
@@ -136,9 +136,11 @@ class BlogIndex extends React.Component {
       }
 
       @media (max-width: 414px) {  
-        td {
-          &:nth-child(2n-1) {width:35%;padding-right:15px;}
-          &:nth-child(2n) {width:65%;}
+        tr {
+          td {
+            &:nth-child(2n-1) {width:30%;padding-right:15px;}
+            &:nth-child(2n) {width:65%;}
+          }
         }
       }
       `

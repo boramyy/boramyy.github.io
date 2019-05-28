@@ -39,7 +39,7 @@ class BlogIndex extends React.Component {
       word-break: break-all;
       @media (max-width: 414px) {
         width: 100%;
-        margin-top: 0;
+        // margin-top: 0;
         margin-bottom: 50px;
       }
     `
@@ -82,7 +82,7 @@ class BlogIndex extends React.Component {
         font-weight: normal;
       }
       @media (max-width: 414px) {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         border-left: 1px solid #111;
         &:after {
           content:none
@@ -97,7 +97,7 @@ class BlogIndex extends React.Component {
       min-height: 193px;
       padding: 50px;
       @media (max-width: 414px) {
-        padding: 10px 20px 15px;
+        padding: 8px 20px 14px;
         min-height: auto;
       }
     `
