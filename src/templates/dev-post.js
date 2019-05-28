@@ -13,15 +13,18 @@ class DevPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     const StyledLayout = styled(Layout)`
-      padding-top: 50px;
-      padding-right: 12%;
-      padding-bottom: 50px;
-      padding-left: 12%;
+      padding: 50px 12%;
+      @media (max-width: 414px) {
+        padding: 0 35px 50px;
+      }
     `
     const PostHeader = styled.div`
       overflow: hidden;
       margin-top: 100px;
       margin-bottom: 120px;
+      @media (max-width: 414px) {
+        margin-bottom: 80px;
+      }
     `
 
     const PostTitle = styled.h2`
@@ -30,6 +33,9 @@ class DevPostTemplate extends React.Component {
       margin-top: 0;
       margin-right: 15%;
       color: #111;
+      @media (max-width: 414px) {
+        margin-bottom: 0;
+      }
     `
 
     const PostHeaderRight = styled.div`
@@ -128,6 +134,11 @@ class DevPostTemplate extends React.Component {
           margin-left: -5px;
         }
       }
+      @media (max-width: 414px) {
+        h3:first-child {
+          margin-top:0;   
+        }
+      }
     `
 
     const AnotherPostBox = styled.div`
@@ -169,6 +180,12 @@ class DevPostTemplate extends React.Component {
         width: 50px;
         height: 50px;
         fill: #333;
+      }
+      @media (max-width: 414px) {
+        float: none;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
       }
     `
 
