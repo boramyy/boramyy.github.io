@@ -52,7 +52,7 @@ published: false
 
 ### css composes
 
-#### 컴어쩌고
+#### composes를 알고있나요?
 
 #### box모델 - css를 이용해서 html 태그들의 위치, 부피, 여백 등을 지정하는 것
 
@@ -77,7 +77,9 @@ published: false
 
 
 ### 참고
-<!-- 
-- [Gatsby Docs][gatsby-docs] <br>
 
-[gatsby-docs]: https://www.gatsbyjs.org/docs/quick-start -->
+- [CSS Modules 번역@utatti][css-modules-kr] <br>
+- [CSS Modules 원문][css-modules] <br>
+
+[css-modules-ki]: https://medium.com/@utatti/%EB%B2%88%EC%97%AD-css-modules-8bb6edf4f2f
+[css-modules]: https://glenmaddern.com/articles/css-modules
