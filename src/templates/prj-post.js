@@ -40,15 +40,17 @@ class PrjPostTemplate extends React.Component {
     const PostGroup = styled.span`
       margin-right: 10px;
       font-size: 20px;
+      font-weight: 100;
     `
 
     const Tags = styled.div`
       display: inline-block;
-      `
+    `
       
       const PostTag = styled.span`
       margin-left: 6px;
       font-size: 20px;
+      font-weight: 100;
       line-height: 2;
     `
     
@@ -56,6 +58,7 @@ class PrjPostTemplate extends React.Component {
       display: block;
       margin-top: 50px;
       font-size: 15px;
+      font-weight: 100;
       line-height: 2;
       cursor: pointer;
       &:hover {
@@ -70,6 +73,7 @@ class PrjPostTemplate extends React.Component {
       display: block;
       margin-top: 4px;
       font-size: 15px;
+      font-weight: 100;
       line-height: 2;
     `
     const SvgIcon = styled.svg`

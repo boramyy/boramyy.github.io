@@ -165,13 +165,13 @@ class BlogIndex extends React.Component {
       display: block;
       margin-top: 30px;
       font-size: 16px;
-      font-weight: 100;
       line-height: 3;
     `
 
     const StackSkill = styled.span`
       display: inline-block;
       margin-right: 50px;
+      font-weight: 100;
       @media (max-width: 414px) {  
         display: block;
       }

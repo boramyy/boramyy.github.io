@@ -51,6 +51,7 @@ class DevPostTemplate extends React.Component {
     `
 
     const PostTag = styled.span`
+      display: inline-block;
       margin-right: 15px;
       line-height: 30px;
     `
@@ -116,9 +117,9 @@ class DevPostTemplate extends React.Component {
         }
       }
       blockquote {
-        margin-top: 70px;
+        margin-top: 50px;
         margin-bottom: 100px;
-        padding: 40px 50px;
+        padding: 35px 50px;
         font-size: 0.9em;
         line-height: 1.8;
         border: 1px solid #ccc;

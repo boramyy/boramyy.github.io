@@ -98,8 +98,8 @@ class User extends React.Component {
 
     const StyledLink = styled.a`
       display: block;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: 6px;
+      padding-bottom: 6px;
       text-decoration: none;
     `;
 
