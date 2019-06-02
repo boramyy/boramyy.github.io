@@ -46,6 +46,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow"
+            },
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -79,11 +86,6 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Noto Sans KR`,
-            subsets: [`korean`],
-            variants: [`100`, `400`, `700`]
-          },
           { family: `Roboto Mono` },
           { family: `Nanum Gothic` },
         ],
