@@ -15,7 +15,7 @@ class DevPostTemplate extends React.Component {
     const StyledLayout = styled(Layout)`
       padding: 50px 12%;
       @media (max-width: 414px) {
-        padding: 0 35px 50px;
+        padding: 0 30px 50px;
       }
     `
     const PostHeader = styled.div`
@@ -185,7 +185,23 @@ class DevPostTemplate extends React.Component {
         float: none;
         width: 100%;
         height: auto;
-        min-height: 100px;
+        min-height: 80px;
+        padding: 0 15px;
+        font-size: 18px;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+        &.prev {
+          svg {
+            margin-right: 25px;
+          }
+        }
+        &.next {
+          svg {
+            margin-left: 25px;
+          }
+        }
       }
     `
 

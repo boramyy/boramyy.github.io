@@ -50,7 +50,7 @@ class User extends React.Component {
         padding: 30px;
       }
       @media (max-width: 414px) {
-        padding: 25px;
+        padding: 22px;
       }
     `
 
@@ -77,6 +77,7 @@ class User extends React.Component {
       font-weight: bold;
       color: #111;
       @media (max-width: 414px) {
+        margin-top: 10px;
         font-size: 18px;
       }
     `
