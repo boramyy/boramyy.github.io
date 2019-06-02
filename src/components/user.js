@@ -1,6 +1,7 @@
 import React from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 import axios from "axios"
+import HiddenTextForSemantic from "../utils/common-comp"
 
 class User extends React.Component {
 
@@ -9,6 +10,7 @@ class User extends React.Component {
     this.state = { 
       user: {
         id: "boramyy",
+        email: "boramyy@gmail.com",
         name: "",
         img: "",
         url: "",
@@ -47,6 +49,9 @@ class User extends React.Component {
         margin: 15px 0 70px;
         padding: 30px;
       }
+      @media (max-width: 414px) {
+        padding: 25px;
+      }
     `
 
     const StyledImage = styled.img`
@@ -62,11 +67,15 @@ class User extends React.Component {
     const StyledInfo = styled.div`
       display: inline-block;
       margin-left: 30px;
+      @media (max-width: 414px) {
+        margin-left: 15px;
+      }
     `
 
     const StyledName = styled.div`
       font-size: 20px;
       font-weight: bold;
+      color: #111;
       @media (max-width: 414px) {
         font-size: 18px;
       }
@@ -77,6 +86,9 @@ class User extends React.Component {
       svg {
         margin-right: 8px;
         margin-bottom: -2px;
+        path {
+          fill: #444;
+        }
       }
       @media (max-width: 414px) {
         font-size: 14px;
@@ -84,6 +96,7 @@ class User extends React.Component {
     `
 
     const StyledLink = styled.a`
+      display: block;
       padding-top: 5px;
       padding-bottom: 5px;
       text-decoration: none;
@@ -91,6 +104,7 @@ class User extends React.Component {
 
     return (
       <UserCard>
+        <HiddenTextForSemantic text={`글쓴이`}/>
         <StyledImage src={this.state.user.img} alt={this.state.user.name} />
         <StyledInfo>
           <StyledName>{this.state.user.name}</StyledName>
@@ -103,6 +117,14 @@ class User extends React.Component {
                 </path>
               </svg>
               {this.state.user.id}
+            </StyledLink>
+            <StyledLink href={`mailto:${this.state.user.email}`} target='_blank'>
+              <svg viewBox="0 0 14 16" width="14" height="16">
+                <path fillRule="evenodd"
+                  d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z">
+                </path>
+              </svg>
+              {this.state.user.email}
             </StyledLink>
           </StyledUrl>
         </StyledInfo>
