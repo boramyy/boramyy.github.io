@@ -26,10 +26,10 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-bd883bfcfcd96d084af5.js"
+    "url": "webpack-runtime-7d2b3e5313fcf36bb13e.js"
   },
   {
-    "url": "styles.e3957ce774cfa4d6948e.css"
+    "url": "styles.3576377a655149243186.css"
   },
   {
     "url": "styles-9c7a7a0337e9124f37ec.js"
@@ -42,30 +42,10 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "946f4df8374987a3fc61b21f02497830"
+    "revision": "7d134c249ef432bf46b8d51c361a7c2e"
   },
   {
-    "url": "google-fonts/s/nanumgothic/v16/PN_3Rfi-oW3hYwmKDpxS7F_D-dje.woff2",
-    "revision": "01fe0d37c63c0cdc03b3745c03d01e2d"
-  },
-  {
-    "url": "google-fonts/s/notosanskr/v11/Pby6FmXiEBPT4ITbgNA5CgmOsk7lyJc.woff2",
-    "revision": "b047fc8e25a874bece3e3c5234de05af"
-  },
-  {
-    "url": "google-fonts/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIR.woff2",
-    "revision": "c8f6d5258b4c57c91be8179a872ccc08"
-  },
-  {
-    "url": "google-fonts/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237t.woff2",
-    "revision": "7b91af55b8d0b4df6adc4c5d6810037a"
-  },
-  {
-    "url": "google-fonts/s/robotomono/v6/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2",
-    "revision": "0c94e034ca06357576c2d03d623e1fcd"
-  },
-  {
-    "url": "component---src-pages-404-js-483b85760fdc97216e67.js"
+    "url": "component---src-pages-404-js-64f7acc99c51650cd27b.js"
   },
   {
     "url": "0-5dc25dfbbf735d4bed87.js"

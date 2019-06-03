@@ -1,11 +1,250 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[boram kim, developer]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://boramyy.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Fri, 31 May 2019 14:35:12 GMT</lastBuildDate><item><title><![CDATA[웹폰트 적용시 문제점과 해결방법]]></title><description><![CDATA[index참고참고웹 폰트 사용과 최적화의 최근 동향 ]]></description><link>https://boramyy.github.io//dev/front-end/etc/font/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/etc/font/</guid><pubDate>Mon, 27 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[boram kim, developer]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://boramyy.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Mon, 03 Jun 2019 08:04:04 GMT</lastBuildDate><item><title><![CDATA[웹폰트 더빠르게 로드하기]]></title><description><![CDATA[블로그에 로 폰트를 적용했는데, 여러 폰트를 불러오다보니 생각보다 많이 느렸어요.
+그래서 더빠르게 로드할 수 있는 방법을 찾아보았습니다!index…]]></description><link>https://boramyy.github.io//dev/front-end/etc/font/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/etc/font/</guid><pubDate>Mon, 27 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;블로그에 &lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-prefetch-google-fonts&lt;/code&gt;로 폰트를 적용했는데, 여러 폰트를 불러오다보니 생각보다 많이 느렸어요.
+그래서 더빠르게 로드할 수 있는 방법을 찾아보았습니다!&lt;/p&gt;
+&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%EC%9B%B9%ED%8F%B0%ED%8A%B8-%EC%A0%81%EC%9A%A9%EC%88%9C%EC%84%9C&quot;&gt;웹폰트 적용순서&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%85%8B-%ED%8F%B0%ED%8A%B8&quot;&gt;서브셋 폰트&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%84%9C%EB%B8%8C%EC%85%8B-%EB%A7%8C%EB%93%A4%EA%B8%B0&quot;&gt;커스텀 서브셋 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%ED%8F%B0%ED%8A%B8-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0&quot;&gt;폰트 적용하기&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot;&gt;참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&quot;웹폰트-적용순서&quot;&gt;&lt;a href=&quot;#%EC%9B%B9%ED%8F%B0%ED%8A%B8-%EC%A0%81%EC%9A%A9%EC%88%9C%EC%84%9C&quot; aria-label=&quot;웹폰트 적용순서 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹폰트 적용순서&lt;/h3&gt;
+&lt;p&gt;웹폰트 확장자별로 용량과 지원 브라우저에 따라 다음과 같은 순서로 요청하는게 좋다고 합니다.&lt;br/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;woff2&lt;/code&gt; - woff를 30~50% 압축한 형식. 같은 폰트중 용량이 가장 작으므로 브라우저가 이 형식을 지원하는지 먼저 확인한다&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;woff&lt;/code&gt; - 대부분의 브라우저&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ttf&lt;/code&gt; - 이전 버전의 Android(4.4 이전) 브라우저&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;eot&lt;/code&gt; - IE 에서만 지원하는 형식. IE9 이전인 하위버전 IE를 지원하기위해 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;h4 id=&quot;google-developers&quot;&gt;&lt;a href=&quot;#google-developers&quot; aria-label=&quot;google developers permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=ko&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Developers&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;WOFF 2.0 버전을 지원하는 브라우저에 이 글꼴을 제공합니다.&lt;/li&gt;
+&lt;li&gt;대부분의 브라우저에 WOFF 버전을 제공합니다.&lt;/li&gt;
+&lt;li&gt;이전 버전의 Android(4.4 이전) 브라우저에 TTF를 제공합니다.&lt;/li&gt;
+&lt;li&gt;이전 버전의 IE(IE9 이전) 브라우저에 EOT 버전을 제공합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;서브셋-폰트&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%85%8B-%ED%8F%B0%ED%8A%B8&quot; aria-label=&quot;서브셋 폰트 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서브셋 폰트&lt;/h3&gt;
+&lt;p&gt;영문은 알파벳이 이어져 단어가 되는 반면에 한글은 각각의 자음과 모음이 합쳐져 새로운 완성형 글자를 만든다.
+그 완성형 글자 또한 하나의 글자로 폰트파일에 정의되어있다. 그래서 한글로 만들 수 있는 모든 글자를 다 가지고 있는 폰트는 용량이 엄청 크다!!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h4 id=&quot;naver-d2&quot;&gt;&lt;a href=&quot;#naver-d2&quot; aria-label=&quot;naver d2 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/4969726&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;NAVER D2&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;“서브셋 폰트(subset font)는 폰트 파일에서 불필요한 글자를 제거하고 사용할 글자만 남겨둔 폰트다.
+영어는 26개 알파벳으로 이루어져 있다. 영문 폰트에는 대소문자를 포함해 총 72자의 글자가 필요하다. 하지만 한글은 자음, 모음의 조합으로 구성되어 있다. 모든 경우를 조합하면 한글의 글자 수는 11,172자나 된다. 그래서 한글 폰트 파일은 영문 폰트 파일보다 용량이 크다. … 이러한 불필요한 글자를 폰트에서 제거하고 사용할 글자만 남겨 둔 폰트가 서브셋 폰트다. 글자의 개수가 줄었기 때문에 서브셋 폰트는 용량이 작다.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;ks-x-1001&quot;&gt;&lt;a href=&quot;#ks-x-1001&quot; aria-label=&quot;ks x 1001 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;KS X 1001&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;KS X 1001 : 국가 표준(KS) 정보 교환용 부호계(한글 및 한자) 2,350자&lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;실제로 한글을 사용하면서 사용되지 않은 글자를 배제하고, 꼭 필요한 글자만을 모아놓은 국가 표준 한글 2,350자&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;가각간갇갈갉갊감갑값갓갔강갖갗같갚갛개객갠갤갬갭갯갰갱갸갹갼걀걋걍걔걘걜거걱건걷걸걺검겁것겄겅겆겉겊겋게겐겔겜겝겟겠겡겨격겪견겯결겸겹겻겼경곁계곈곌곕곗고곡곤곧골곪곬곯곰곱곳공곶과곽관괄괆괌괍괏광괘괜괠괩괬괭괴괵괸괼굄굅굇굉교굔굘굡굣구국군굳굴굵굶굻굼굽굿궁궂궈궉권궐궜궝궤궷귀귁귄귈귐귑귓규균귤그극근귿글긁금급긋긍긔기긱긴긷길긺김깁깃깅깆깊까깍깎깐깔깖깜깝깟깠깡깥깨깩깬깰깸깹깻깼깽꺄꺅꺌꺼꺽꺾껀껄껌껍껏껐껑께껙껜껨껫껭껴껸껼꼇꼈꼍꼐꼬꼭꼰꼲꼴꼼꼽꼿꽁꽂꽃꽈꽉꽐꽜꽝꽤꽥꽹꾀꾄꾈꾐꾑꾕꾜꾸꾹꾼꿀꿇꿈꿉꿋꿍꿎꿔꿜꿨꿩꿰꿱꿴꿸뀀뀁뀄뀌뀐뀔뀜뀝뀨끄끅끈끊끌끎끓끔끕끗끙끝끼끽낀낄낌낍낏낑나낙낚난낟날낡낢남납낫났낭낮낯낱낳내낵낸낼냄냅냇냈냉냐냑냔냘냠냥너넉넋넌널넒넓넘넙넛넜넝넣네넥넨넬넴넵넷넸넹녀녁년녈념녑녔녕녘녜녠노녹논놀놂놈놉놋농높놓놔놘놜놨뇌뇐뇔뇜뇝뇟뇨뇩뇬뇰뇹뇻뇽누눅눈눋눌눔눕눗눙눠눴눼뉘뉜뉠뉨뉩뉴뉵뉼늄늅늉느늑는늘늙늚늠늡늣능늦늪늬늰늴니닉닌닐닒님닙닛닝닢다닥닦단닫달닭닮닯닳담답닷닸당닺닻닿대댁댄댈댐댑댓댔댕댜더덕덖던덛덜덞덟덤덥덧덩덫덮데덱덴델뎀뎁뎃뎄뎅뎌뎐뎔뎠뎡뎨뎬도독돈돋돌돎돐돔돕돗동돛돝돠돤돨돼됐되된될됨됩됫됴두둑둔둘둠둡둣둥둬뒀뒈뒝뒤뒨뒬뒵뒷뒹듀듄듈듐듕드득든듣들듦듬듭듯등듸디딕딘딛딜딤딥딧딨딩딪따딱딴딸땀땁땃땄땅땋때땍땐땔땜땝땟땠땡떠떡떤떨떪떫떰떱떳떴떵떻떼떽뗀뗄뗌뗍뗏뗐뗑뗘뗬또똑똔똘똥똬똴뙈뙤뙨뚜뚝뚠뚤뚫뚬뚱뛔뛰뛴뛸뜀뜁뜅뜨뜩뜬뜯뜰뜸뜹뜻띄띈띌띔띕띠띤띨띰띱띳띵라락란랄람랍랏랐랑랒랖랗래랙랜랠램랩랫랬랭랴략랸럇량러럭런럴럼럽럿렀렁렇레렉렌렐렘렙렛렝려력련렬렴렵렷렸령례롄롑롓로록론롤롬롭롯롱롸롼뢍뢨뢰뢴뢸룀룁룃룅료룐룔룝룟룡루룩룬룰룸룹룻룽뤄뤘뤠뤼뤽륀륄륌륏륑류륙륜률륨륩륫륭르륵른를름릅릇릉릊릍릎리릭린릴림립릿링마막만많맏말맑맒맘맙맛망맞맡맣매맥맨맬맴맵맷맸맹맺먀먁먈먕머먹먼멀멂멈멉멋멍멎멓메멕멘멜멤멥멧멨멩며멱면멸몃몄명몇몌모목몫몬몰몲몸몹못몽뫄뫈뫘뫙뫼묀묄묍묏묑묘묜묠묩묫무묵묶문묻물묽묾뭄뭅뭇뭉뭍뭏뭐뭔뭘뭡뭣뭬뮈뮌뮐뮤뮨뮬뮴뮷므믄믈믐믓미믹민믿밀밂밈밉밋밌밍및밑바박밖밗반받발밝밞밟밤밥밧방밭배백밴밸뱀뱁뱃뱄뱅뱉뱌뱍뱐뱝버벅번벋벌벎범법벗벙벚베벡벤벧벨벰벱벳벴벵벼벽변별볍볏볐병볕볘볜보복볶본볼봄봅봇봉봐봔봤봬뵀뵈뵉뵌뵐뵘뵙뵤뵨부북분붇불붉붊붐붑붓붕붙붚붜붤붰붸뷔뷕뷘뷜뷩뷰뷴뷸븀븃븅브븍븐블븜븝븟비빅빈빌빎빔빕빗빙빚빛빠빡빤빨빪빰빱빳빴빵빻빼빽뺀뺄뺌뺍뺏뺐뺑뺘뺙뺨뻐뻑뻔뻗뻘뻠뻣뻤뻥뻬뼁뼈뼉뼘뼙뼛뼜뼝뽀뽁뽄뽈뽐뽑뽕뾔뾰뿅뿌뿍뿐뿔뿜뿟뿡쀼쁑쁘쁜쁠쁨쁩삐삑삔삘삠삡삣삥사삭삯산삳살삵삶삼삽삿샀상샅새색샌샐샘샙샛샜생샤샥샨샬샴샵샷샹섀섄섈섐섕서석섞섟선섣설섦섧섬섭섯섰성섶세섹센셀셈셉셋셌셍셔셕션셜셤셥셧셨셩셰셴셸솅소속솎손솔솖솜솝솟송솥솨솩솬솰솽쇄쇈쇌쇔쇗쇘쇠쇤쇨쇰쇱쇳쇼쇽숀숄숌숍숏숑수숙순숟술숨숩숫숭숯숱숲숴쉈쉐쉑쉔쉘쉠쉥쉬쉭쉰쉴쉼쉽쉿슁슈슉슐슘슛슝스슥슨슬슭슴습슷승시식신싣실싫심십싯싱싶싸싹싻싼쌀쌈쌉쌌쌍쌓쌔쌕쌘쌜쌤쌥쌨쌩썅써썩썬썰썲썸썹썼썽쎄쎈쎌쏀쏘쏙쏜쏟쏠쏢쏨쏩쏭쏴쏵쏸쐈쐐쐤쐬쐰쐴쐼쐽쑈쑤쑥쑨쑬쑴쑵쑹쒀쒔쒜쒸쒼쓩쓰쓱쓴쓸쓺쓿씀씁씌씐씔씜씨씩씬씰씸씹씻씽아악안앉않알앍앎앓암압앗았앙앝앞애액앤앨앰앱앳앴앵야약얀얄얇얌얍얏양얕얗얘얜얠얩어억언얹얻얼얽얾엄업없엇었엉엊엌엎에엑엔엘엠엡엣엥여역엮연열엶엷염엽엾엿였영옅옆옇예옌옐옘옙옛옜오옥온올옭옮옰옳옴옵옷옹옻와왁완왈왐왑왓왔왕왜왝왠왬왯왱외왹왼욀욈욉욋욍요욕욘욜욤욥욧용우욱운울욹욺움웁웃웅워웍원월웜웝웠웡웨웩웬웰웸웹웽위윅윈윌윔윕윗윙유육윤율윰윱윳융윷으윽은을읊음읍읏응읒읓읔읕읖읗의읜읠읨읫이익인일읽읾잃임입잇있잉잊잎자작잔잖잗잘잚잠잡잣잤장잦재잭잰잴잼잽잿쟀쟁쟈쟉쟌쟎쟐쟘쟝쟤쟨쟬저적전절젊점접젓정젖제젝젠젤젬젭젯젱져젼졀졈졉졌졍졔조족존졸졺좀좁좃종좆좇좋좌좍좔좝좟좡좨좼좽죄죈죌죔죕죗죙죠죡죤죵주죽준줄줅줆줌줍줏중줘줬줴쥐쥑쥔쥘쥠쥡쥣쥬쥰쥴쥼즈즉즌즐즘즙즛증지직진짇질짊짐집짓징짖짙짚짜짝짠짢짤짧짬짭짯짰짱째짹짼쨀쨈쨉쨋쨌쨍쨔쨘쨩쩌쩍쩐쩔쩜쩝쩟쩠쩡쩨쩽쪄쪘쪼쪽쫀쫄쫌쫍쫏쫑쫓쫘쫙쫠쫬쫴쬈쬐쬔쬘쬠쬡쭁쭈쭉쭌쭐쭘쭙쭝쭤쭸쭹쮜쮸쯔쯤쯧쯩찌찍찐찔찜찝찡찢찧차착찬찮찰참찹찻찼창찾채책챈챌챔챕챗챘챙챠챤챦챨챰챵처척천철첨첩첫첬청체첵첸첼쳄쳅쳇쳉쳐쳔쳤쳬쳰촁초촉촌촐촘촙촛총촤촨촬촹최쵠쵤쵬쵭쵯쵱쵸춈추축춘출춤춥춧충춰췄췌췐취췬췰췸췹췻췽츄츈츌츔츙츠측츤츨츰츱츳층치칙친칟칠칡침칩칫칭카칵칸칼캄캅캇캉캐캑캔캘캠캡캣캤캥캬캭컁커컥컨컫컬컴컵컷컸컹케켁켄켈켐켑켓켕켜켠켤켬켭켯켰켱켸코콕콘콜콤콥콧콩콰콱콴콸쾀쾅쾌쾡쾨쾰쿄쿠쿡쿤쿨쿰쿱쿳쿵쿼퀀퀄퀑퀘퀭퀴퀵퀸퀼큄큅큇큉큐큔큘큠크큭큰클큼큽킁키킥킨킬킴킵킷킹타탁탄탈탉탐탑탓탔탕태택탠탤탬탭탯탰탱탸턍터턱턴털턺텀텁텃텄텅테텍텐텔템텝텟텡텨텬텼톄톈토톡톤톨톰톱톳통톺톼퇀퇘퇴퇸툇툉툐투툭툰툴툼툽툿퉁퉈퉜퉤튀튁튄튈튐튑튕튜튠튤튬튱트특튼튿틀틂틈틉틋틔틘틜틤틥티틱틴틸팀팁팃팅파팍팎판팔팖팜팝팟팠팡팥패팩팬팰팸팹팻팼팽퍄퍅퍼퍽펀펄펌펍펏펐펑페펙펜펠펨펩펫펭펴편펼폄폅폈평폐폘폡폣포폭폰폴폼폽폿퐁퐈퐝푀푄표푠푤푭푯푸푹푼푿풀풂품풉풋풍풔풩퓌퓐퓔퓜퓟퓨퓬퓰퓸퓻퓽프픈플픔픕픗피픽핀필핌핍핏핑하학한할핥함합핫항해핵핸핼햄햅햇했행햐향허헉헌헐헒험헙헛헝헤헥헨헬헴헵헷헹혀혁현혈혐협혓혔형혜혠혤혭호혹혼홀홅홈홉홋홍홑화확환활홧황홰홱홴횃횅회획횐횔횝횟횡효횬횰횹횻후훅훈훌훑훔훗훙훠훤훨훰훵훼훽휀휄휑휘휙휜휠휨휩휫휭휴휵휸휼흄흇흉흐흑흔흖흗흘흙흠흡흣흥흩희흰흴흼흽힁히힉힌힐힘힙힛힝&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;한글-자음-및-모음&quot;&gt;&lt;a href=&quot;#%ED%95%9C%EA%B8%80-%EC%9E%90%EC%9D%8C-%EB%B0%8F-%EB%AA%A8%EC%9D%8C&quot; aria-label=&quot;한글 자음 및 모음 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;한글 자음 및 모음&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;ㄱㄲㄳㄴㄵㄶㄷㄸㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅃㅄㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;숫자와-기호-및-영문&quot;&gt;&lt;a href=&quot;#%EC%88%AB%EC%9E%90%EC%99%80-%EA%B8%B0%ED%98%B8-%EB%B0%8F-%EC%98%81%EB%AC%B8&quot; aria-label=&quot;숫자와 기호 및 영문 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;숫자와 기호 및 영문&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&quot;\#$%&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&apos;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;*+,-./:&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;?@&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;^_`&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;커스텀-서브셋-만들기&quot;&gt;&lt;a href=&quot;#%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%84%9C%EB%B8%8C%EC%85%8B-%EB%A7%8C%EB%93%A4%EA%B8%B0&quot; aria-label=&quot;커스텀 서브셋 만들기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;커스텀 서브셋 만들기&lt;/h3&gt;
+&lt;p&gt;참고한 사이트에서는 서브셋 폰트 메이커를 사용하는 방법, fontTools 라이브러리를 사용하는 방법 이렇게 두가지를 소개하는데 저는 서브셋 폰트 메이커를 사용했습니다!&lt;/p&gt;
+&lt;p&gt;우선 프로그램을 받아봅시다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://opentype.jp/subsetfontmk.htm&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;서브셋 폰트 메이커&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opentype.jp/woffconv.htm&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;woff 컨버터&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위 두개의 링크로 각각 들어가서 하단에 &lt;code class=&quot;language-text&quot;&gt;Mac版&lt;/code&gt; 또는 &lt;code class=&quot;language-text&quot;&gt;Windows版&lt;/code&gt;을 다운받습니다. &lt;br/&gt;
+두가지 모두 받은 후 서브셋 폰트 메이커를 실행합니다.&lt;/p&gt;
+&lt;h4 id=&quot;서브셋-폰트-메이커-사용법&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B8%8C%EC%85%8B-%ED%8F%B0%ED%8A%B8-%EB%A9%94%EC%9D%B4%EC%BB%A4-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;서브셋 폰트 메이커 사용법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서브셋 폰트 메이커 사용법&lt;/h4&gt;
+&lt;p&gt;일본어가 나와서 당황했지만 긴장했던 것 보다 사용법은 간단합니다.&lt;br/&gt;
+저는 위의 세가지(KS X 1001, 한글 자음 및 모음, 숫자와 기호 및 영문)를 합친 커스텀 서브셋을 만들었습니다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/da5daea30c6f5f76350ac9ae569faa5e/7e280/fontmaker.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 120.6896551724138%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB6qitEFiwmgj/xAAaEAABBQEAAAAAAAAAAAAAAAABABAgITFB/9oACAEBAAEFAiwztoQ//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGBAAAgMAAAAAAAAAAAAAAAAAARARIDH/2gAIAQEABj8CZimL/8QAGhABAQEBAAMAAAAAAAAAAAAAAREAITFBYf/aAAgBAQABPyEWnrT7hB5M07POv3mzuirymEILPR3Tf//aAAwDAQACAAMAAAAQ1+jA/8QAGBEAAgMAAAAAAAAAAAAAAAAAAAEQETH/2gAIAQMBAT8QNE7j/8QAGBEAAgMAAAAAAAAAAAAAAAAAADEQIWH/2gAIAQIBAT8QQ7Mj/8QAHhABAAICAgMBAAAAAAAAAAAAAQARITFRYXGBkfD/2gAIAQEAAT8QALhdzyOMBEAiBpzXuc4F3P3Indd8REXaxvEIoxMhXuUNB9n/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;폰트메이커 사용법&quot;
+        title=&quot;&quot;
+        src=&quot;/static/da5daea30c6f5f76350ac9ae569faa5e/17de2/fontmaker.jpg&quot;
+        srcset=&quot;/static/da5daea30c6f5f76350ac9ae569faa5e/21749/fontmaker.jpg 163w,
+/static/da5daea30c6f5f76350ac9ae569faa5e/3950f/fontmaker.jpg 325w,
+/static/da5daea30c6f5f76350ac9ae569faa5e/17de2/fontmaker.jpg 650w,
+/static/da5daea30c6f5f76350ac9ae569faa5e/7e280/fontmaker.jpg 812w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;폰트메이커 사용순서&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;서브셋을 만들 폰트 선택하기. (1-1은 컴퓨터의 폰트시스템에 저장된 폰트에서 선택하도록 연결되고 1-2는 파일시스템에서 폰트확장자인 파일이면 선택할 수 있다.)&lt;/li&gt;
+&lt;li&gt;만든 서브셋 폰트 파일이 저장될 위치 설정하기&lt;/li&gt;
+&lt;li&gt;사용할 글자 작성하기&lt;/li&gt;
+&lt;li&gt;폰트패밀리 지정해주기&lt;/li&gt;
+&lt;li&gt;체크하고 서브셋을 제작을 완료하면 같이 설치했던 woff 컨버터로 연결&lt;/li&gt;
+&lt;li&gt;만들기!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;woff-컨버터-사용법&quot;&gt;&lt;a href=&quot;#woff-%EC%BB%A8%EB%B2%84%ED%84%B0-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;woff 컨버터 사용법 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;woff 컨버터 사용법&lt;/h4&gt;
+&lt;p&gt;위 단계의 5번의 체크박스를 체크한 상태에서 서브셋 만들기가 완료되면, 자동으로 woff 컨버터가 자동으로 실행됩니다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6fe8220e9d42d7b2ac3ea44c34a5f447/7e280/woff-converter.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.26108374384236%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB1SWpC0X/xAAYEAADAQEAAAAAAAAAAAAAAAAQESEAAf/aAAgBAQABBQLIK9g//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BV//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AVf/xAAYEAADAQEAAAAAAAAAAAAAAAAAEDERQf/aAAgBAQAGPwKnVpF//8QAGxAAAQUBAQAAAAAAAAAAAAAAAQARIUFREJH/2gAIAQEAAT8hsyTt8IEzN4mmIImWPP/aAAwDAQACAAMAAAAQ9C//xAAWEQEBAQAAAAAAAAAAAAAAAAAAMXH/2gAIAQMBAT8QsYf/xAAYEQACAwAAAAAAAAAAAAAAAAAAEQFBUf/aAAgBAgEBPxB1AmH/xAAaEAEBAQEAAwAAAAAAAAAAAAABEQAhQaHw/9oACAEBAAE/EEhQqwC6D9PWvCmR157SjTnnCFSMhgTf/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;컨버터 사용순서&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6fe8220e9d42d7b2ac3ea44c34a5f447/17de2/woff-converter.jpg&quot;
+        srcset=&quot;/static/6fe8220e9d42d7b2ac3ea44c34a5f447/21749/woff-converter.jpg 163w,
+/static/6fe8220e9d42d7b2ac3ea44c34a5f447/3950f/woff-converter.jpg 325w,
+/static/6fe8220e9d42d7b2ac3ea44c34a5f447/17de2/woff-converter.jpg 650w,
+/static/6fe8220e9d42d7b2ac3ea44c34a5f447/7e280/woff-converter.jpg 812w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;컨버터 사용순서&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;woff로 변환할 폰트 선택하기&lt;/li&gt;
+&lt;li&gt;변환된 폰트 파일이 저장될 위치 설정하기&lt;/li&gt;
+&lt;li&gt;체크하면 woff2 파일도 함께 만들어집니다.&lt;/li&gt;
+&lt;li&gt;변환하기!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;처음엔 저 체크박스를 못보고 구글링한 웹페이지를 통해서 woff를 woff2로 변환했는데, 어떤 사이트에서는 변환 후 폰트일부가 날아가는 바람에 한참을 헤맸습니다 ㅠ_ㅠ..&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7a92a9f5ba8bdb4324034d39e11460d5/1a3b4/font-desc.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 34.599999999999994%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3KFB/8QAFRABAQAAAAAAAAAAAAAAAAAAAEH/2gAIAQEAAQUCR//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAABD/2gAIAQEABj8Cf//EABgQAAIDAAAAAAAAAAAAAAAAAAABEDFB/9oACAEBAAE/IcgqP//aAAwDAQACAAMAAAAQAA//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxAn/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/ELGP/8QAGhAAAgMBAQAAAAAAAAAAAAAAAREAITFBgf/aAAgBAQABPxAM96sEIJ6vcg0b9n//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;otf와 woff의 용량 차이&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7a92a9f5ba8bdb4324034d39e11460d5/17de2/font-desc.jpg&quot;
+        srcset=&quot;/static/7a92a9f5ba8bdb4324034d39e11460d5/21749/font-desc.jpg 163w,
+/static/7a92a9f5ba8bdb4324034d39e11460d5/3950f/font-desc.jpg 325w,
+/static/7a92a9f5ba8bdb4324034d39e11460d5/17de2/font-desc.jpg 650w,
+/static/7a92a9f5ba8bdb4324034d39e11460d5/029e1/font-desc.jpg 975w,
+/static/7a92a9f5ba8bdb4324034d39e11460d5/1a3b4/font-desc.jpg 1000w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;otf와 woff의 용량 차이&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 용량이 2배 가까이 줄어든 것을 확인할 수 있어요!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dd867adafe79556b93afe8d4b2ad6c85/1a3b4/woff-woff2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 650px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 9.6%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAACABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3QUH/8QAFhABAQEAAAAAAAAAAAAAAAAAAAFB/9oACAEBAAEFAtR//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAFhABAQEAAAAAAAAAAAAAAAAAAAEx/9oACAEBAAE/IYXGH//aAAwDAQACAAMAAAAQA8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEAAgMAAAAAAAAAAAAAAAABABEhQVH/2gAIAQEAAT8QBqTJ31goz//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;woff와 woff2의 용량 차이&quot;
+        title=&quot;&quot;
+        src=&quot;/static/dd867adafe79556b93afe8d4b2ad6c85/17de2/woff-woff2.jpg&quot;
+        srcset=&quot;/static/dd867adafe79556b93afe8d4b2ad6c85/21749/woff-woff2.jpg 163w,
+/static/dd867adafe79556b93afe8d4b2ad6c85/3950f/woff-woff2.jpg 325w,
+/static/dd867adafe79556b93afe8d4b2ad6c85/17de2/woff-woff2.jpg 650w,
+/static/dd867adafe79556b93afe8d4b2ad6c85/029e1/woff-woff2.jpg 975w,
+/static/dd867adafe79556b93afe8d4b2ad6c85/1a3b4/woff-woff2.jpg 1000w&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;woff와 woff2의 용량 차이&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;woff와 woff2에서도 용량이 줄어든 것을 확인할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&quot;폰트-적용하기&quot;&gt;&lt;a href=&quot;#%ED%8F%B0%ED%8A%B8-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;폰트 적용하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;폰트 적용하기&lt;/h3&gt;
+&lt;p&gt;이제 우리가 만든 서브셋 폰트를 사이트에 적용해봅시다!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@charset&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@font-face&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Noto Sans KR&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token url&quot;&gt;url(&apos;../../content/assets/fonts/NotoSansKR-Regular.woff2&apos;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;woff2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+       &lt;span class=&quot;token url&quot;&gt;url(&apos;../../content/assets/fonts/NotoSansKR-Regular.woff&apos;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;woff&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+       &lt;span class=&quot;token url&quot;&gt;url(&apos;../../content/assets/fonts/NotoSansKR-Regular.ttf&apos;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ttf&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+       &lt;span class=&quot;token url&quot;&gt;url(&apos;../../content/assets/fonts/NotoSansKR-Regular.eot&apos;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;eot&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; normal&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;font-style&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; normal&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;...
+
+body&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Noto Sans KR&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; normal&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&quot;참고&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/4969726&quot;&gt;웹 폰트 사용과 최적화의 최근 동향&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[주니어 프론트엔드 개발자 면접 질문]]></title><description><![CDATA[index기본javascripthtmlcss서비스통신참고기본간단한 자기소개어떤 계기로 개발자로 전향하였나요?javascriptcall apply 차이점을 알고있나요?RESTful apilet, const 랑 var 차이호이스팅vue, react…]]></description><link>https://boramyy.github.io//dev/front-end/etc/interview/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/etc/interview/</guid><pubDate>Sun, 26 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
+&lt;li&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/4969726&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;웹 폰트 사용과 최적화의 최근 동향 : NAVER&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=ko&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;웹폰트 최적화 : Google&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kssn.net/search/stddetail.do?itemNo=K001010102764&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;KS X 1001&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opentype.jp/subsetfontmk.htm&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;서브셋 폰트 메이커&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opentype.jp/woffconv.htm&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;woff 컨버터&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[주니어 프론트엔드 개발자 면접 질문]]></title><description><![CDATA[index기본javascripthtmlcss서비스통신참고기본간단한 자기소개어떤 계기로 개발자로 전향하게 되었나요?javascriptcall apply 차이점을 알고있나요?둘다 RESTful apilet, const 랑 var 차이호이스팅vue…]]></description><link>https://boramyy.github.io//dev/front-end/etc/interview/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/etc/interview/</guid><pubDate>Sun, 26 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B3%B8&quot;&gt;기본&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#javascript&quot;&gt;javascript&lt;/a&gt;&lt;/li&gt;
@@ -17,9 +256,10 @@
 &lt;/ul&gt;
 &lt;h3 id=&quot;기본&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%B3%B8&quot; aria-label=&quot;기본 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기본&lt;/h3&gt;
 &lt;h4 id=&quot;간단한-자기소개&quot;&gt;&lt;a href=&quot;#%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C&quot; aria-label=&quot;간단한 자기소개 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;간단한 자기소개&lt;/h4&gt;
-&lt;h4 id=&quot;어떤-계기로-개발자로-전향하였나요&quot;&gt;&lt;a href=&quot;#%EC%96%B4%EB%96%A4-%EA%B3%84%EA%B8%B0%EB%A1%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%A0%84%ED%96%A5%ED%95%98%EC%98%80%EB%82%98%EC%9A%94&quot; aria-label=&quot;어떤 계기로 개발자로 전향하였나요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;어떤 계기로 개발자로 전향하였나요?&lt;/h4&gt;
+&lt;h4 id=&quot;어떤-계기로-개발자로-전향하게-되었나요&quot;&gt;&lt;a href=&quot;#%EC%96%B4%EB%96%A4-%EA%B3%84%EA%B8%B0%EB%A1%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A1%9C-%EC%A0%84%ED%96%A5%ED%95%98%EA%B2%8C-%EB%90%98%EC%97%88%EB%82%98%EC%9A%94&quot; aria-label=&quot;어떤 계기로 개발자로 전향하게 되었나요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;어떤 계기로 개발자로 전향하게 되었나요?&lt;/h4&gt;
 &lt;h3 id=&quot;javascript&quot;&gt;&lt;a href=&quot;#javascript&quot; aria-label=&quot;javascript permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;javascript&lt;/h3&gt;
 &lt;h4 id=&quot;call-apply-차이점을-알고있나요&quot;&gt;&lt;a href=&quot;#call-apply-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%84-%EC%95%8C%EA%B3%A0%EC%9E%88%EB%82%98%EC%9A%94&quot; aria-label=&quot;call apply 차이점을 알고있나요 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;call apply 차이점을 알고있나요?&lt;/h4&gt;
+&lt;p&gt;둘다 &lt;/p&gt;
 &lt;h4 id=&quot;restful-api&quot;&gt;&lt;a href=&quot;#restful-api&quot; aria-label=&quot;restful api permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful api&lt;/h4&gt;
 &lt;h4 id=&quot;let-const-랑-var-차이&quot;&gt;&lt;a href=&quot;#let-const-%EB%9E%91-var-%EC%B0%A8%EC%9D%B4&quot; aria-label=&quot;let const 랑 var 차이 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;let, const 랑 var 차이&lt;/h4&gt;
 &lt;h4 id=&quot;호이스팅&quot;&gt;&lt;a href=&quot;#%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85&quot; aria-label=&quot;호이스팅 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;호이스팅&lt;/h4&gt;
@@ -39,8 +279,9 @@
 &lt;h4 id=&quot;rest-api-rest-full이-뭐징&quot;&gt;&lt;a href=&quot;#rest-api-rest-full%EC%9D%B4-%EB%AD%90%EC%A7%95&quot; aria-label=&quot;rest api rest full이 뭐징 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST api (rest full이 뭐징?)&lt;/h4&gt;
 &lt;h3 id=&quot;참고&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;[CSS Modules 번역@utatti][css-modules-kr] &lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://glenmaddern.com/articles/css-modules&quot;&gt;CSS Modules 원문&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean/questions?target=_blank&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;front-end-interview-handbook&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@utatti/%EB%B2%88%EC%97%AD-css-modules-8bb6edf4f2f&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;CSS Modules 번역@utatti&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://glenmaddern.com/articles/css-modules&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;CSS Modules 원문&lt;/a&gt; &lt;br/&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[브라우저가 페이지를 렌더링하는 과정]]></title><description><![CDATA[indexDOM (Document Object Model) 트리 생성CSSOM 트리 생성렌더링 트리 생성렌더 트리 레이아웃렌더 트리 페인팅참고DOM (Document Object Model) 트리 생성브라우저 엔진이 html을 파싱해서 DOM…]]></description><link>https://boramyy.github.io//dev/front-end/javascript/browser-rendering/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/javascript/browser-rendering/</guid><pubDate>Wed, 22 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;#DOM-(Document-Object-Model)-%ED%8A%B8%EB%A6%AC-%EC%83%9D%EC%84%B1&quot;&gt;DOM (Document Object Model) 트리 생성&lt;/a&gt;&lt;/li&gt;
@@ -71,9 +312,9 @@
 &lt;hr&gt;
 &lt;h3 id=&quot;참고&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=ko&quot;&gt;Deploying a Next.js app into GitHub Pages&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/codepink/codepink.github.com/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94%EA%B0%80:-%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%97%94%EC%A7%84%EA%B3%BC-%EC%84%B1%EB%8A%A5%EC%9D%84-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot;&gt;How JavaScript works: the rendering engine and tips to optimize its performance 번역@codepink &lt;/a&gt; &lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda&quot;&gt;How JavaScript works: the rendering engine and tips to optimize its performance 원본&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=ko&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Deploying a Next.js app into GitHub Pages&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/codepink/codepink.github.com/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94%EA%B0%80:-%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%97%94%EC%A7%84%EA%B3%BC-%EC%84%B1%EB%8A%A5%EC%9D%84-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;How JavaScript works: the rendering engine and tips to optimize its performance 번역@codepink &lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;How JavaScript works: the rendering engine and tips to optimize its performance 원본&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[nextjs gh-pages로 배포하기]]></title><description><![CDATA[index배포할 nextjs 사이트prefix 설정하기next export.nojekyll블로그 배포하기참고배포할 nextjs 사이트먼저 배포할 nextjs 사이트를 준비합니다. 저는 만들었던 청첩장 사이트를 gh-pages…]]></description><link>https://boramyy.github.io//dev/front-end/nextjs/deploy-gh-pages/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/nextjs/deploy-gh-pages/</guid><pubDate>Sun, 19 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#%EB%B0%B0%ED%8F%AC%ED%95%A0-nextjs-%EC%82%AC%EC%9D%B4%ED%8A%B8&quot;&gt;배포할 nextjs 사이트&lt;/a&gt;&lt;/li&gt;
@@ -156,7 +397,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run &lt;span cla
 &lt;p&gt;next는 밑줄로 시작하는 파일이나 디렉토리(_next)를 사용하기 때문에 out 폴더 하위에 .nojekyll 파일을 생성해 주어야 합니다.
 .nojekyll 파일을 추가해줌으로써 GitHub 페이지에서의 jekyll 처리과정(jekyll은 이러한 파일을 특수 리소스로 간주하고 최종 사이트에 복사하지 않는 것)을 피할 수 있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h4 id=&quot;bypassing-jekyll-on-github-pages&quot;&gt;&lt;a href=&quot;#bypassing-jekyll-on-github-pages&quot; aria-label=&quot;bypassing jekyll on github pages permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/&quot;&gt;Bypassing Jekyll on GitHub Pages&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;bypassing-jekyll-on-github-pages&quot;&gt;&lt;a href=&quot;#bypassing-jekyll-on-github-pages&quot; aria-label=&quot;bypassing jekyll on github pages permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Bypassing Jekyll on GitHub Pages&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;It is now possible to completely bypass Jekyll processing on GitHub Pages by creating a file named .nojekyll in the root of your pages repo and pushing it to GitHub. This should only be necessary if your site uses files or directories that start with underscores since Jekyll considers these to be special resources and does not copy them to the final site.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;블로그-배포하기&quot;&gt;&lt;a href=&quot;#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0&quot; aria-label=&quot;블로그 배포하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;블로그 배포하기&lt;/h3&gt;
@@ -178,8 +419,8 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;hr&gt;
 &lt;h3 id=&quot;참고&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zeit/next.js/wiki/Deploying-a-Next.js-app-into-GitHub-Pages&quot;&gt;Deploying a Next.js app into GitHub Pages&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/&quot;&gt;Bypassing Jekyll on GitHub Pages&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zeit/next.js/wiki/Deploying-a-Next.js-app-into-GitHub-Pages&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Deploying a Next.js app into GitHub Pages&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Bypassing Jekyll on GitHub Pages&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[gatsby-plugin-prefetch-google-fonts]]></title><description><![CDATA[indexgatsby에서 google webfont 사용하기플러그인 설치하기gatsby-config.js에 설정 추가style 지정삽질참고gatsby에서 google webfont…]]></description><link>https://boramyy.github.io//dev/front-end/gatsby/prefetch-google-fonts/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/gatsby/prefetch-google-fonts/</guid><pubDate>Thu, 09 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#gatsby%EC%97%90%EC%84%9C-google-webfont-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot;&gt;gatsby에서 google webfont 사용하기&lt;/a&gt;&lt;/li&gt;
@@ -358,7 +599,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;li&gt;여기서 왜 같은 폰트를 불러오는데 다른 결과가 나오지?&lt;/li&gt;
 &lt;li&gt;네트워크에서 정말 똑같은 폰트를 불러오는지 확인해보자&lt;/li&gt;
 &lt;li&gt;요청하는 url이 다르네?&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://fonts.google.com&quot;&gt;font.google.com&lt;/a&gt;에서 한 폰트 내에서도 weight 말고도 구분하는 기준이 있나 확인해봐야겠다&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fonts.google.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;font.google.com&lt;/a&gt;에서 한 폰트 내에서도 weight 말고도 구분하는 기준이 있나 확인해봐야겠다&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;customize&lt;/code&gt;탭에서 Korean을 체크하면 &lt;code class=&quot;language-text&quot;&gt;link&lt;/code&gt;태그의 attribute로 &lt;code class=&quot;language-text&quot;&gt;subsets&lt;/code&gt;가 생긴다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
@@ -403,7 +644,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
   
   &lt;/a&gt;
     &lt;/p&gt;
-&lt;p&gt;그렇다.. &lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/?=google&quot;&gt;라이브러리의 설명&lt;/a&gt;에 명시되어있던 &lt;code class=&quot;language-text&quot;&gt;subsets&lt;/code&gt;를 간과한것이 문제였다.&lt;/p&gt;
+&lt;p&gt;그렇다.. &lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/?=google&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;라이브러리의 설명&lt;/a&gt;에 명시되어있던 &lt;code class=&quot;language-text&quot;&gt;subsets&lt;/code&gt;를 간과한것이 문제였다.&lt;/p&gt;
 &lt;h4 id=&quot;문제-해결&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0&quot; aria-label=&quot;문제 해결 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문제 해결&lt;/h4&gt;
 &lt;p&gt;다시 &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; 파일을 열고 다음과 같이 &lt;code class=&quot;language-text&quot;&gt;subsets&lt;/code&gt; 설정을 추가해주었다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -439,8 +680,8 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;hr&gt;
 &lt;h3 id=&quot;참고&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/?=google&quot;&gt;gatsby-plugin-prefetch-google-fonts-docs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://fonts.google.com&quot;&gt;구글 웹폰트&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-prefetch-google-fonts/?=google&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;gatsby-plugin-prefetch-google-fonts-docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fonts.google.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;구글 웹폰트&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[gatsby에서 styled-component 사용하기]]></title><description><![CDATA[index프로젝트에 styled-component 설치gatsby-config.js에 설정 추가참고프로젝트에 styled-component 설치 이 명령을 실행하면 의 에 다음 내용이 추가됩니다.gatsby-config.js…]]></description><link>https://boramyy.github.io//dev/front-end/gatsby/styled-component/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/gatsby/styled-component/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-styled-component-%EC%84%A4%EC%B9%98&quot;&gt;프로젝트에 styled-component 설치&lt;/a&gt;&lt;/li&gt;
@@ -471,7 +712,7 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;hr&gt;
 &lt;h3 id=&quot;참고&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/?=styled&quot;&gt;Gatsby styled-component&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/?=styled&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Gatsby styled-component&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[react gatsby로 github 블로그 만들기!]]></title><description><![CDATA[indexgatsby로 블로그 시작하기github.io 주소 사용하기블로그 배포하기참고gatsby로 블로그 시작하기gatsby-cli 설치하기터미널에서 다음 명령어를 사용하여 gatsby-cli…]]></description><link>https://boramyy.github.io//dev/front-end/gatsby/create-blog/</link><guid isPermaLink="false">https://boramyy.github.io//dev/front-end/gatsby/create-blog/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h3 id=&quot;index&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;index&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#gatsby%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;gatsby로 블로그 시작하기&lt;/a&gt;&lt;/li&gt;
@@ -486,8 +727,8 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; subtree push --p
 &lt;h4 id=&quot;사이트-생성하기&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;사이트 생성하기 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사이트 생성하기&lt;/h4&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ gatsby new &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;생성할 사이트 이름&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;기본으로 가져올 소스코드 주소&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;br&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;이 명령어를 통해 개츠비에서 제공하는 기본구조의 사이트를 쉽게 생성할 수 있습니다.
-&lt;code class=&quot;language-text&quot;&gt;기본으로 가져올 소스코드 주소&lt;/code&gt;를 명시하지 않으면 &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-default&quot;&gt;https://github.com/gatsbyjs/gatsby-starter-default&lt;/a&gt; 에 작성된 소스코드가 받아집니다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot;&gt;Gatsby Starter&lt;/a&gt; 여기서 더 많은 샘플을 고를 수 있습니다.&lt;/p&gt;
+&lt;code class=&quot;language-text&quot;&gt;기본으로 가져올 소스코드 주소&lt;/code&gt;를 명시하지 않으면 &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-default&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;https://github.com/gatsbyjs/gatsby-starter-default&lt;/a&gt; 에 작성된 소스코드가 받아집니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Gatsby Starter&lt;/a&gt; 여기서 더 많은 샘플을 고를 수 있습니다.&lt;/p&gt;
 &lt;p&gt;저는 블로그가 목적이니 블로그 스타터를 사용해보겠습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ gatsby new react-blog https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;다음 명령어를 통해 &lt;code class=&quot;language-text&quot;&gt;localhost:8000&lt;/code&gt;로 접속 가능합니다.&lt;/p&gt;
@@ -571,9 +812,9 @@ $ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin &lt;
 &lt;hr&gt;
 &lt;h3 id=&quot;참고&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/quick-start&quot;&gt;Gatsby Docs&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot;&gt;Gatsby Starter&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot;&gt;How Gatsby Works with GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/quick-start&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Gatsby Docs&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Gatsby Starter&lt;/a&gt; &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;How Gatsby Works with GitHub Pages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[dunocanna]]></title><link>https://boramyy.github.io//prj/dunocanna/</link><guid isPermaLink="false">https://boramyy.github.io//prj/dunocanna/</guid><pubDate>Fri, 08 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;style&gt;
 .content-box-1 {margin-right:-100px;padding:200px 8% 120px;background:url(&apos;/images/dunocanna_back.png&apos;) -150px -200px repeat, url(&apos;/images/dunocanna_back.png&apos;) 0 0 repeat;}
 
