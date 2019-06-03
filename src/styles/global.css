@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: 'Noto Sans KR';
-  src: url('../../content/assets/fonts/NotoSansKR-Thin.woff2') format('woff2'),
+  src: local('Noto Sans KR'),
+       url('../../content/assets/fonts/NotoSansKR-Thin.woff2') format('woff2'),
        url('../../content/assets/fonts/NotoSansKR-Thin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
@@ -10,7 +11,8 @@
 
 @font-face {
   font-family: 'Noto Sans KR';
-  src: url('../../content/assets/fonts/NotoSansKR-Regular.woff2') format('woff2'),
+  src: local('Noto Sans KR'),
+       url('../../content/assets/fonts/NotoSansKR-Regular.woff2') format('woff2'),
        url('../../content/assets/fonts/NotoSansKR-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -18,7 +20,8 @@
 
 @font-face {
   font-family: 'Noto Sans KR';
-  src: url('../../content/assets/fonts/NotoSansKR-Bold.woff2') format('woff2'),
+  src: local('Noto Sans KR'),
+       url('../../content/assets/fonts/NotoSansKR-Bold.woff2') format('woff2'),
        url('../../content/assets/fonts/NotoSansKR-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
@@ -26,7 +29,8 @@
 
 @font-face {
   font-family: 'Nanum Gothic';
-  src: url('../../content/assets/fonts/NanumGothic.woff2') format('woff2'),
+  src: local('Nanum Gothic'),
+       url('../../content/assets/fonts/NanumGothic.woff2') format('woff2'),
        url('../../content/assets/fonts/NanumGothic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -34,7 +38,8 @@
 
 @font-face {
   font-family: 'Roboto Mono';
-  src: url('../../content/assets/fonts/RobotoMono-Regular.woff2') format('woff2'),
+  src: local('Roboto Mono'),
+       url('../../content/assets/fonts/RobotoMono-Regular.woff2') format('woff2'),
        url('../../content/assets/fonts/RobotoMono-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
