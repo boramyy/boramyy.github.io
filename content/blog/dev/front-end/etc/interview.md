@@ -22,13 +22,14 @@ published: false
 
 #### 간단한 자기소개
 
-#### 어떤 계기로 개발자로 전향하였나요?
+#### 어떤 계기로 개발자로 전향하게 되었나요?
 
 
 
 ### javascript
 
 #### call apply 차이점을 알고있나요?
+둘다 
 
 #### RESTful api 
 
@@ -78,8 +79,10 @@ published: false
 
 ### 참고
 
-- [CSS Modules 번역@utatti][css-modules-kr] <br>
-- [CSS Modules 원문][css-modules] <br>
+- [front-end-interview-handbook][interview-handbook] <br/>
+- [CSS Modules 번역@utatti][css-modules-kr] <br/>
+- [CSS Modules 원문][css-modules] <br/>
 
-[css-modules-ki]: https://medium.com/@utatti/%EB%B2%88%EC%97%AD-css-modules-8bb6edf4f2f
+[interview-handbook]: https://github.com/yangshun/front-end-interview-handbook/tree/master/Translations/Korean/questions?target=_blank
+[css-modules-kr]: https://medium.com/@utatti/%EB%B2%88%EC%97%AD-css-modules-8bb6edf4f2f
 [css-modules]: https://glenmaddern.com/articles/css-modules

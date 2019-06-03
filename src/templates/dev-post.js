@@ -100,6 +100,7 @@ class DevPostTemplate extends React.Component {
         margin-bottom: 15px;
         padding-left: 20px;
         li {
+          font-family: "Nanum Gothic",san-serif;
           font-size: 18px;
           line-height: 2.2;
         }
@@ -127,13 +128,17 @@ class DevPostTemplate extends React.Component {
         h2, h3, h4, h5, h6 {
           margin-top: 15px;
         }
-        p {font-size: 16px;}
+        p, li {font-size: 16px;}
       }
       .anchor {
         svg {
           margin-top: 14px;
           margin-left: -5px;
         }
+      }
+      .gatsby-resp-image-link + em {
+        margin-top: -30px;
+        margin-bottom: 30px;
       }
       @media (max-width: 414px) {
         h3:first-child {
