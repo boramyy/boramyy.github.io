@@ -88,7 +88,7 @@ class BlogIndex extends React.Component {
           content:none
         }
         &:hover {
-          margin-bottom:25px;
+          margin-bottom: 40px;
         }
       }
     `

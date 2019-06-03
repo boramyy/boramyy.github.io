@@ -15,7 +15,7 @@ class DevPostTemplate extends React.Component {
     const StyledLayout = styled(Layout)`
       padding: 50px 12%;
       @media (max-width: 414px) {
-        padding: 0 35px 50px;
+        padding: 0 30px 50px;
       }
     `
     const PostHeader = styled.div`
@@ -51,6 +51,7 @@ class DevPostTemplate extends React.Component {
     `
 
     const PostTag = styled.span`
+      display: inline-block;
       margin-right: 15px;
       line-height: 30px;
     `
@@ -99,6 +100,7 @@ class DevPostTemplate extends React.Component {
         margin-bottom: 15px;
         padding-left: 20px;
         li {
+          font-family: "Nanum Gothic",san-serif;
           font-size: 18px;
           line-height: 2.2;
         }
@@ -116,9 +118,9 @@ class DevPostTemplate extends React.Component {
         }
       }
       blockquote {
-        margin-top: 70px;
+        margin-top: 50px;
         margin-bottom: 100px;
-        padding: 40px 50px;
+        padding: 35px 50px;
         font-size: 0.9em;
         line-height: 1.8;
         border: 1px solid #ccc;
@@ -126,13 +128,17 @@ class DevPostTemplate extends React.Component {
         h2, h3, h4, h5, h6 {
           margin-top: 15px;
         }
-        p {font-size: 16px;}
+        p, li {font-size: 16px;}
       }
       .anchor {
         svg {
           margin-top: 14px;
           margin-left: -5px;
         }
+      }
+      .gatsby-resp-image-link + em {
+        margin-top: -30px;
+        margin-bottom: 30px;
       }
       @media (max-width: 414px) {
         h3:first-child {
@@ -185,7 +191,23 @@ class DevPostTemplate extends React.Component {
         float: none;
         width: 100%;
         height: auto;
-        min-height: 100px;
+        min-height: 80px;
+        padding: 0 15px;
+        font-size: 18px;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+        &.prev {
+          svg {
+            margin-right: 25px;
+          }
+        }
+        &.next {
+          svg {
+            margin-left: 25px;
+          }
+        }
       }
     `
 

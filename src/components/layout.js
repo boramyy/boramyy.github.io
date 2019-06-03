@@ -11,6 +11,10 @@ class Layout extends React.Component {
   render() {
     const { children, className } = this.props
     
+    const StyledMain = styled.main`
+      display: block;
+    `
+
     const StyledFooter = styled.footer`
       padding-bottom: 35px;
       font-size: 12px;
@@ -25,7 +29,7 @@ class Layout extends React.Component {
     return (
       <div className={this.props.scrollSmooth ? 'scroll-smooth' : ''}>
         <Header className={this.props.fixed ? 'fixed': ''} />
-        <main className={className}>{children}</main>
+        <StyledMain className={className}>{children}</StyledMain>
         <StyledFooter className={`container${this.props.fixed ? ' fixed' : ''}`}>
           Copyright 2019. boramkim All rights reserved.
         </StyledFooter>
