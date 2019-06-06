@@ -49,10 +49,10 @@ exports.createPages = ({ graphql, actions }) => {
       posts.forEach((item, idx) => {
         if (item.node.frontmatter.categories === category && item.node.frontmatter.published === true) {
           if (idx < index) {
-            prevPost = item.node;
-          }
-          if (idx > index && nextPost === null) {
             nextPost = item.node;
+          }
+          if (idx > index && prevPost === null) {
+            prevPost = item.node;
           }
         }
       });
