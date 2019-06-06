@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Site: https://boramyy.github.io/sitemap.xml

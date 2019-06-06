@@ -29,7 +29,6 @@ published: false
 ### javascript
 
 #### call apply 차이점을 알고있나요?
-둘다 
 
 #### RESTful api 
 
