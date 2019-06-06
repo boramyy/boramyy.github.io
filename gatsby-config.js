@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `boram kim, developer`,
     author: `boramkim`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `boramkim's devlog`,
     siteUrl: `https://boramyy.github.io/`,
     social: {
       github: `boramyy`,
