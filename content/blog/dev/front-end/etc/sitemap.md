@@ -58,7 +58,8 @@ root(프로젝트 최상단)에 `sitemap.xml`파일을 생성하고 다음을 �
 - `changefreq` - 페이지가 변경되는 빈도. 검색엔진이 참고하지 않을 수도 있음
 - `priority` - 해당 사이트의 0.0 - 1.0 사이의 상대적 우선순위. 크롤러에 가장 중요하다고 생각하는 페이지를 검색 엔진에 알리기만 하고 페이지를 비교하는 방식에 아무런 영향을 주지 않음
 
-
+#### 
+위처럼 sitemap.xml을 url별로 하나하나 지정할 수 있지만
 
 ### 검색엔진에 sitemap.xml 알려주기
 
@@ -103,6 +104,56 @@ Site: https://boramyy.github.io/sitemap.xml
 ##### 구글 - [Google Search Console][google-sitemap-admin]
 
 
+``` shell
+https://boramyy.github.io/sitemap.xml
+```
+
+![Google Search Console - start](./google-sitemap-01.jpg)
+*Google Search Console - start*
+
+![Google Search Console - add properties](./google-sitemap-02.jpg)
+*Google Search Console - add properties*
+
+![Google Search Console - verification confirms](./google-sitemap-03.jpg)
+*Google Search Console - verification confirms*
+
+![Google Search Console - verification confirms - ok](./google-sitemap-04.jpg)
+*Google Search Console - verification confirms - ok*
+
+![Google Search Console - open menu](./google-sitemap-05.jpg)
+*Google Search Console - open menu*
+
+![Google Search Console - sitemap](./google-sitemap-06.jpg)
+*Google Search Console - sitemap*
+
+![Google Search Console - add sitemap](./google-sitemap-07.jpg)
+*Google Search Console - add sitemap*
+
+![Google Search Console - add sitemap](./google-sitemap-08.jpg)
+*Google Search Console - add sitemap*
+
+1. 시작하기
+2. 사이트 url 입력
+3. 사이트 소유권 확인
+4. 소유권 확인 완료
+5. 좌측 상단의 햄버거(메뉴)를 오픈하여 `속성검색 - sitemap` 으로 이동합니다
+6. sitemap.xml 경로를 제출합니다.
+
+그래도 여전히 내 사이트는 검색되지 않네요! 아마도 색인을 생성하는데에 시간이 걸리는 것 같습니다.<br/>
+바로 색인을 생성하도록 꼼수를 써봅시다.
+
+7. Google Search Console 상단의 검색창에 본인 사이트의 주소를 검색합니다.
+8. 우측 상단의 `실제 URL 테스트`를 클릭합니다.
+
+`url이 구글에 등록되어있지 않음` 에서 `url을 구글에 등록할 수 있음.`
+
+
+주의할 점
+- http 와 https 를 잘 확인하고 입력하자
+- 루트폴더에 html 파일을 위치시켜야한다.
+- 필자와 같이 gatsby build를 통해 빌드된 public 폴더를 repogitory의 master에 deploy 시킨 경우라면, root/static/ 하위에 위치시켜야한다.
+- 그리고 블로그를 배포한다.
+- 이제 아무 브라우저에서 내사이트url/sitemap.xml 로 들어가서 잘 올라갔는지 확인한다.
 
 ##### 다음 - [Daum 검색등록][daum-sitemap-admin]
 
