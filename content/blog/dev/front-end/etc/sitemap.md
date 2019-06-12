@@ -4,7 +4,7 @@ date: "2019-06-06"
 categories: dev
 tags: ['front-end', 'sitemap', 'search', 'seo']
 description: "내 블로그를 검색에 노출시키는 방법"
-published: false
+published: true
 ---
 
 야심차게 블로그를 개설하고 몇개의 글을 올렸다. 구글에 어떻게 나오나 검색해봐야지~ ^0^ <br/>
@@ -140,7 +140,7 @@ https://boramyy.github.io/sitemap.xml
 6. sitemap.xml 경로를 제출합니다.
 
 그래도 여전히 내 사이트는 검색되지 않네요! 아마도 색인을 생성하는데에 시간이 걸리는 것 같습니다.<br/>
-바로 색인을 생성하도록 꼼수를 써봅시다.
+바로 색인을 생성하도록하는 방법이 있습니다.
 
 7. Google Search Console 상단의 검색창에 본인 사이트의 주소를 검색합니다.
 8. 우측 상단의 `실제 URL 테스트`를 클릭합니다.
